@@ -1,0 +1,81 @@
+<?php
+	  $this->headTitle("Webadmin - Moderação de projetos");
+
+	  Use Application\Model\Project; 
+	  Use Application\Model\Perfil;
+	   
+    if (!empty($sMensagemErro)) {
+?>
+<div id="alerta" class="alert alert-error">
+  <button type="button" class="close" onClick="$('#alerta').hide();">&times;</button>
+  <strong>Atenção!</strong><br/><br/>
+  <?php echo $sMensagemErro ?>
+</div><?php		
+    }
+?>	
+<div class="span10 offset1">
+
+    <h3>PROJETOS CADASTRADOS</h3>
+    
+    <p>Abaixo está a lista de projetos enviados e que estão aguardando uma moderação para serem publicados ou não no portal.</p>
+
+<?php 
+    if (count($aIdsProjetos)>0) {
+?>    
+    
+    <table class="table table-striped table-hover">
+    <thead>
+    <tr>
+        <td>
+            Data Cadastro
+        </td>
+        <td>
+            Título do Projeto
+        </td>
+        <td>
+            Autor
+        </td>
+        <td>
+            &nbsp;
+        </td>
+    </tr>
+    </thead>
+    <tbody>
+<?php
+    foreach ($aIdsProjetos as $iIdProjeto) {
+        $umProjetoTemp = new Project($oSm,$iIdProjeto);
+?>
+    <tr>
+        <td>
+            <?php echo date("d/m/Y",strtotime($umProjetoTemp->getProperty("dt_registration")))?>
+        </td>
+        <td>
+            <?php echo $umProjetoTemp->getProperty("title")?>
+        </td>
+        <td>
+            <?php 
+                $oUSer = new Perfil($oSm,$umProjetoTemp->getProperty("id_user"));
+                echo $oUSer->getNome();
+            ?>
+        </td>
+        <td>
+            <a href="<?php echo $this->basePath()?>/wbadmin/projetos-detalhes/<?php echo $umProjetoTemp->getProjectId()?>"><i class="icon-search"></i></a>
+            <a href="<?php echo $this->basePath()?>/wbadmin/projetos-excluir/<?php echo $umProjetoTemp->getProjectId()?>"><i class="icon-remove"></i></a>
+        </td>
+    </tr>
+<?php 
+    }
+?>
+    </tbody>
+    </table>
+<?php 
+}
+else {
+?>
+    <div class="alert alert-info" role="alert">
+        No momento não existe nenhum projeto para ser avaliado como pré-projeto ;-)
+    </div>
+<?php
+} 
+?>    
+</div>

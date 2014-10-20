@@ -1,0 +1,166 @@
+.saiba-mais{
+  background-color: $blue;
+}
+
+.saiba-mais p{
+  color:white;
+  font-family: 'Raleway';
+  text-align: center;
+  font-size: 24px;
+  line-height: 110%;
+  padding: 20px;
+}
+
+
+
+.projectsPlace{
+  .place{
+    transition-duration: 0.5s;
+    -ms-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+  }
+}
+
+.financiadotxt, .valortxt{
+  font-size:13.3px;
+  font-family: "Raleway";
+  display: inline-block;
+  width: 100%;
+  text-align: left;
+}
+
+.financiadotxt{
+  color: #8b8e94;
+  float:left;
+
+  span{
+  color:black;
+  font-size: 20px;
+  font-weight: bold;
+  }
+}
+
+.valortxt{
+  color:#8b8e94;
+  float:left;
+  margin-bottom: 10px;
+  span {
+    color:black;
+    font-size:20px;
+    font-weight: bold;
+  }
+}
+
+
+.carousel-indicators{
+	li{
+	 	border-radius:5px !important;
+	}
+}
+
+#carouselHome, .projectsLayer{
+
+  ol{
+    top:100%;
+    right: 50%;
+    list-style-type: circle;
+    
+    li{
+      border:1px solid gray;
+    }
+
+    .active{
+        background-color:#677272;
+    }
+  }
+
+  ul{
+    li{
+      height: 500px;
+    }
+  }
+
+  .thumbnail{
+    width: 240px;
+    height: 450px;
+    margin-left:auto;
+    border:18px solid white;
+
+    .thumb{
+      height: 180px;
+      padding:0;
+    }
+
+    p { 
+      color: black; 
+    }
+
+    .tborder{
+      width: 290px;
+      height: 470px;
+      border:1px solid lightgray;
+    }
+
+    .caption{
+      margin-top: -10px;
+      padding:0;
+      padding-left:5px;
+      
+      .title{
+        margin-bottom:15px;
+      }
+
+      h3, p, em{
+        text-align: left;
+        // padding: 0;
+      }
+
+      h3, a{
+        text-transform:uppercase;
+        color:#494848;
+        font-family: "Raleway";
+        font-weight: bold;
+        font-size:15px;
+      }
+
+      em,p{
+        color: #494848;
+        font-family: "Raleway";
+        font-weight: 300;
+        font-size:13px;
+      }
+
+      p{
+        text-align: left;
+        font-size: 14px;
+        height: 100px;
+      }
+    }
+  }
+
+  .t1{
+    margin-left:55px;
+  }
+
+  .t2{
+    margin-left:22px;
+  }
+
+  .t3{
+     margin-left: -12px;
+  }
+
+  .carousel-control{
+    border:none;
+  }
+
+  .progress{
+    // border:1px solid red;  
+    padding:3px;
+    .bar{
+
+    }
+  }
+}

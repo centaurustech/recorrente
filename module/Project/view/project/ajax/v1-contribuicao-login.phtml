@@ -1,0 +1,64 @@
+            <strong class="headlineContribuicao">Contribuição</strong><br>
+            <span class='contribuicaoLogin'>Autenticação Necessária</span>
+            
+              <br> <br>
+
+              <form action="#" class="logar" method="post">
+              <input type="hidden" name="project_id" value="<?php echo $iProjectId?>">  
+                <label>
+                  Login <br>
+                  <input type="text" id="InputUsuario" placeholder='Informe seu email' value="<?php echo $sEmail?>">
+                </label>
+                
+                <label>
+                  Senha <br>
+                  <input type="password" id="InputSenha" placeholder='Senha'>
+                </label>
+                
+                <input type="button" class="btn btn-primary" onClick="contribuicaoLogin($('#InputUsuario').val(),$('#InputSenha').val(),<?php echo $iProjectId?>,'<?php echo base64_encode($_SERVER['REQUEST_URI'])?>')" value="Entrar">
+              
+              </form>
+              
+              <div class="cadastroOverProject">
+              <p class='contribuicaoLogin'>Não tem cadastro ainda? Faça um agora!</p>
+              <a href="javascript:cadastroPF()"><button class="btn btn-primary">Pessoa Física</button></a>
+             <a href="javascript:cadastroPJ()"><button class="btn btn-primary juri" disabled>Pessoa Jurídica</button></a>
+              
+              <br><br>
+
+<!--               <p class="contribuicaoLogin">Fez seu cadastro mas falta validá-lo?</p> -->
+<!--                <a href="javascript:cadastroValidar()"><button class="btn btn-primary validate">Validar Agora</button></a> -->
+<!--               </div> -->
+              
+              
+
+<script>
+$(".loader").fadeOut('fast');
+function cadastroPF() {
+  $('#divConteudo').fadeOut('slow', function(){
+    $(".loader").fadeIn('fast');
+	  $(this).load('<?php echo $this->basePath()?>/projeto/ajaxContribuicaoNovoCadastroPF/<?php echo $iProjectId?>',function(){
+      $(".loader").fadeOut('fast', function(){ $('#divConteudo').fadeIn(); });
+    });
+  })
+}
+
+function cadastroPJ() {
+  $('#divConteudo').fadeOut('slow', function(){
+    $(".loader").fadeIn('fast');
+	  $('#divConteudo').load('<?php echo $this->basePath()?>/projeto/ajaxContribuicaoNovoCadastroPJ/<?php echo $iProjectId?>',function(){
+      $(".loader").fadeOut('fast', function(){ $('#divConteudo').fadeIn(); });
+    });
+  });
+}
+
+function cadastroValidar() {
+  $('#divConteudo').fadeOut('slow', function(){
+    $(".loader").fadeIn('fast');
+	$('#divConteudo').load('<?php echo $this->basePath()?>/projeto/ajaxContribuicaoValidacaoCadastro/<?php echo $iProjectId?>',function(){
+    $(".loader").fadeOut('fast', function(){ $('#divConteudo').fadeIn(); });
+  });
+})
+}
+
+</script>              

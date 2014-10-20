@@ -1,0 +1,70 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/* Masonry */
+.masonry, .masonry .masonry-brick {
+	transition-duration: 0.5s;
+	-ms-transition-duration: 0.5s;
+	-moz-transition-duration: 0.5s;
+	-webkit-transition-duration: 0.5s;
+	-o-transition-duration: 0.5s;
+}
+#masonry {
+	margin: 0 auto 20px;
+	width: 960px;
+	clear: both;
+}
+
+/* Masonry single container */
+#masonry .single {
+	margin: 0px 10px 20px 10px;
+	width: 220px;
+	background: #FFF;
+	box-shadow: 0px 1px 1px #CCC !important;
+	text-align: center;
+}
+
+/* Masonry single container big */
+#masonry .single.big {
+	width: 460px;
+}
+#masonry .single h3 {
+	margin: 20px 20px 0px 20px;
+	width: auto;
+}
+#masonry .single em {
+	margin: 0px 20px 20px 20px;
+	font: normal 12px/20px Arial, Helvetica, sans-serif;
+	color: #999;
+	display: block;
+}
+#masonry .single p {
+	margin: 20px;
+}
+#masonry img, #masonry object {
+	width: 100%;
+}
+@media (min-width: 1200px) {
+#masonry {
+	width: 1200px;
+}
+}
+@media (min-width: 768px) and (max-width: 979px) {
+#masonry {
+	width: 720px;
+}
+}
+@media (min-width: 480px) and (max-width: 767px) {
+#masonry {
+	width: 480px;
+}
+}
+@media (max-width: 479px) {
+#masonry {
+	width: 320px;
+}
+#masonry .single, #masonry .single.big {
+	width: 300px;
+}
+}

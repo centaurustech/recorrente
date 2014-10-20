@@ -1,0 +1,31 @@
+#accordionFAQ{
+	.accordion-toggle{
+		font-family: "Brandon Bold";
+		font-size:18px;
+		text-transform: initial;
+		color:$blue;
+	}
+	.accordion-inner{
+		font-family: "Raleway";
+		font-size:15px;
+		text-transform: initial;
+		color: #5F5656;
+		border-top:1px solid $orange;
+	}
+
+	hr{
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+
+	.accordion-group{
+		border:none;
+	}
+}
+
+.faqPage{
+	p{
+		font-family: "Raleway";
+		font-weight: bold;
+	}
+}

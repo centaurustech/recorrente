@@ -1,0 +1,27 @@
+<?php
+	  $this->headTitle("Webadmin - Moderação de projetos");
+    Use Application\Model\Project; 
+
+    if (!empty($sMensagemErro)) {
+?>
+<div id="alerta" class="alert alert-error">
+  <button type="button" class="close" onClick="$('#alerta').hide();">&times;</button>
+  <strong>Atenção!</strong><br/><br/>
+  <?php echo $sMensagemErro ?>
+</div><?php		
+    }
+?>	
+<div class="span10 offset1">
+
+    <h3>CONFIRMAÇÃO</h3>
+    
+    <div class="alert alert-danger">
+        <p>Tem certeza que deseja <strong>CANCELAR</strong> o projeto <strong><?php echo $oProject->getProperty("title")?>?</strong></p>
+        <p class="text-right">
+            <a class="btn btn-danger" href="<?php echo $this->basepath()?>/wbadmin/projetos-moderacao">Não</a>
+            <a class="btn btn-success" href="<?php echo $this->basepath()?>/wbadmin/projetosExclusaoConfirmada/<?php echo $oProject->getId()?>">Sim</a>
+        </p>
+    </div>
+        
+   
+</div>

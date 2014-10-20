@@ -1,0 +1,147 @@
+<?php echo $this->headTitle(" Cadastro de Pessoa Física| Recorrente: financiamento contínuo"); ?>
+
+  <div class="section cadastro">
+    <div class="container">
+      <div class="row">
+        <div class="span12">
+          <h2 class='lead'>Cadastro de Pessoa Física</h2>
+          <!-- <p class='lead'>Informe os dados da pessoa física que deseja cadastrar.</p> -->
+          <hr>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span12">
+            <form action="<?php echo $this->basePath()?>/criaCadastro" method="post" enctype="multipart/form-data" class="form-horizontal" role="form" id="formCadastroPF">
+            <input type="hidden" name="tipo" value="PF">
+            <input type="hidden" name="ajax" value="">
+            <input type="hidden" name="image_data" id="image_data">
+            
+            <div class="control-group">
+              <label  class='control-label' for='email'> Email * </label>
+              <div class="controls">
+                <input type="email" id='email' placeholder='Email' name="email" required onChange="verificaEmail('<?php echo $this->basePath()?>/ajaxVerificaEmail',$('#email').val())">
+                <input type="hidden" name="email_existe" id="emailExiste" value="">
+                <span id="spanMensagemErro"></span>
+              </div>
+              <div class="col-sm-1" id="divLoadingEmail"><img src="<?php echo $this->basepath()?>/images/loader.gif"></div>
+            </div>
+            
+            <div class="control-group">
+              <label  class='control-label' for='senha'> Senha * </label>
+              <div class="controls">
+                <input type="password" id='senha' placeholder='Senha' name="senha1" value="" required>
+              </div>
+            </div>
+            
+            <div class="control-group">
+              <label  class='control-label' for='csenha'>Confirmar senha * </label>
+              <div class="controls">
+                <input type="password" id='csenha' placeholder='Repita sua senha' name="senha2" value="" equalto="#senha" required>
+              </div>
+            </div>
+            
+            <div class="control-group">
+              <label  class='control-label' for='nome'> Nome completo * </label>
+              <div class="controls">
+                 <input type="text" placeholder='Informe seu nome' id='nome' name="nome" required>
+              </div>
+            </div>
+
+            <div class="control-group">
+              <label  class='control-label' for='sexo'> Sexo </label>
+              <div class="controls">
+                 <select name="sexo" id='sexo' required>
+                     <option>Escolha</option>
+                     <option value="1">Masculino</option>
+                     <option value="2">Feminino</option>
+                   </select>
+              </div>
+            </div>
+
+<?php
+    if ( (getenv('APPLICATION_ENV')=="andre") || (getenv('APPLICATION_ENV')=="dev") ) { 
+?>            
+            
+            <div class="control-group">
+              <label  class='control-label' for='avatar'> Avatar </label>
+              <div class="controls">
+                 <div id="avatar">
+                   
+                  <div class="containerCrop">
+                    <div class="imageBox" style='float:left'>
+                        <div class="thumbBox"></div>
+                        <div class="spinner" style="display: none">Carregando...</div>
+                    </div>
+                    <div class="cropped" style='float:left;margin-left:15px'>
+    
+                    </div>
+                    <div class="action" style='float:right'>
+                        <input type="file" class='hackEstilo' id="file" style="float:left; width: 160px">
+                        <input type="button" class='btn btn-primary' id="btnCrop" value="Cortar">
+                        <input type="button" class='btn btn-primary' id="btnZoomIn" value="+" >
+                        <input type="button" class='btn btn-primary' id="btnZoomOut" value="-">
+                    </div>
+                </div>
+
+                 </div><!-- /#avatar -->
+              </div>
+            </div>
+<?php 
+    }
+?>
+            <div class="control-group">
+              <label  class='control-label' for='pais'> País * </label>
+              <div class="controls">
+                     <select name="pais" id='pais' onChange="selecionaPais($('#pais').val())" required>
+                      <option>Escolha</option>
+<?php echo $sHTMLCountries?>
+                    </select>
+              </div>
+              <div class="col-sm-1" id="divLoadingPais"><img src="<?php echo $this->basepath()?>/images/loader.gif"></div>
+            </div>
+            
+            <div class="control-group" id="divSeletorEstado">
+              <label  class='control-label' for='estado'> Estado * </label>
+              <div class="controls">
+                 <select name="estado" id='estado' onChange="selecionaCidade($('#estado').val())">
+                      <option>Escolha</option>
+                  </select>
+              </div>
+              <div class="col-sm-1" id="divLoadingEstado"><img src="<?php echo $this->basepath()?>/images/loader.gif"></div>
+            </div>
+            <div class="control-group" id="divInputEstado">
+              <label  class='control-label' for='novo_estado'> Estado/Província/Território * </label>
+              <div class="controls">
+                 <input type="text" placeholder='Informe o nome' id='novo_estado' name="novo_estado" onChange="$('#divInputCidade').show()">
+              </div>
+            </div>
+            
+            
+            <div class="control-group" id="divSeletorCidade">
+              <label  class='control-label' for='cidade'> Cidade * </label>
+              <div class="controls">
+                 <select name="cidade" id='cidade'>
+                      <option>Escolha</option>
+                  </select>
+              </div>
+              <div class="col-sm-1" id="divLoadingCidade"><img src="<?php echo $this->basepath()?>/images/loader.gif"></div>
+            </div>
+            <div class="control-group" id="divInputCidade">
+              <label  class='control-label' for='nova_cidade'> Cidade * </label>
+              <div class="controls">
+                 <input type="text" placeholder='Informe o nome' id='nova_cidade' name="nova_cidade">
+              </div>
+            </div>
+            
+            <div class="options">
+              <input type="button" onClick="document.location='<?php echo $this->basePath()?>/cadastro'" class="btn btn-primary" value="Voltar">
+              <input class="btn btn-primary" type="button" onClick="enviaFormPF()" name="comando" value="Criar" />
+            </div>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div id="push"></div>

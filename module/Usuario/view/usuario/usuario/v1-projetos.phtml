@@ -1,0 +1,67 @@
+<?php 
+    use Application\Model\ProjectStatus;
+    
+    $aProjects = $oUser->getProjects(array(1));
+    
+?>
+  <div class="section cadastro perfil contribuicao">
+    <div class="container">
+      <div class="row">
+        <div class="span12">
+          <h2 class='lead'>Minhas Campanhas</h2>
+          <p class='lead'>Veja a relação de campanhas que você possui com a Benfeitoria: </p>
+          <hr>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span12">
+
+<?php
+    if (count($aProjects)>0) {
+?>
+        <p class='nOfContri'>Abaixo a relação de suas campanhas e seus status atuais:</p> <br>
+
+          <table class='table table-striped'>
+  
+          <thead>
+            <tr>
+              <th>Data de Criação</th>
+              <th>Campanha</th>
+              <th>Valor</th>
+              <th>URL</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+<?php
+    foreach ($aProjects as $oProjectItem) { 
+?>
+            <tr>
+              <td><?php echo date("d/m/Y",strtotime($oProjectItem->getProperty("dt_registration"))) ?></td>
+              <td><?php echo $oProjectItem->getProperty("title")?></td>
+              <td>R$ <?php echo number_format($oProjectItem->getTotalAmountCollected(),2,",",".")?></td>
+              <td><?php echo $oProjectItem->getProperty("short_url")?></td>
+              <td>
+<?php
+                                $oProjectStatus = new ProjectStatus($oSM,$oProjectItem->getProperty("id_status"));
+                                echo $oProjectStatus->getProperty("title");
+?>
+              </td>
+            </tr>
+<?php
+    } 
+?>            
+            <tbody>
+        </table>
+<?php
+    }
+    else {
+?>
+    <p>No momento não existem campanhas disponíveis para o seu gerenciamento.</p>
+<?php         
+    } 
+?>
+        </div>
+      </div>
+    </div>
+  </div>

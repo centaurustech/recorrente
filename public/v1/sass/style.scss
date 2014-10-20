@@ -1,0 +1,305 @@
+@import "vendor/normalize";
+@import "vendor/bootstrap/bootstrap.min";
+// @import "vendor/bootstrap/bootstrap-responsive.min";
+@import "vendor/theme/fancybox";
+@import "vendor/theme/masonry";
+@import "vendor/jquery.bxslider";
+@import "vendor/theme/tstyle";
+@import "vendor/fontawe/font-awesome";
+@import "vendor/qtip";
+@import "compass/css3/font-face";
+@import "compass/layout/sticky-footer";
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,500,600,800,700,300);
+
+
+// Not vendor css
+@import "./varMixinsFontCommonLayout";
+@import "./footer";
+@import "./nav";
+@import "./home";
+@import "./abas";
+@import "./faq";
+@import "./slider";
+@import "./modal";
+@import "./verProjeto";
+@import "./enviarProjeto";
+@import "./listasProjetos";
+@import "./loginPage";
+@import "./cadastro";
+@import "./fixedAdds";
+
+// Overwriting Bootstrap Methods
+
+a.thumb:hover img {
+	transform: none;
+	-ms-transform: none;
+	-moz-transform: none;
+	-webkit-transform: none;
+	-o-transform: none;
+}
+
+.perfil{
+	//remover isso um dia, repetição inutil de css
+	.container{
+		// margin-top:30px;
+		padding-bottom:50px;
+	}
+
+	h2{
+		margin-top:30px;
+		font-family: "Raleway";
+		font-weight: bold;
+		color: $blue;
+	}
+
+	hr,p {
+		margin-top:-30px;
+	}
+
+	p{
+		font-family: "Raleway";
+		color: darken($gray,30%);
+	}
+
+	.lead{
+		color:$blue;
+	}
+
+	p{
+		font-size: 16px;
+	}
+}
+
+.text-error, .error{
+			// margin-top:-30px;
+			margin-bottom:20px;
+			width: 80%;
+			background-color: #b94a48;
+			color:white !important;
+			border-radius:3px !important;
+			display: block;
+			padding: 2px 4px;
+			font-size: 11.844px;
+			font-weight: bold;
+			// line-height: 14px;
+			text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+			white-space: nowrap;
+			vertical-align: baseline;
+}
+
+.error{
+	width: 210px;
+	text-align: center;
+}
+
+input.error{
+	background-color:white;
+	color:black !important;
+	border:1px solid red;
+}
+
+.home{
+	margin-bottom: 0 !important;
+	padding-bottom: 0 !important;
+}
+
+.generic{
+	.container{
+		min-height: 300px;
+	}
+
+	.wide-bg{
+		margin-bottom: 0;
+	}
+
+	#push{
+		background-color: $gray;
+	}
+
+	h1,h2,h3,h4,h5{
+		font-family: "Brandon Bold";
+		color:$blue;
+	}
+
+	p,span{
+		font-family: "Raleway";
+		font-size:15px;
+	}
+}
+
+.contribuicao{
+	table{
+
+		thead{
+			border-bottom: 2px solid $orange;
+		}
+
+		tr{
+			th{
+				font-family: "Brandon Bold";
+				font-size:18px;
+			}
+			td{
+				font-family: "Raleway";
+				font-size:15px;
+			}
+		}
+
+	}
+
+	.nOfContri{
+		color:$blue;
+	}
+
+	.row:last-child{
+		margin-top: 30px;
+	}
+}
+
+.btn-send{
+		width: 170px !important;
+		height: 50px !important;
+		font-family: "Brandon Bold";
+		float: right;
+		margin-right:-10px;
+}
+
+
+#verMetas{
+	font-size: 16px;
+}
+
+#avatar{
+	.imageBox
+	{
+	    position: relative;
+	    height: 400px;
+	    width: 400px;
+	    border:1px solid #aaa;
+	    background: #fff;
+	    overflow: hidden;
+	    background-repeat: no-repeat;
+	    cursor:move;
+	}
+
+	.imageBox .thumbBox
+	{
+	    position: absolute;
+	    top: 50%;
+	    left: 50%;
+	    width: 200px;
+	    height: 200px;
+	    margin-top: -100px;
+	    margin-left: -100px;
+	    box-sizing: border-box;
+	    border: 1px solid rgb(102, 102, 102);
+	    box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.5);
+	    background: none repeat scroll 0% 0% transparent;
+	}
+
+	.imageBox .spinner
+	{
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    bottom: 0;
+	    right: 0;
+	    text-align: center;
+	    line-height: 400px;
+	    background: rgba(0,0,0,0.7);
+	}
+
+	.action{
+		width: 100%;
+		margin-top:10px;
+
+		input{
+			float:left;
+		}
+	}
+
+	input{
+		width: auto;
+		height: 40px;
+		margin-left:13px;
+
+		&:first-of-type{
+			margin-left: 0;
+			button{
+				height: 10px;
+			}
+		}
+	}
+
+	.hackEstilo::-webkit-file-upload-button {
+	  visibility: hidden;
+	}
+	
+	.hackEstilo::after{
+		content:'';
+	}
+
+	.hackEstilo::before {
+	  content: 'ESCOLHER FOTO';
+	  display: inline-block;
+	  background: $blue;
+	  padding: 5px 8px;
+	  outline: none;
+	  white-space: nowrap;
+	  -webkit-user-select: none;
+	  font-family: "Brandon Bold";
+	  cursor: pointer;
+	  font-size: 18px;
+	  color: white;
+	}
+
+	.hackEstilo:hover::before {
+	  border-color: black;
+	}
+	.hackEstilo:active::before {
+	  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+	}
+
+}
+
+.form-meuPerfil {
+	input, select{
+		height: 35px;
+	}
+	input{
+		width: 100%;
+	}
+	select{
+		width: 101.5%;
+	}
+	.span6{
+		width: 47%;
+
+		&:last-child{
+			margin-left: 14px;
+		}
+	}
+	#nascimento, #cpf{
+		width: 140px;
+	}
+	input[type='submit'],.btn-send, input[type='button'] {
+		width: 170px;
+		height: 50px;
+		font-family: "Brandon Bold";
+		float: right;
+		margin-right:-10px;
+	}
+}
+
+.contato{
+	p{
+		span{
+			color:$orange;
+		}
+
+		a{
+			&:hover{
+			}
+		}
+	}
+}

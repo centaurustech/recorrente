@@ -1,0 +1,108 @@
+            <strong class="headlineContribuicao">Contribuição</strong><br>
+            <span class='contribuicaoLogin'>Novo Cadastro</span>
+            
+              <br> <br>
+    <div id="divLoadingContent" style="display:none">
+        <img src="<?php echo $this->basepath()?>/images/loader.gif">
+    </div>
+              
+      <form class="form-horizontal logar" role="form" id="formCadastroPF">
+      <input type="hidden" name="tipo" id="inputTipo" value="PF">
+      <input type="hidden" name="ajax" id="inputAjax" value="sim">
+      <input type="hidden" name="project_id" id="inputProjectId" value="<?php echo $iProjectId?>">
+                              
+                <label>
+                  Login <br>
+                  <input type="email" name="email" placeholder='Informe seu email' id="inputEmail" required onChange="verificaEmail('<?php echo $this->basePath()?>/ajaxVerificaEmail',$('#inputEmail').val())">
+                  <input type="hidden" name="email_existe" id="emailExiste" value="">
+                  <span id="spanMensagemErro"></span>
+                </label>
+                <div id="divLoadingEmail">
+                    <img src="<?php echo $this->basepath()?>/images/loader.gif">
+                </div>
+                
+                <label>
+                  Senha <br>
+                  <input type="password" name="senha1" id="inputSenha1" placeholder='Senha' required>
+                </label>
+                
+                <label>
+                  Confirmar senha <br>
+                  <input type="password" placeholder='Repita a senha' name="senha2" id="inputSenha2" equalto="#inputSenha1" class="required error">
+                </label>
+                
+                <label>
+                  Nome completo <br>
+                  <input type="text" placeholder='Informe seu nome' name="nome" id="inputNomeCompleto" required>
+                </label>
+                
+                <label>
+                  Sexo <br>
+                  <select name="sexo" id='inputSexo' required>
+                     <option>Escolha</option>
+                     <option value="1">Masculino</option>
+                     <option value="2">Feminino</option>
+                   </select>
+                </label>
+
+                <label>
+                  País <br>
+                  <select name="pais" id="inputPais" onChange="selecionaPais($('#inputPais').val())" required>
+                      <option>Escolha</option>
+    <?php echo $sHTMLCountries?>
+                    </select>
+                </label>
+                <div id="divLoadingPais">
+                    <img src="<?php echo $this->basepath()?>/images/loader.gif">
+                </div>
+      
+      <div id="divInputEstado">
+                
+        <label for="inputNovoEstado">
+          Estado<br/>
+          <input type="text" name="novo_estado" id="inputNovoEstado" placeholder="Informe o estado/território">
+        </label>
+      </div>
+    
+      <div id="divSeletorEstado">
+        <label for="inputEstado">
+            Estado<br/>
+            <select name="estado" id="estado" onChange="selecionaCidade($('#estado').val())">
+                <option value="">Escolha -----></option>
+            </select>
+        </label>
+        <div id="divLoadingEstado">
+            <img src="<?php echo $this->basepath()?>/images/loader.gif">
+        </div>
+      </div>
+      
+      <div id="divInputCidade">
+        <label for="inputNovaCidade">
+            Cidade<br/>
+            <input type="text" name="nova_cidade" id="inputNovaCidade" placeholder="Informe a cidade">
+        </label>
+      </div>
+      
+      <div id="divSeletorCidade">
+        <label>
+            Cidade<br/>
+            <select name="cidade" id="cidade">
+                <option value="">Escolha -----></option>
+            </select>
+        </label>
+        <div id="divLoadingCidade">
+            <img src="<?php echo $this->basepath()?>/images/loader.gif">
+        </div>
+      </div>
+                
+                
+                
+                
+                <a href="#"><button class="btn btn-primary voltar" onClick="$('#divConteudo').load('<?php echo $this->basePath()?>/projeto/ajaxContribuicaoP0/<?php echo $iProjectId?>');"><i class="fa fa-arrow-left"></i> Voltar</button></a>
+
+                <input class="btn btn-primary no-hover" type="button" onClick="enviaFormContribuicaoNovoCadastroPF()" value="Criar  " />
+              
+              </form>
+ <span id="spanMensagemErroGeral"></span>
+ 
+ 

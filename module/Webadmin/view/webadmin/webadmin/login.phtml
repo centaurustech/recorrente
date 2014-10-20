@@ -1,0 +1,12 @@
+<?php
+	$this->headTitle("Webadmin - Início");
+
+	if (!empty($sMensagemErro)) {
+?>
+<div id="alerta" class="alert alert-error">
+  <button type="button" class="close" onClick="$('#alerta').hide();">&times;</button>
+  <strong>Atenção!</strong><br/><br/>
+  <?php echo $sMensagemErro ?>
+</div><?php		
+	}
+?>	

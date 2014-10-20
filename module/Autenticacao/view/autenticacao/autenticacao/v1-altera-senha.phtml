@@ -1,0 +1,43 @@
+      <div class="section generic">
+      <div class="wide-bg" >
+        <div class="container">
+          <div class="row">
+            <div class="span12">
+                <h2>Alteração de senha</h2>
+                <hr/>
+            </div>
+            <div class="row">
+                <div class="span12">
+                    <p>Informe abaixo a nova senha.</p>
+                    <br/><br/>
+    
+                    
+                    <form name="formRecoveryPassword" action="<?php echo $this->basePath()?>/seguro/formAlteraSenhaBD" method="post" class="form-horizontal" role="form">
+                    <input type="hidden" name="hash_key" value="<?php echo $sHashKey?>">
+                  
+                    <div class="control-group">
+                      <label  class='control-label' for='senha'> Senha</label>
+                      <div class="controls">
+                        <input type="password" id='senha' placeholder='Senha' name="password1" value="" required>
+                      </div>
+                    </div>
+                    
+                    <div class="control-group">
+                      <label  class='control-label' for='csenha'>Confirmar senha </label>
+                      <div class="controls">
+                        <input type="password" id='csenha' placeholder='Repita sua senha' name="password2" value="" equalto="#senha" required>
+                      </div>
+                    </div>
+                    
+                    
+                    <div class="options text-right">
+                      <a href="javascript:history.go(-1)"><button class="btn btn-primary">Voltar</button></a>
+                      <input class="btn btn-primary" type="submit" name="comando" value="Enviar" />
+                    </div>
+                    </form>
+                </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>

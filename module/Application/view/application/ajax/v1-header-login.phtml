@@ -1,0 +1,20 @@
+                <li><a href="<?php echo $this->basePath()?>/comoFunciona">como funciona</a></li>
+                <li><a href="<?php echo $this->basePath()?>/campanhas">campanhas</a></li>
+                <li><a href="<?php echo $this->basePath()?>/arrecade">arrecade</a></li>
+                <li class="dropdown">
+                  <a class="dropdown-toggle loginToggle" href="#" data-toggle="dropdown">login</a>
+                  <div class="dropdown-menu" id="loginHoverMenu">
+                    <form action="<?php echo $this->basePath()?>/seguro/validaLogin" method="post">
+                      <input type="hidden" name="url_redirect" id="urlRedirect" value="<?php echo $sURLRedirect?>">
+                      <input id="user_username" type="text" name="usuario" placeholder="Usuário" />
+                      <input id="user_password" type="password" name="senha" placeholder="Senha" />
+
+                      <ul>
+                        <li><a href="<?php echo $this->basePath()?>/seguro/recuperarSenha">Esqueci minha senha</a></li>
+                        <li><a href="<?php echo $this->basePath()?>/cadastro">Criar conta</a></li>
+                      </ul> 
+
+                      <input class="btn btn-primary" type="submit" name="commit" value="ENTRAR" />
+                    </form>
+                  </div>
+                </li>

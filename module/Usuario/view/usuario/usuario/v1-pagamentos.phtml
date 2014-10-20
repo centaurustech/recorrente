@@ -1,0 +1,161 @@
+<?php
+    Use Application\Model\Project;
+    use Application\Model\Contribution;
+?>
+  <div class="section cadastro perfil contribuicao">
+    <div class="container">
+      <div class="row">
+        <div class="span12">
+          <h2 class='lead'>Minhas assinaturas</h2>
+          <p class='lead'>Abaixo a lista de assinaturas feitas por você: </p>
+          <hr>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span12">
+<?php
+    $aContributions = $oUser->getAllActiveContributionsMade(true); 
+    if (count($aContributions)>0) { 
+        if (count($aContributions)>1) {
+?>
+            <p class='nOfContri'>Você possui <?php echo count($aContributions)?> assinaturas ATIVAS. Veja a lista abaixo:</p>
+<?php
+        }
+        else {
+?>
+            <p class='nOfContri'>Você possui 1 assinatura ATIVA. Veja abaixo:</p>
+<?php
+        } 
+?>            
+
+          <table class='table table-striped'>
+  
+          <thead>
+            <tr>
+              <th>Projeto</th>
+              <th>Valor (R$)</th>
+              <th>Código MOIP</th>
+              <th>Primeira Contribuição</th>
+              <th>Próximo Vencimento</th>
+              <th><i class="fa fa-cog"></i></th>
+            </tr>
+          </thead>
+          <tbody>
+<?php
+    foreach ($aContributions as $aOneContribution) {
+        $oProject = new Project($oSM,$aOneContribution["id_project"]); 
+        $oContribution = new Contribution($oSM,$aOneContribution["id_contribution"]);
+?>
+            <tr>
+              <td><?php echo $oProject->getProperty("title")?></td>
+              <td>R$ <?php echo number_format($aOneContribution["value_contribution"],2,",",".")?></td>
+              <td><?php echo $aOneContribution["payment_gateway_code"]?></td>
+              <td><?php echo date("d/m/Y H:i",strtotime($aOneContribution["dt_contribution"]))?></td>
+              <td>
+<?php 
+                                $dData = mktime(date("H",strtotime($aOneContribution["dt_contribution"])),date("i",strtotime($aOneContribution["dt_contribution"])),date("s",strtotime($aOneContribution["dt_contribution"])),date("m"),date("d",strtotime($aOneContribution["dt_contribution"])),date("Y"));
+                                echo date("d/m/Y",strtotime("+1 month",$dData));
+?>
+              </td>
+              <td>
+                <a href="#modalCancelar_<?php echo $oProject->getId()?>" role='button' data-toggle='modal'><i class="fa fa-trash-o"></i></a>
+                  <div id="modalCancelar_<?php echo $oProject->getId()?>" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="modalCancelar" aria-hidden="true">
+                    <div class="modal-header">
+                      <!-- button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> -->
+                      <h3 id="label">Cancelar</h3>
+                      <hr>
+                    </div>
+                    <div class="modal-body">
+                      <p>Tem certeza que deseja cancelar sua assinatura da campanha <?php echo $oProject->getProperty("title")?></p>
+                    </div>
+                    <div class="modal-footer">
+                      <button class="btn" onClick="$('#modalConfirmacao_<?php echo $oProject->getId()?>').modal('hide'); cancelarContribuicaoDireto(<?php echo $oProject->getId()?>,'<?php echo $oUser->getId()?>','<?php echo $oContribution->getId()?>')">Sim, confirmo</button>
+                      <button class="btn" data-dismiss="modal" aria-hidden="true">Não</button>
+                    </div>
+                  </div>
+              </td>
+            </tr>
+<?php
+    } 
+?>
+            
+          </tbody>
+        </table>
+<?php
+    }
+    else { 
+?>
+            <p class='nOfContri'>Você não possui nenhuma assinatura ATIVA.</p>
+<?php
+    }
+?>
+                
+        </div>
+
+        
+        <div class="span12">
+<?php
+    $aContributions = $oUser->getAllContributionsMade(true); 
+    if (count($aContributions)>0) { 
+        if (count($aContributions)>1) {
+?>
+            <p class='nOfContri'>Você possui <?php echo count($aContributions)?> assinaturas DESATIVADAS. Veja a lista abaixo:</p>
+<?php
+        }
+        else {
+?>
+            <p class='nOfContri'>Você possui 1 assinatura DESATIVADA. Veja abaixo:</p>
+<?php
+        } 
+?>            
+
+          <table class='table table-striped'>
+  
+          <thead>
+            <tr>
+              <th>Projeto</th>
+              <th>Valor (R$)</th>
+              <th>Código MOIP</th>
+              <th>Data Cancelamento</th>
+              <th>Primeira Contribuição</th>
+              <th>Situação</th>
+            </tr>
+          </thead>
+          <tbody>
+<?php
+    foreach ($aContributions as $aOneContribution) {
+        $oProject = new Project($oSM,$aOneContribution["id_project"]); 
+        $oContribution = new Contribution($oSM,$aOneContribution["id_contribution"]);
+?>
+            <tr>
+              <td><?php echo $oProject->getProperty("title")?></td>
+              <td>R$ <?php echo number_format($aOneContribution["value_contribution"],2,",",".")?></td>
+              <td><?php echo $aOneContribution["payment_gateway_code"]?></td>
+              <td><?php echo date("d/m/Y H:i",strtotime($aOneContribution["dt_status_change"]))?></td>
+              <td><?php echo date("d/m/Y H:i",strtotime($aOneContribution["dt_contribution"]))?></td>
+              <td><?php echo $aOneContribution["status"]?></td>
+            </tr>
+<?php
+    } 
+?>
+            
+          </tbody>
+        </table>
+<?php
+    }
+    else { 
+?>
+            <p>Você não possui nenhuma assinatura DESATIVADA.</p>
+<?php
+    }
+?>
+                
+        </div>
+        
+        
+        
+        
+        
+      </div>
+    </div>
+  </div>

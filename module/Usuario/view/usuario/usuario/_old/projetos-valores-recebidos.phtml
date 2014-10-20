@@ -1,0 +1,112 @@
+    <div class="page-header">
+      <div class="container">
+        <h1>Meus valores recebidos</h1>
+        <p>Uma visão consolidada de todos os valores recebidos</p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="rows">
+        <div class="col-md-3">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                Arrecadado até o momento
+                <h2>R$ <?php echo number_format($oUser->getSumReceivedContributionsAllTime(),2,",",".")?></h2>
+              </div>
+            </div>        
+        </div>
+        <div class="col-md-3">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                Arrecadado no mês atual
+                <h2>R$ <?php echo number_format($oUser->getSumReceivedContributionsMonth(date("m"),date("Y")),2,",",".")?></h2>
+                <span class=""></span>
+              </div>
+            </div> 
+        </div>
+        <div class="col-md-3">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                Variação do mês anterior
+                <h2 class="red">
+                <?php 
+                    $fValue = $oUser->getContributionsVariationLastMonth();
+                    if ($fValue!==false) {
+                        echo number_format($fValue,2,",",".");
+                    }
+                    else {
+                        echo "---";
+                    }
+                ?>
+                </h2>
+                <span class=""></span>
+              </div>
+            </div> 
+        </div>
+        <div class="col-md-3">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                Projetado para <?php echo $sNextMonthDate?>
+                <h2>R$ <?php echo number_format($oUser->getSumProjectedContributionsMonth($iFutureMonth,$iFutureYear),2,",",".")?></h2>
+                <span class=""></span>
+              </div>
+            </div> 
+        </div>
+     </div>
+ </div>
+ 
+<?php
+    $aContributions = $oUser->getAllContributionsReceived(true);
+
+    if (count($aContributions)>0) {
+?>
+ 
+ <div class="container">
+     <div class="rows">
+        <div class="panel panel-default">
+            <div class="panel-heading">Relação das contribuições recebidas</div>
+            <div class="panel-body">
+                <p>Abaixo estão todas as contribuições recebidas nos seus projetos</p>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td>
+                            Data
+                        </td>
+                        <td>
+                            Projeto
+                        </td>
+                        <td>
+                            Valor
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+<?php
+    foreach ($aContributions as $oContributionItem) { 
+?>
+                    <tr>
+                        <td>
+                            <?php echo date("d/m/Y",strtotime($oContributionItem["dt_contribution"])) ?>
+                        </td>
+                        <td>
+                            <?php echo $oContributionItem["title"]?>
+                        </td>
+                        <td>
+                            R$ <?php echo number_format($oContributionItem["value_contribution"],2,",",".")?>
+                        </td>
+                    </tr>
+<?php 
+    }
+?>
+                </tbody>
+            </table>
+        </div>
+     </div>
+  </div>
+<?php 
+    }
+?>
+    
+    
+    

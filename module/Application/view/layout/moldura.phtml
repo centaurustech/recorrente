@@ -1,0 +1,82 @@
+<?php echo $this->doctype(); ?>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="<?php echo $this->basePath()?>/assets/ico/favicon.ico">
+
+    <title>Benfeitoria - Crowndfunding Continuo Beta</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="<?php echo $this->basePath()?>/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="<?php echo $this->basePath()?>/css/jumbotron.css" rel="stylesheet">
+    <link href="<?php echo $this->basePath()?>/css/cfc.css" rel="stylesheet">
+    
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="<?php echo $this->basePath()?>/assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <script src="<?php echo $this->basePath()?>/js/jquery-1.11.1.min.js"></script>
+    <script src="<?php echo $this->basePath()?>/js/jquery.validate.js"></script>
+    <script src="<?php echo $this->basePath()?>/js/jquery.mask.js"></script>
+    <script src="<?php echo $this->basePath()?>/js/jquery.maskMoney.js"></script>
+    <script src="<?php echo $this->basePath()?>/js/jquery.limit-1.2.source.js"></script>
+    <script src="<?php echo $this->basePath()?>/js/additional-methods.js"></script>
+    <script src="<?php echo $this->basePath()?>/js/jquery-validation-1.12.0/src/localization/messages_pt_BR.js"></script>
+    <script src="<?php echo $this->basePath()?>/js/bootstrap.min.js"></script>
+    <script>
+    	$(function() {
+        	sBasePath = '<?php echo $this->basePath()?>';
+        	var sLoggedUserId = '<?php echo $iIdUsuarioLogadoSite?>';
+        	if (sLoggedUserId!='') {
+        		$('#divMenuContent').load(sBasePath+'/ajaxHeaderLogged');
+        	}
+        	else {
+        		$('#divMenuContent').load(sBasePath+'/ajaxHeaderLogin');
+    	    }
+      });
+    </script>
+    <script src="<?php echo $this->basePath()?>/js/core.js"></script>
+  
+  
+  
+  
+
+  
+  
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="<?php echo $this->basepath()?>/">Benfeitoria - CFC</a>
+        </div>
+        <div class="collapse navbar-collapse" id="divMenuContent">
+        </div>
+      </div>
+    </div>
+    </nav>
+            <?php echo $this->content; ?>
+    
+    <div class="container">
+      <hr>
+
+      <footer>
+        <p>Versão Beta 2 Release 0.1 - &copy; Benfeitoria 2014</p>
+      </footer>
+    </div> <!-- /container -->
+
+
+    </body>
+</html>

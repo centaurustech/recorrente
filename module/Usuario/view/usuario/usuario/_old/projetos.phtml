@@ -1,0 +1,67 @@
+<?php 
+    use Application\Model\ProjectStatus;
+?>
+
+    <div class="page-header">
+      <div class="container">
+        <h1>Meus projetos</h1>
+        <p>Veja a relação de projetos que você possui com a Benfeitoria</p>
+      </div>
+    </div>
+<?php
+    $aProjects = $oUser->getProjects();
+
+    if (count($aProjects)>0) {
+?>
+    <div class="container">
+      <div class="rows">
+        <div class="col-md-12">
+            <p>Abaixo a relação dos seus projetos e seus status atuais</p>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td>
+                            Data criação
+                        </td>
+                        <td>
+                            Projeto
+                        </td>
+                        <td>
+                            Valor
+                        </td>
+                        <td>
+                            Status
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+<?php
+    foreach ($aProjects as $oProjectItem) { 
+?>
+                    <tr>
+                        <td>
+                            <?php echo date("d/m/Y",strtotime($oProjectItem->getProperty("dt_registration"))) ?>
+                        </td>
+                        <td>
+                            <?php echo $oProjectItem->getProperty("title")?>
+                        </td>
+                        <td>
+                            R$ <?php echo number_format($oProjectItem->getTotalAmountCollected(),2,",",".")?>
+                        </td>
+                        <td>
+                            <?php
+                                $oProjectStatus = new ProjectStatus($oSM,$oProjectItem->getProperty("id_status"));
+                                echo $oProjectStatus->getProperty("title");
+                            ?>
+                        </td>
+                    </tr>
+<?php 
+    }
+?>
+                </tbody>
+            </table>
+            </div>
+    </div>
+<?php 
+}
+?>    

@@ -1,0 +1,43 @@
+Informe a combinação desejada para gerar os dados na base:<br/>
+</br>
+<div class="row">
+	<div class="span5 offset1">
+		<form action="<?php echo $this->basePath() ?>/manutencao/geraCadastros" method="post" class="form-horizontal">
+		  <div class="control-group">
+		    <label class="control-label" for="inputEmail">Quantidade de Escolas</label>
+		    <div class="controls">
+			    <select name="qtd_escolas">
+<?php
+	for ($i=1;$i<=12;$i++) {
+?>		
+			    	<option value="<?php echo $i?>"><?php echo $i?></option>
+<?php
+	}
+?>		
+			    </select><br/>
+		    </div>
+		  </div>
+		  <div class="control-group">
+		    <label class="control-label" for="inputEmail">Quantidade de Turmas por Escola</label>
+		    <div class="controls">
+			    <select name="qtd_turmas">
+<?php
+	for ($i=1;$i<=10;$i++) {
+?>		
+			    	<option value="<?php echo $i?>"><?php echo $i?></option>
+<?php
+	}
+?>		
+			    </select><br/>
+		    </div>
+		  </div>
+		  <div class="control-group">
+		    <label class="control-label" for="inputEmail">Quantidade de Estudantes por Turma</label>
+		    <div class="controls">
+			    <input name="qtd_estudantes" class="input-mini"><br/>
+		    </div>
+		  </div>
+	    <button type="submit" class="btn btn-primary">Gerar</button>
+		</form>
+	</div>
+</div>

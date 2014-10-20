@@ -1,0 +1,23 @@
+            <strong class="headlineContribuicao">Obrigado</strong><br>
+            <!-- <span class='contribuicaoLogin'>Forma de Pagamento</span> -->
+              
+              
+              <p class="info">
+                A partir de agora você está contribuindo mensalmente com R$ <strong>R$<?php echo number_format($oContribution->getProperty("value_contribution"),2,",",".")?></strong> para a campanha <strong><?php echo $oProject->getProperty("title")?></strong>. Agradecemos e admiramos a sua participação, pois além de contribuir para que essa iniciativa seja sustentável e contínua, você está fazendo parte de uma rede que gera e compartilha valor! :)
+              </p>
+
+              <p class="info">O código de sua assinatura é <strong><?php echo $oContribution->getProperty("payment_gateway_code")?></strong></p>
+
+              <p class="info">Sempre que a sua contribuição mensal for confirmada você será notificado, afinal queremos sempre te deixar informado sobre cada passo dado.</p>
+              
+              <p class="info">Para acompanhar a campanha é só entrar <a href="http://<?php echo $_SERVER["HTTP_HOST"].$_SERVER["SCRIPT_NAME"]."/".$oProject->getProperty("short_url"); ?>">neste link</a>. E, se possível, não esqueça de divulgá-la, afinal acreditamos em relações ganha-ganha e, quanto mais assinantes, maior o impacto positivo!</p>
+              
+              <p class="info">
+                Se quiser, você pode alterar esse valor ou até mesmo cancelar sua assinatura. Para isso acesse <a href="<?php echo $this->basePath()?>/usuario/pagamentos"><strong>minhas assinaturas</strong></a>.
+              </p>
+              
+              <p class="info">Enviamos um email a você com estas informações. Verifique sua caixa de entrada.</p>
+              
+              <p class="info">Obrigado!</p>
+         
+            

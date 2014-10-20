@@ -1,0 +1,210 @@
+.navbar-nav li{
+	margin-left:15px;
+}
+
+.navbar{
+	 ul{
+	  	li{
+	  		&:last-child{
+	  			// width: 200px;
+	  		}
+	  	}
+	  }
+}
+
+.navbar{
+	width: auto;
+	background: none;
+	margin-top:-25px;
+	margin-bottom:5px;
+
+	.dropdown-menu{
+		margin-top:15px;
+		text-align: center;
+		li{ 
+				padding-left: 0;
+				padding-right: 10px;
+			a{
+				display: inline;
+				margin-top:0;
+				font-family: "Raleway";
+				font-size:14px;
+			}
+			
+		}
+	}
+	
+	a.dropdown-toggle{
+		// font-size:23px;
+	}
+
+	.loggedInfo{
+		
+	  font-family: "Brandon Regular";
+
+	  .bar{
+	  	border-left: 1px solid $orange;
+	  	margin-top: 39px;
+	  	width: 50px;
+	  }
+		
+	  span:first-of-type{
+	  	margin-right: 10px;
+	  }
+	
+	  strong{
+	  	font-family: "Brandon Bold";
+	  	margin-right: 10px;
+	  }
+
+	  button{
+	  	padding-bottom: 10px;
+		padding-top: 10px;
+		padding-left: 15px;
+		padding-right: 15px;
+
+		&:first-of-type{
+			margin-top: -1px;
+		}
+	  }
+
+	  font-size: 19px;
+	  margin-left:-10px;
+	  margin-top:43px;
+	  display: block;
+	  color: darken(#ccc,30%);
+	  height: 30px;
+	  line-height: normal;
+	}
+	
+	.dropdown{
+		// position:absolute; 
+	}
+
+	.dropdown-toggle{
+
+	}
+
+	button{
+		background-color:$orange;
+	}
+
+	i.icon-cog	 {
+		margin-top:2px;
+	}
+
+	i.fa{
+		margin-right: 10px;
+	}
+}
+
+.navbar-nav a{
+  font-family: "Brandon Regular";
+  font-size: 18.6px;
+  margin-top:35px;
+  color: #87837e;
+
+  &:hover{
+  	font-size: 18.6px;
+  	color: $orange !important;
+  }
+}
+
+.dropdown{
+  .loginToggle{
+    &:hover{
+      color: #87837e !important;
+    }
+  }
+}
+
+#loginHoverMenu{
+
+	margin-left:-228px;
+	margin-top:-5px;
+	background-color:darken($gray,20%);
+	border:none;
+
+	form{
+		padding:15px;
+	}
+
+	ul{
+		float:left;
+		height: 40px;
+		margin-left:-15px;
+		li{
+			&:last-child{
+					margin-left:-31px;
+			}
+			a{
+				color: white;
+				font-family: "Brandon Regular";
+				font-size:13px;
+				height: 13px;
+				// margin-left:13px;
+
+				&:hover{
+					color:white !important;
+					border-bottom:1px solid white;
+				}
+			}
+		}
+	}
+
+	input{
+		margin-bottom:8px;
+		width: 228px;
+		height: 33px;
+		padding: 0;
+		padding-left: 35px;
+		border:none;
+
+		@include placeholder{
+			padding-left:5px;
+			color:#75627b;
+			font-family: "Brandon Regular";
+		}
+	}
+
+	#user_username{
+		background: #fff url("../img/user-sign.png") no-repeat;
+		background-position:left;
+		background-size: 31px 35px;
+	}
+
+	#user_password{
+		background: #fff url("../img/lock-sign.png") no-repeat;
+		background-position:left;
+		background-size: 31px 35px;
+	}
+
+
+	&:before, &:after{
+		border:none;
+		content: "";
+	}
+
+	input[value="ENTRAR"]{
+		width: 110px;
+		height: 30px;
+		float:right;
+		font-family: "Brandon Bold";
+		font-weight: bold;
+		font-size:15px;
+		// margin-right: -3px;
+		margin-top: 5px;
+		padding: 0;
+
+		&:hover{
+			background-color:$blue;
+		}
+	}
+}
+
+
+
+// .loginToggle:hover{
+// 	border:none;
+// 	font-weight: normal;
+// }

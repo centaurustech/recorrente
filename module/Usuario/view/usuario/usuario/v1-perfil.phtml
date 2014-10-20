@@ -1,0 +1,229 @@
+  <div class="section  perfil">
+    <div class="container">
+      <div class="row">
+        <div class="span12">
+          <h2 class='lead'>Meu Perfil</h2>
+          <p class='lead'>Para sua comodidade em futuras contribuições aos projetos, mantenha seus dados sempre atualizados, informando os campos abaixo:</p>
+          <hr>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span12">
+  <form action="<?php echo $this->basePath()?>/atualizaCadastro" method="post" class="form-horizontal form-meuPerfil" role="form" id="formAtualizaCadastroUsuario">
+  <input type="hidden" name="tipo" value="<?php echo $oUser->getTipo()?>">
+  <input type="hidden" name="id_usuario" value="<?php echo $oUser->getId()?>">
+  <input type="hidden" name="image_data" id="image_data">
+          
+<?php
+    //if ( (getenv('APPLICATION_ENV')=="felipe") || (getenv('APPLICATION_ENV')=="dev") || (getenv('APPLICATION_ENV')=="andre") ) { 
+?>            
+            
+            <div class="control-group">
+              <label  class='control-label' for='avatar'> Avatar </label>
+              <div class="controls">
+                 <div id="avatar">
+                   
+                  <div class="containerCrop">
+                    <div class="imageBox" style='float:left'>
+                        <div class="thumbBox"></div>
+                        <div class="spinner" style="display: none">Carregando...</div>
+                    </div>
+                    <div class="cropped" style='float:left;margin-left:15px'>
+<?php
+    $sFoto = $oUser->getFoto("medium");
+    echo "<img src=\"".$sFoto."\">"
+?>    
+                    </div>
+                    <div class="action" style='float:right'>
+                        <input type="file" class='' id="file">
+                        <input type="button" class='btn btn-primary' id="btnZoomIn" value="+" >
+                        <input type="button" class='btn btn-primary' id="btnZoomOut" value="-">
+                        <input type="button" class='btn btn-primary' id="btnCrop" value="Cortar">
+                    </div>
+                </div>
+
+                 </div><!-- /#avatar -->
+              </div>
+            </div>
+<?php 
+    //}
+?>
+            <div class="control-group">
+              <label  class='control-label' for='email'> Email </label>
+              <div class="controls">
+                <input type="email" id='email' placeholder='Email' name="email" value="<?php echo $oUser->getEmail()?>" disabled>
+              </div>
+            </div>
+            
+            <div class="control-group">
+              <label  class='control-label' for='nome'> Nome completo</label>
+              <div class="controls">
+                <input type="text" name="nome" id="inputNomeCompleto" placeholder="Informe seu nome" value="<?php echo $oUser->getNome()?>" required>
+              </div>
+            </div>
+            
+            
+            <div class="control-group">
+              <label  class='control-label' for='senha'> Senha </label>
+              <div class="controls">
+                <input type="password" name="senha1" class='span6' id='inputSenha1' placeholder='Digite uma nova senha' name="">
+                <input type="password" name="senha2" class='span6' id='inputSenha2' placeholder='Repita sua senha'  equalto="#inputSenha1" class="required error">
+              </div>
+            </div>
+            
+
+
+<?php 
+    $sDataNascimento = date("d/m/Y",$oUser->getDataNascimento());
+    if ($sDataNascimento=="30/11/-0001") {
+        $sDataNascimento = "";
+    }
+?>
+            <div class="control-group">
+              <label  class='control-label' for='nascimento'> Data de Nascimento </label>
+              <div class="controls">
+                 <input type="text" name="data_nascimento" id="inputDataNascimento" placeholder="__/__/____" value="<?php echo $sDataNascimento?>">
+              </div>
+            </div>
+<?php 
+    // Conforme o tipo, apresenta os campos necessários
+    if (strtolower($oUser->getTipo())=="pf") {
+        // PESSOA FÍSICA
+?>
+            <div class="control-group">
+              <label  class='control-label' for='inputCPF'> CPF </label>
+              <div class="controls">
+                <input type="text" id='inputCPF' placeholder='Digite seu CPF' name="cpf" value='<?php echo $oUser->getCPF()?>'>
+              </div>
+            </div>
+<?php
+    }
+    else {
+        // PESSOA JURIDICA
+?>
+            <div class="control-group">
+              <label  class='control-label' for='inputCNPJ'> CNPJ </label>
+              <div class="controls">
+                <input type="text" id='inputCNPJ' placeholder='Digite seu CNPJ' name="cnpj" value='<?php echo $oUser->getCNPJ()?>'>
+              </div>
+            </div>
+            <div class="control-group">
+              <label  class='control-label' for='inputCompanyName'> Nome da Empresa </label>
+              <div class="controls">
+                <input type="text" name="nome_empresa" id="inputCompanyName" placeholder="" value="<?php echo $oUser->getCompanyName()?>">
+              </div>
+            </div>
+<?php
+    }
+?>
+        
+          
+            <div class="control-group">
+              <label class='control-label' for='sexo'> Sexo </label>
+              <div class="controls">
+                 <select name="sexo" id='inputSexo' onChange="selecionaPais($('#inputPais').val())" required>
+                     <option>Escolha</option>
+                     <option value="m" <?php if ($oUser->getSexo()==1) { echo "selected"; }?>>Masculino</option>
+                     <option value="f" <?php if ($oUser->getSexo()==2) { echo "selected"; }?>>Feminino</option>
+                 </select>
+              </div>
+            </div>
+
+            <div class="control-group">
+              <label  class='control-label' for='pais'> País </label>
+              <div class="controls">
+                     <select name="pais" id='pais'>
+                        <option>Escolha</option>
+<?php echo $sHTMLCountries?>
+                     </select>
+              </div>
+            </div>
+            
+            <div id="divSeletorEstado">
+                <div class="control-group">
+                  <label  class='control-label' for='estado'> Estado </label>
+                  <div class="controls">
+                     <select name="estado" id='estado'>
+                          <option>Escolha</option>
+<?php echo $sHTMLStates?>
+                     </select>
+                  </div>
+                </div>
+                <div id="divLoadingEstado">
+                    <img src="<?php echo $this->basepath()?>/images/loader.gif">
+                </div>
+             </div>
+          
+             <div id="divSeletorCidade">
+                 <div class="control-group">
+                  <label  class='control-label' for='cidade'> Cidade </label>
+                  <div class="controls">
+                     <select name="cidade" id='cidade'>
+                          <option>Escolha</option>
+<?php echo $sHTMLCities?>
+                     </select>
+                  </div>
+                </div>
+                <div id="divLoadingCidade">
+                    <img src="<?php echo $this->basepath()?>/images/loader.gif">
+                </div>
+             </div>
+
+<?php 
+    $aEndereco = $oUser->getEndereco("residencial");
+?>
+            
+            <div class="control-group">
+              <label  class='control-label' for='inputEnderecoRua'> Endereço (Rua, Avenida, etc) </label>
+              <div class="controls">
+                 <input type="text" name="endereco_rua" id="inputEnderecoRua" placeholder="" value="<?php echo $aEndereco["address"]?>">
+              </div>
+            </div>
+
+            <div class="control-group">
+              <label  class='control-label' for='inputEnderecoNumero'> Número </label>
+              <div class="controls">
+                 <input type="text" name="endereco_numero" id="inputEnderecoNumero" placeholder="" value="<?php echo $aEndereco["number"]?>">
+              </div>
+            </div>
+
+            <div class="control-group">
+              <label  class='control-label' for='inputEnderecoComplemento'> Complemento </label>
+              <div class="controls">
+                 <input type="text" name="endereco_complemento" id="inputEnderecoComplemento" placeholder="" value="<?php echo $aEndereco["complement"]?>">
+              </div>
+            </div>
+
+            <div class="control-group">
+              <label  class='control-label' for='inputEnderecoBairro'> Bairro </label>
+              <div class="controls">
+                 <input type="text" name="endereco_bairro" id="inputEnderecoBairro" placeholder="" value="<?php echo $aEndereco["neighborhood"]?>">
+              </div>
+            </div>
+
+            <div class="control-group">
+              <label  class='control-label' for='cep'> CEP </label>
+              <div class="controls">
+                 <input type="text" name="cep" id="inputCEP" placeholder="" value="<?php echo $aEndereco["zip"]?>">
+              </div>
+            </div>
+
+              <input class="btn btn-primary" type="button" value="Atualizar"  onClick="$('#formAtualizaCadastroUsuario').submit()" />
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+    
+    
+    <script>
+        if ($('#estado').val()!='') {
+            $('#divSeletorEstado').show();
+        }
+        if ($('#cidade').val()!='') {
+            $('#divSeletorCidade').show();
+        }
+    </script>        
+  
+  

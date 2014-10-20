@@ -1,0 +1,20 @@
+<?php
+	// Titulo da página
+	$this->headTitle("XMS Manutenção - Ajustar e-commerce");
+?>
+Os seguintes usuários ainda não tiveram seus planos migrados para o Mundo Xmile:<br/>
+<br/>
+<?php
+	foreach ($aDadosUsuariosNaoMigrados as $aDados) {
+		$umPedido = $aDados["pedido"];
+		$umResponsavel = $aDados["responsavel"];
+		$umPlano = $aDados["plano"];
+?>
+<b><?php echo $umResponsavel->getNome()?></b><br/>
+&nbsp;&nbsp;&nbsp;<i>Pedido atual: <?php echo $umPedido->getId() ?></i><br/>
+&nbsp;&nbsp;&nbsp;<i>Plano atual: <?php echo $umPlano->getTitulo() ?></i><br/>
+&nbsp;&nbsp;&nbsp;<i>Valor plano: R$ <?php echo number_format($umPlano->getValor(),2,",",".") ?></i><br/>
+<?php echo $aMensagens[$umPedido->getId()]?>
+<?php
+	}
+?>

@@ -1,0 +1,30 @@
+                     
+
+                      <h3>Pessoas que estão ajudando essa campanha a acontecer.</h3>
+                      
+                      <div class="asFotos">
+                        
+<?php
+    $aContributors = $oProject->getAllContributors();
+    if (count($aContributors)>0) {
+        foreach ($aContributors as $oUser) {
+            $sArquivoFoto = $oUser->getFoto("small");
+?>       
+                        <a href="#PossivelUrlParaPerfilDoUsuario??">
+                          <img  title='<?php echo $oUser->getNome() ?>' title='Nome Do Assinante' class='assinanteAjax' src="<?php echo $this->basePath().$sArquivoFoto?>" width='60px' height='60px'>
+                        </a>
+<?php
+        }
+    }
+    else {
+?>
+    <h3>Seja o primeiro!</h3>
+<?php
+    }
+?>
+                        
+                      </div>
+
+<script>
+$('[title!=""]').qtip(); 
+</script>

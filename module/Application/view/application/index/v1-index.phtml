@@ -1,0 +1,134 @@
+<div class="section slidearea">
+  <div class="container">
+    <div class="slider">
+      <div class="slide s1">
+        <img src="<?php echo $this->basePath()?>/v1/img/slideshow/slideshow-15.jpg" alt="Crowdfunding. Só que continuo">
+      </div>
+      <div class="slide s2">
+        <img src="<?php echo $this->basePath()?>/v1/img/slideshow/slideshow-16.jpg" alt="É dinheiro todo mês, tá?">
+      </div>
+      <div class="slide s3">
+        <img src="<?php echo $this->basePath()?>/v1/img/slideshow/slideshow-17.jpg" alt="A união faz a força!">
+      </div>
+      <div class="slide s4">
+        <img src="<?php echo $this->basePath()?>/v1/img/slideshow/slideshow-18.jpg" alt="Vem com a gente!">
+      </div>
+    </div>
+  </div>
+</div>
+
+<?php
+if (count($aProjects)>0) { 
+  ?>
+
+  <div class="section">
+    <div class="row"> 
+      <div class="container">
+        <div class="wide-bg home">
+          <div class="container">
+            <div class="span12">
+              <p class="lead">CAMPANHAS</p>
+              <div id="carouselHome" class="carousel slide" data-ride="carousel" data-interval="8000">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                  <?php
+                  $iQtdPorBloco = 3;
+                  $iContBloco = 0;
+                  $iContItem = 0;
+                  foreach ($aProjects as $oProject) {
+                    $sActive = "";
+                    if ($iContBloco==0) {
+                      $sActive = " class=\"active\"";
+                    }
+                    $iContItem++;
+                    if ($iContItem>=$iQtdPorBloco) {
+                      ?>
+                      <li data-target="#carouselHome" data-slide-to="<?php echo $iContBloco?>"<?php echo $sActive?>></li>
+                      <?php
+                      $iContItem = 0;
+                      $iContBloco++;
+                    }
+                  }
+                  ?>
+                </ol>
+                <!-- end of indicators -->
+
+                <div class="carousel-inner">
+                  <?php
+                  $iContBloco = 0;
+                  $iContItem = 0;
+                  foreach ($aProjects as $oProject) {
+                    $sActive = "";
+                    if ($iContBloco==0) {
+                      $sActive = " active";
+                    }
+                    if ($iContItem==0) {
+                      if ($iContBloco>0) {
+                        ?>
+                      </ul>
+                    </div>
+                    <?php
+                  }
+                  ?>
+                  <div class="item<?php echo $sActive?>">
+                    <ul class="thumbnails">
+                      <?php
+                    }
+                    ?>
+                    <li class="span4" >
+                      <div class="thumbnail t<?php echo $iContItem+1?>">
+                        <a href="<?php echo $this->basePath()?>/projeto/detalhes/<?php echo $oProject->getId()?>" class="thumb">
+                          <img src="<?php echo $this->basePath()?><?php echo $oProject->getProperty("url_cover_image")?>" alt="Woman" /> </a>
+                          <div class="caption">
+                            <h3 class='title'><a href="<?php echo $this->basePath()?>/projeto/detalhes/<?php echo $oProject->getId()?>"><?php echo $oProject->getProperty("title")?></a></h3>
+                            <p><?php echo $oProject->getProperty("tag_line")?></p>
+
+                            <?php 
+                            $aActualGoal = $oProject->getActualGoal();
+                            $fTotalAmount = $oProject->getTotalAmountCollected();
+                            
+                            if (($aActualGoal["reference"])>0) {
+                              $fProgress = round($fTotalAmount*100/$aActualGoal["reference"]);
+                            }
+                            else {
+                              $fProgress = 0;
+                            }
+                            ?>
+                            <strong class='valortxt'><span>R$<?php echo $fTotalAmount?></span><br> ARRECADADO POR MÊS</strong>
+                            <strong class='financiadotxt'><span><?php echo $fProgress ?>% </span><br>DA META</strong><br />
+                            <div class="progress">
+                              <div class="bar" style="width: <?php echo $fProgress ?>%">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <?php
+                      $iContItem++;
+                      if ($iContItem>=$iQtdPorBloco) {
+                        $iContItem = 0;
+                        $iContBloco++;
+                      }
+                    }
+                    ?>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Controls -->
+              <a class="left carousel-control" href="#carouselHome" id="carouselProjectsControlLeft" role="button" data-slide="prev">
+                <img src="<?php echo $this->basePath()?>/v1/img/seta-esquerda.png">
+              </a>
+              <a class="right carousel-control" href="#carouselHome" id="carouselProjectsControlRight" role="button" data-slide="next">
+                <img src="<?php echo $this->basePath()?>/v1/img/seta-direita.png">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <?php
+} 
+?>                          

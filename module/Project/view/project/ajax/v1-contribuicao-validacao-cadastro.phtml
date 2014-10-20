@@ -1,0 +1,25 @@
+            <strong class="headlineContribuicao">Contribuição</strong><br>
+            <span class='contribuicaoLogin'>Validar Cadastro</span>
+              
+              <p class='info'>
+                Verifique a caixa de entrada do seu email, procurando pelo assunto "Ativação de Cadastro". <br><br> Em seguida, copie e cole o código informado abaixo:
+              </p>
+
+
+              <form class="logar" id="formValidaCodigo">
+                <input type="hidden" name="project_id" id="project_id" value="<?php echo $iProjectId?>">
+              
+                <label>
+                  Código
+                  <input type="text" placeholder='Informe o código' name="codigo_validacao" id="inputCodigoValidacao" required>
+                  <span id="spanMensagemErro"></span>
+                </label>
+                <div id="divLoadingValidacao" style="display:none">
+                    <img src="<?php echo $this->basepath()?>/images/loader.gif">
+                </div>
+                
+                <input class="btn btn-primary" type="button" value="Validar"  onClick="enviaValidaCodigo()" />
+              
+              </form>
+              
+              <span id="divMensagemErroGeral"></span>

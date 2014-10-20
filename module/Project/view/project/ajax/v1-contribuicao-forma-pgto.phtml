@@ -1,0 +1,198 @@
+            <strong class="headlineContribuicao">Contribuição</strong>
+            <br>
+            <div class="alert alert-info">
+            <strong>Utilizamos o MOIP como nosso portal de pagamento. <a href="http://www.moip.com.br" target="_blank">Saiba mais.</a></strong>
+            </div>
+            
+            <div class="alert alert-pagamento" id="divMensagemAviso">
+              No momento estamos disponibilizando apenas o cartão de crédito como forma de pagamento. Em breve outras formas de pagamento estarão disponíveis.<br/>
+            </div>
+            
+            <div class="alert alert-pagamento alert-info" id="divMensagemInfo" style="display:none">
+              <!-- <button type="button" class="close" data-dismiss="alert">&times;</button> -->
+              Aguarde, comunicando com o sistema de pagamento ... [<span id="countdown">30s</span>]
+               <i class="fa fa fa-spinner fa-spin"> </i>
+            </div>
+            
+            <div class="alert alert-pagamento alert-error" id="divMensagemErro" style="display:none">
+              
+            </div>
+            
+            <form class="logar" action="#" method="POST" id="formGateway">
+                            
+                <label>
+                  Bandeira <br>
+                  <select name="bandeira" id='bandeira' onchange="$('#bandeiraMensagemErro').hide()">
+                      <option value="">Escolha</option>
+                      <option value="visa">Visa</option>
+                      <option value="mastercard">Mastercard</option>
+                      <option value="amex">American Express</option>
+                    </select>
+                </label>
+                <div id="bandeiraMensagemErro" class="alert alert-error" style="display:none;margin: -10px 15px 5px 1px;padding:3px">Escolha uma das bandeiras disponívels</div>
+                <label>
+                  Número <br>
+                  <input type="text" name="cc_numero" id="cc_numero" placeholder='Número do Cartão'  onchange="$('#numeroMensagemErro').hide()">
+                </label>
+                <div id="numeroMensagemErro" class="alert alert-error" style="display:none;margin: -10px 15px 5px 1px;padding:3px">Forneça o número do seu cartão</div>
+                
+                <label>
+                  Nome <br>
+                  <input type="text" placeholder='Nome impresso como no cartão' name="cc_nome_impresso" id="cc_nome_impresso"  onchange="$('#nomeMensagemErro').hide()">
+                </label>
+                <div id="nomeMensagemErro" class="alert alert-error" style="display:none;margin: -10px 15px 5px 1px;padding:3px">Informe o nome do titular do cartão</div>
+                
+                <label>
+                  Validade <br>
+                  <input type="text" id="cc_validade" placeholder='Validade do cartão'  onchange="$('#validadeMensagemErro').hide()">
+                </label>
+                <div id="validadeMensagemErro" class="alert alert-error" style="display:none;margin: -10px 15px 5px 1px;padding:3px">Informe a validade de seu cartão</div>
+                
+                <label>
+                  Código de Segurança <br>
+                  <input type="text" placeholder='Código de segurança' name="cc_codigo_seguranca" id="cc_codigo_seguranca" onchange="$('#codigoSegurancaMensagemErro').hide()">
+                </label>
+                <div id="codigoSegurancaMensagemErro" class="alert alert-error" style="display:none;margin: -10px 15px 5px 1px;padding:3px">Informe o código de segurança do seu cartão</div>
+                
+<!--                 <a href="#"><button class="btn btn-primary voltar"><i class="fa fa-arrow-left"></i> Voltar</button></a> -->
+
+                <input id="btnVoltar" class="btn btn-primary no-hover" type="button" value="Voltar" onClick="actionBack()" />
+                
+                <input id="btnPagar" class="btn btn-primary no-hover" type="button" value="Pagar  " onClick="goPaymentGateway()" />
+              
+              </form>
+ 
+ <script>
+    $('#cc_numero').mask('9999999999999999');
+    $('#cc_validade').mask('99/9999');
+		$('#cc_codigo_seguranca').mask('9999');
+	  var oTime = null;
+	  var iCountTime = 30;
+		  
+    function actionBack() {
+      clearTimeout(oTime);
+    	$('#divConteudo').load(sBasePath+'/projeto/ajaxContribuicaoP2/<?php echo $oProject->getId()?>-<?php echo $oContribution->getId()?>-<?php echo $iIdContributionOld?>');
+    }
+
+    function startCountdown() {
+    	iCountTime = 30;
+      oTime = setTimeout('decreaseTime()',1000);
+    }
+
+    function decreaseTime() {
+    	iCountTime = iCountTime - 1;
+      $('#countdown').html(iCountTime+'s');
+      oTime = setTimeout('decreaseTime()',1000);
+    }
+            
+		function goPaymentGateway() {
+    		  var sBandeira = $('#bandeira').val();
+    		  var sNumeroCartao = $('#cc_numero').val();
+    		  var sNomeImpresso = $('#cc_nome_impresso').val();
+    		  var sValidade = $('#cc_validade').val();
+    		  var sCodigoSeguranca = $('#cc_codigo_seguranca').val(); 
+    		  bValidou = true;
+
+//alert('Bandeira:'+sBandeira+'\nNumero Cartao:'+sNumeroCartao+'\nNome:'+sNomeImpresso+'\nValidade:'+sValidade+'\nCodigo:'+sCodigoSeguranca);
+
+          if (sBandeira=='') {
+              bValidou = false;
+              $('#bandeiraMensagemErro').show();
+          }
+          if (sNumeroCartao=='') {
+              bValidou = false;
+              $('#numeroMensagemErro').show();
+          }
+          if (sNomeImpresso=='') {
+              bValidou = false;
+              $('#nomeMensagemErro').show();
+          }
+          if (sValidade=='') {
+              bValidou = false;
+              $('#validadeMensagemErro').show();
+          }
+          if (sCodigoSeguranca=='') {
+              bValidou = false;
+              $('#codigoSegurancaMensagemErro').show();
+          }
+          
+          if (bValidou) {		  
+
+        		  $('#divMensagemAviso').hide();
+      		    $('#divMensagemErro').hide();
+      		    $('#countdown').html('30s');
+      		    $('#divMensagemInfo').show();
+        		  startCountdown();
+        		  // Desliga os botões de voltar e submeter
+      		    $('#btnVoltar').attr('disabled','disabled');    		  
+      		    $('#btnPagar').attr('disabled','disabled');
+
+  		        $.ajax({
+    	    			  type: 'POST',
+    	    			  url: sBasePath+'/projeto/ajaxGatewayPagamento',
+    	    		    data: {contributionId: '<?php echo $oContribution->getId()?>', contributionOld: '<?php echo $iIdContributionOld?>', projectId: '<?php echo $oProject->getId() ?>', type: 'credit card', cc_flag: sBandeira, cc_number: sNumeroCartao, cc_holder_name: sNomeImpresso, cc_expiration_date: sValidade, cc_security_number: sCodigoSeguranca},
+    	    			  dataType: 'json',
+    	    		    cache: false,
+    	    			  timeout: 30000,
+    	    			  success: function(json) {
+    	    				  $('#divLoadingEmail').hide();
+    	    				  clearTimeout(oTime);
+    	    				  if (json.retorno) {
+    	    					  if (json.retorno=='ok') {
+        	    				    // Envia para o aviso de concluido
+        	    				    $('#divConteudo').load(sBasePath+'/projeto/ajaxContribuicaoP4/<?php echo $oProject->getId() ?>-<?php echo $oContribution->getId()?>-<?php echo $iIdContributionOld?>');
+        	    				  }
+        	    				  else {
+            	    				  if (json.retorno=='error-delay') {
+          	    					    $('#divMensagemErro').html('Atenção!<br/>'+json.mensagem_erro);
+                        			$('#divMensagemAviso').hide();
+                        			$('#divMensagemInfo').hide();
+                        			$('#divMensagemErro').show();
+                        			$('#btnVoltar').prop('disabled', true);
+                        			$('#btnPagar').prop('disabled', true);
+                     				}
+            	    				  else {
+          	    					    $('#divMensagemErro').html('Ocorreu um problema na autorização de sua contribuição. '+json.mensagem_erro+'<br/><br/>Por favor, tente novamente.');
+                    			  	$('#divMensagemAviso').hide();
+                    			  	$('#divMensagemInfo').hide();
+                    					$('#divMensagemErro').show();
+                    					$('#btnVoltar').prop('disabled', false);
+                    					$('#btnPagar').prop('disabled', false);
+            	    				  }
+                				}
+    	    				  }
+    	    				  else {
+    		    				  // não recebeu um json
+    	    					  $('#divMensagemErro').html('Ocorreu um problema na autorização de sua contribuição. <br/>Por favor, tente novamente.');
+            			  	$('#divMensagemAviso').hide();
+            			  	$('#divMensagemInfo').hide();
+            					$('#divMensagemErro').show();
+            					$('#btnVoltar').prop('disabled', false);
+            					$('#btnPagar').prop('disabled', false);
+            				}
+    	    			  },
+    	    			  error: function (jqXHR, textStatus, errorThrown) {
+    	    				  clearTimeout(oTime);
+    	    				  switch (textStatus) {
+    	    				  	case 'timeout'	:	$('#divLoadingEmail').hide();
+    	    				                      $('#divMensagemErro').html('TEMPO EXCEDIDO AO CONECTAR COM O GATEWAY DE PAGAMENTO. A mensagem informada foi: '+errorThrown+'<br/>Por favor, tente novamente.');
+                    	        			  	$('#divMensagemAviso').hide();
+                    	        			  	$('#divMensagemInfo').hide();
+                    	        					$('#divMensagemErro').show();
+    	    				  										break;
+    	    				  	default         : $('#divLoadingEmail').hide();
+    	    				  	                  $('#divMensagemErro').html('OCORREU UM ERRO. A mensagem informada foi: '+errorThrown+'<br/>Por favor, tente novamente.');
+                    	        			  	$('#divMensagemAviso').hide();
+                    	        			  	$('#divMensagemInfo').hide();
+                    	        					$('#divMensagemErro').show();
+    	    				  										break;
+    	    			  	}
+        					  $('#btnVoltar').prop('disabled', false);
+        					  $('#btnPagar').prop('disabled', false);
+    	    			  	return false;
+    	    		  	}
+    	    		});
+  		    }
+	    } 
+ 	
+</script>

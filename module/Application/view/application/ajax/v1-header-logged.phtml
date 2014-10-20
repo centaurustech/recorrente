@@ -1,0 +1,41 @@
+                <li><a href="<?php echo $this->basepath()?>/comoFunciona">como funciona</a></li>
+                <li><a href="<?php echo $this->basepath()?>/campanhas">campanhas</a></li>
+                <li><a href="<?php echo $this->basepath()?>/arrecade">arrecade</a></li>
+                <li>
+                  <span class='loggedInfo dropdown'>
+                    <span class='bar'></span> Olá <strong> <?php echo $umUsuario->getPrimeiroNome()?></strong>   
+
+                  
+                    <a class='dropdown-toggle' data-toggle="dropdown" href="#">
+                      <i class='fa fa-wrench fa-lg' alt='Opções'></i> 
+                    </a>
+
+
+                     <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                      <li><a href="<?php echo $this->basepath()?>/usuario/perfil">Meu perfil</a></li>
+                      <li><a href="<?php echo $this->basepath()?>/usuario/pagamentos">Minhas assinaturas</a></li>
+<?php
+    $aProfiles = $umUsuario->getIdsPerfis();
+    // Projetista
+    if (in_array(2,$aProfiles)) { 
+?>
+                      <li class="divider"></li>
+                      <li><a href="<?php echo $this->basepath()?>/usuario/projetos">Minhas campanhas</a></li>
+                      <li><a href="<?php echo $this->basepath()?>/usuario/projetosValoresRecebidos">Meus valores recebidos</a></li>
+<?php
+    }
+    if (in_array(3,$aProfiles)) { 
+?>
+                      <li class="divider"></li>
+                      <li><a href="<?php echo $this->basepath()?>/wbadmin">Webadmin <span class="badge alert-danger"><?php if ($umUsuario->showBadgeWebadmin()>0) { echo $umUsuario->showBadgeWebadmin(); }?></span></a></li>
+<?php 
+    }
+?>
+                     </ul>
+                     <a href="#" onClick="document.location='<?php echo $this->basePath()?>/seguro/logout'">
+                    <i class="fa fa-sign-out fa-lg"  title='Sair' alt='Sair' ></i>
+                    </a>
+                  </span>
+                </li>
+
+        

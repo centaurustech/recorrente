@@ -1,0 +1,89 @@
+.cadastro{
+	// background-color: white;
+	// margin-bottom: 80px;
+
+	.container{
+		// margin-top:30px;
+		padding-bottom:50px;
+	}
+
+	h2{
+		margin-top:30px;
+		font-family: "Raleway";
+		font-weight: bold;
+		color: $blue;
+	}
+
+	hr,p {
+		margin-top:-30px;
+	}
+
+	p{
+		font-family: "Raleway";
+		color: darken($gray,30%);
+	}
+
+	form{
+		label{
+			font-family: "Brandon Regular";
+			font-weight: 16px;
+			// font-weight: bold;
+		}
+
+		#email, #nome, #rsocial, #cnpj{
+			width: 415px;
+			height: 40px;
+		}
+
+		#senha, #csenha{
+			width: 265px;
+			height: 40px;
+		}
+
+		#sexo{
+			width: 290px;
+			height: 50px;
+		}
+
+
+		#pais, #estado, #cidade,#novo_estado{
+			width: 390px;
+			height: 50px;
+		}
+
+		input[type='submit'],button, input[type='button']{
+			font-family: "Brandon Bold";
+			width: 150px;
+		}
+		.options{
+			// float:right;
+			margin-left: 15%;
+
+			button{
+				font-family: "Brandon Bold";
+				margin-right: 25px;
+				margin-left: 5px;
+				width: 140px;
+				height: 30px;
+				line-height: 5px;
+				background: $orange;
+				i{
+					height: 30px;
+					margin-top: -3px;
+					margin-right: 7px;
+				}
+			}
+
+			input{
+				width: 150px;
+				height: 30px;
+				line-height: 5px;
+				font-family: "Brandon Bold";
+				&:hover{
+					background-color: $blue;
+				}
+			}
+		}
+	}
+
+}

@@ -1,0 +1,10 @@
+<?php
+	$this->headTitle("Manutenção - Corrigir Inconsistências");
+?>
+<h4>As seguintes inconsistências foram corrigidas:</h4>
+<br/>
+<?php
+	foreach ($aMensagens as $sMensagem) {
+		echo $sMensagem."<br/>\n";
+	}
+?>

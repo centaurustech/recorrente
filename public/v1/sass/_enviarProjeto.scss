@@ -1,0 +1,262 @@
+.inscreverProjeto{
+	padding-bottom:50px;
+
+	h1,h2,h3,h4{
+		color: $blue;
+		font-family: "Brandon Bold";
+		margin-bottom: 20px;
+	}
+
+	.buttons{
+		width: 100%;
+		height: 100px;
+		margin-bottom: 40px;
+		.center{ width:500px; height: 100px; margin:0 auto;}
+		button{
+			font-family: "Brandon Bold";
+			margin-left:30px;
+			width: 220px;
+			height: 60px;
+
+			&:hover{
+				background-color: $orange;
+			}
+		}
+	}
+	p{
+		font-family: "Raleway";
+		// font-weight: 600;
+		width: 70%;
+	}
+
+	strong{
+		text-align: center;
+		width: 100%;
+		display: block;
+		font-family: "Brandon Regular";
+		font-size:25px;
+	}
+
+	.confirm{
+			float:left;
+			margin-left: 100px;
+			font-size:16px;
+
+			&:first-of-type{
+				margin-left:0;
+			}
+
+		input{
+			margin-top:-3px;
+			margin-right:7px;
+			 height: 20px;
+			 width: 20px;
+		}		
+	}
+		
+	.arrecadacaoTabs{
+		margin-bottom:30px;
+		p{
+			font-size:16px;
+			width: 100%;	
+		}
+		
+		.nav, .nav-tabs{
+			padding:0;
+			margin:0;
+	
+			li{
+				width: 100px;
+				height: 38px;
+				margin-bottom:0;
+				text-align: center;
+				&.active{
+				}
+			}
+
+			a{
+				font-family: "Brandon Bold";
+				text-transform: uppercase;
+				font-size:18px;
+				background-color:$gray;
+			}
+
+			.active{
+				// margin-bottom: -2px;
+				a{
+					background-color:#eff2ee;
+				}			  
+			}
+		}
+
+		.valor{
+			height: 20px;
+		}
+
+		.tab-pane{
+			background-color:#eff2ee;
+			width: 95%;
+			padding:10px;
+			// height: 200px;
+			textarea{
+				width: 80%;
+			}
+
+			label{
+				font-family: "Raleway";
+				font-size: 16px;
+			}
+		}
+
+	}
+
+	.optionBox{
+		margin-bottom:60px;
+		
+		&:first-of-type{
+			// margin-bottom:300px;
+		}
+
+		p{
+			font-size:16px;
+			font-weight: bold;
+		}
+		width: 100%;
+
+		label{
+			float:left;
+			margin-left: 100px;
+			font-size:16px;
+
+			&:first-of-type{
+				margin-left:0;
+			}
+		}
+
+		input{
+			margin-top:-3px;
+			margin-right:7px;
+			 height: 20px;
+			 width: 20px;
+		}		
+	}
+
+	.secondOne{
+		height: 100px;
+
+		input[type='checkbox'], label{
+			margin:none;
+		}
+	}
+
+	.quarterInputs{
+		width: 100%;
+		label{
+			width: 20%;
+			margin-left:62px;
+			float:left;
+
+			&:first-of-type{
+				margin-left:0;
+			}
+		}
+	}
+
+	.quarter{
+		width: 100%;
+		height: 35px;
+		
+		&:last-child{
+			label{
+				// width: 187px;
+			}
+		}
+
+		label{
+			font-size:14px;
+			width: 160px;
+			// padding-right: 30px;
+
+			&:first-child{
+				height: 30px;
+			}
+			
+			&.last{
+				width: 190px;
+			}
+		}
+	}
+	
+	.subContent{
+		width: 100%;
+		height: 300px;
+		
+		img{
+			display: block;
+			width: 300px;
+			height: 163px;
+			position: relative;
+			margin: 0 auto;
+		}
+	}
+	
+	form{
+		input,textarea{
+			width: 100%;
+		}
+		input{
+			height: 40px;
+		}
+		input[type='submit'], button, input[type='button']{
+			width: 150px;
+			float:right;
+			margin-top:40px;
+			font-family: "Brandon Bold";
+		}
+		.tele, .anothertele{
+			width: 49%;
+			float:left;
+		}
+		.tele{
+			margin-right: 23px;
+		}
+	}
+
+	span{
+		font-family: "Raleway";
+	
+		input{
+			margin-top:-3px;
+		}
+	}
+
+	img{
+		// float:right;
+		margin-top:-35px;
+	}
+
+	.hero-unit{
+		margin-top:30px;
+		padding: 40px;
+		// margin-bottom: 30px;
+
+		h2{
+			font-family: "Raleway";
+			font-weight: 800;
+		}
+	}
+}
+
+div[for='tipo_juridico[]'].error{
+	// position: absolute;
+}
+
+.momentum_fix{
+	width: 293px;
+}
+
+div[for='npSobreVoce'], div[for='npComoChegouBenfeitoria'], div[for='npResumoAtividade'],
+div[for='npExperienciasPassadas'], div[for='npMaisSobre'], div[for='npRecursosExternos'],
+div[for='npComoSeraArrecadacao'], div[for='npMeta1ObjetivosValor'],div[for='npMeta1Recompensa']{
+	margin-top:-30px;
+}

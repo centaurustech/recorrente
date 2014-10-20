@@ -1,0 +1,91 @@
+<?php
+    
+    Use Application\Model\Project;
+
+?>
+    <div class="page-header">
+      <div class="container">
+        <h1>Minhas contribuições</h1>
+        <p>Abaixo a lista de contribuições feitas em projetos.</p>
+      </div>
+    </div>
+<?php
+    $aContributions = $oUser->getAllContributionsMade(true); 
+?>
+    
+    <div class="container">
+      <div class="rows">
+        <div class="col-md-12">
+<?php
+    if (count($aContributions)>0) { 
+        if (count($aContributions)>1) {
+?>
+            <p>Até o momento você fez <?php echo count($aContributions)?> contribuições em projetos. Veja a lista abaixo:</p>
+<?php
+        }
+        else {
+?>
+            <p>Até o momento você fez 1 contribuição em projetos. Veja abaixo:</p>
+<?php
+        } 
+?>            
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td>
+                            Projeto
+                        </td>
+                        <td>
+                            Valor (R$)
+                        </td>
+                        <td>
+                            Primeira contribuição
+                        </td>
+                        <td>
+                            Próximo vencimento
+                        </td>
+                        <td>
+                            <span class="glyphicon glyphicon-cog"></span>
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+<?php
+    foreach ($aContributions as $aOneContribution) {
+        $oProject = new Project($oSM,$aOneContribution["id_project"]); 
+?>
+                    <tr>
+                        <td>
+                            <?php echo $oProject->getProperty("title")?>
+                        </td>
+                        <td>
+                            <?php echo number_format($aOneContribution["value_contribution"],2,",",".")?>
+                        </td>
+                        <td>
+                            <?php echo date("d/m/Y H:i",strtotime($aOneContribution["dt_contribution"]))?>
+                        </td>
+                        <td>
+                            <?php 
+                                $dData = mktime(date("H",strtotime($aOneContribution["dt_contribution"])),date("i",strtotime($aOneContribution["dt_contribution"])),date("s",strtotime($aOneContribution["dt_contribution"])),date("m"),date("d",strtotime($aOneContribution["dt_contribution"])),date("Y"));
+                                echo date("d/m/Y",strtotime("+1 month",$dData));
+                            ?>
+                        </td>
+                        <td>
+                            <span class="glyphicon glyphicon-trash"></span>
+                        </td>
+                    </tr>
+<?php
+    } 
+?>
+                    </tbody>
+            </table>
+<?php
+    }
+    else { 
+?>
+            <h3>Até o momento nenhuma contribuição foi feita em projetos.</h3>
+<?php
+    }
+?>
+        </div>
+    </div>

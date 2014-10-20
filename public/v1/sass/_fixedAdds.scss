@@ -1,0 +1,14 @@
+.pagePadrao{
+	background-color: #EFEFEB;
+	padding:50px;
+}
+
+.nav-tabs .active a, .nav-tabs .active a:hover, .nav-tabs .active a:focus {
+	border: none !important;
+}
+
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled] {
+	background-color: $orange;
+}
+

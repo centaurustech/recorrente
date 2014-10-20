@@ -1,0 +1,168 @@
+										<script>
+
+												<?=$opcoes_turmas;?>
+
+										</script>
+
+                    <div class="span5 offset1">
+
+                        <form action="/manutencao/usuario_cadastra_novo_post" method="post" class="form-horizontal">
+
+                        <div class="control-group" style="text-align: center; font-size: 18px; color: #999">
+                        	<b><?=$mensagem;?></b>
+                        </div>
+
+                        <div class="control-group" style="text-align: center; border-bottom: 1px dotted #666">
+                        	<b>CADASTRAR NOVO USUÁRIO</b>
+                        </div>
+
+                        <div class="control-group">
+                            <label class="control-label" for="nome">Nome completo *</label>
+                            <div class="controls">
+                                <input name="nome" id="nome" class="input" style="width: 450px"><br/>
+                            </div>
+                        </div>
+
+                        <div class="control-group" style="width:600px">
+                            <label class="control-label" for="usuario">Usuário de acesso *</label>
+                            <div class="controls">
+                                <input name="usuario" id="usuario" class="input"> 
+                                <i id="status_icon_usuario" class="" style='padding-top: 2px; font-size: 16px;'></i>
+                                <span id="status_msg_usuario" style="color: #999; font-size: 12px"> Apenas letras e números</span>
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <label class="control-label" for="usuario">Senha *</label>
+                            <div class="controls">
+                                <input type="password" name="senha" id="senha" class="input" style="height:26px; border: 1px solid #aaa"><br/>
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <label class="control-label" for="perfil_acesso">Perfil de acesso *</label>
+                            <div class="controls">
+                                <select name="perfil_acesso" id="perfil_acesso">
+                                    <option value="">Selecione um perfil</option>
+                                    <option value=""></option>
+                                    <?php echo $opcoes_perfil_acesso ?>
+                                </select><br/>
+                            </div>
+                        </div>
+
+                        <div class="control-group" id="divEpisodios">
+                            <label class="control-label" for="perfil_acesso">Liberar episódios</label>
+                            <div class="controls">
+                                <select name="episodios_liberados" id="episodios_liberados" size=24 multiple columns=3>
+                                    <?php echo $opcoes_episodios ?>
+                                </select><br/>
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <label class="control-label" for="escola">Escola</label>
+                            <div class="controls">
+
+                                <select name="escola" id="escola" onchange="recarregaTurma(this.options[this.selectedIndex].value);" style="width: 200px">
+                                    <option value="">Selecione uma escola</option>
+                                    <option value=""></option>
+                                    <?php echo $opcoes_escolas ?>
+                                </select>
+
+																<input type="button" class="btn botaoNovo" value="+"/>
+								                <div style="clear:both"></div>
+								                <div class="boxNovo">                
+		                                <label for="nome_nova_escola">Nome da nova turma:</label>
+		                                <input type="text" name="nome_nova_escola" id="nome_nova_escola" value=""/>
+				                            <input type="button" class="cancel" value="Cancela" />
+								                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="control-group">
+                            <label class="control-label" for="turma">Turma</label>
+                            <div class="controls">
+                                <select name="turma" id="turma" style="width: 200px">
+                                    <option value="">Selecione uma escola</option>
+                                </select>
+
+                                <input type="button" class="btn botaoNovo" value="+"/>
+								                <div style="clear:both"></div>
+								                <div class="boxNovo">                
+		                                <label for="nome_nova_turma">Nome da nova turma:</label>
+		                                <input type="text" name="nome_nova_turma" id="nome_nova_turma" value=""/>
+
+		                                <label for="periodo_nova_turma">Período:</label>
+		                                <select name="periodo_nova_turma" id="periodo_nova_turma">
+		                                    <option value="">Selecione um período</option>
+		                                    <option value=""></option>
+		                                    <?php echo $opcoes_periodos ?>
+		                                </select>
+
+		                                <label for="temporada_nova_turma">Temporada:</label>
+		                                <select name="temporada_nova_turma" id="periodo_nova_turma">
+		                                    <option value="">Selecione uma temporada</option>
+		                                    <option value=""></option>
+		                                    <?php echo $opcoes_temporadas ?>
+		                                </select>
+
+		                                <label for="ano_nova_turma">Ano:</label>
+		                                <input type="text" name="ano_nova_turma" id="ano_nova_turma" value=""/><br>
+		                                <br>
+
+				                            <input type="button" class="btn cancel" value="Cancela"/>
+								                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="control-group" style="text-align: center; border-bottom: 1px dotted #666">
+	                      	  <button type="button" id="enviaCadastro" class="btn btn-primary">Cadastrar Usuário</button><br>
+	                      	  <br>
+	                      </div>
+
+                        <div class="control-group" style="text-align: center;">
+	                      	  Outras informações<br>
+	                      </div>
+
+                        <div class="control-group">
+                            <label class="control-label" for="perfil_acesso">Sexo</label>
+                            <div class="controls">
+                                <select name="sexo" id="perfil_acesso">
+                                    <option value="">Selecione o sexo</option>
+                                    <option value="F">Feminino</option>
+                                    <option value="M">Masculino</option>
+                                </select><br/>
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <label class="control-label" for="data_nascimento">Data nascimento</label>
+                            <div class="controls">
+                                <input name="data_nascimento" id="data_nascimento" class="input"> Formato: dd/mm/aaaa<br/>
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <label class="control-label" for="data_nascimento">Email</label>
+                            <div class="controls">
+                                <input name="email" id="email" class="input" style="width: 450px"><br/>
+                            </div>
+                        </div>
+
+                        <input type="hidden" name="episodios_liberados_valor" id="episodios_liberados_valor" value="">
+
+                        <div class="control-group" style="text-align: center; border-bottom: 1px dotted #666">
+	                      	  <button type="button" id="enviaCadastro" class="btn btn-primary">Cadastrar Usuário</button><br>
+	                      	  <br>
+	                      </div>
+
+                        <div class="control-group" style="color: #999; font-size: 11px">
+			                      	  * Campos obrigatórios<br>
+			                      	  ** Campo usuário deve conter apenas letras e números, mínimo 4 caracteres.
+	                      </div>
+
+                        </form>
+
+                    </div>

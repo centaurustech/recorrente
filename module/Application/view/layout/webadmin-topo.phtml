@@ -1,0 +1,124 @@
+<html>
+<head>
+	<meta charset="utf-8">
+
+
+<?php
+	// Meta dados
+  echo $this->headMeta()->appendName("viewport", "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+  														->appendName("apple-mobile-web-app-capable", "yes")
+  														->appendName("apple-mobile-web-app-status-bar-style", "black-translucent");
+	
+	echo "\n\n";
+	
+	// Title
+	echo $this->headTitle( $this->translate('titulo login'))->setSeparator(' - ')->setAutoEscape(false); 
+	echo "\n\n";
+	
+	// CSS
+	$this->headLink(array("rel" => "apple-touch-icon-precomposed", "href" => $this->basePath() . "/mnt/img/apple-touch-icon-precomposed.png"));
+	echo $this->headLink(array("rel" => "shortcut icon", "type" => "image/vnd.microsoft.icon", "href" => $this->basePath() . "/mnt/img/favicon.ico"))
+                        ->appendStylesheet($this->basePath() . "/mnt/css/bootstrap.css")
+                        ->appendStylesheet($this->basePath() . "/mnt/css/bootstrap-responsive.css")
+                        ->appendStylesheet($this->basePath() . "/mnt/css/font-awesome.min.css")
+                        ->appendStylesheet($this->basePath() . "/mnt/css/menu.css");
+	
+
+	echo "\n\n";
+?>
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+
+      @media (max-width: 980px) {
+        /* Enable use of floated navbar text */
+        .navbar-text.pull-right {
+          float: none;
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+      }
+    </style>
+<?php
+	
+	// JS
+	echo $this->headScript()->appendFile($this->basePath() . "/mnt/js/jquery.js")
+	                        ->appendFile($this->basePath() . "/mnt/js/manutencao.js")
+	                        ->appendFile($this->basePath() . "/mnt/js/jquery.validate.js")
+	                        ->appendFile($this->basePath() . "/mnt/js/bootstrap.js");
+
+	echo "\n\n";
+	
+?>
+</head>
+<body>
+	<script>
+(function() {
+	var $body = document.body
+	, $menu_trigger = $body.getElementsByClassName('menu-trigger')[0];
+
+	if ( typeof $menu_trigger !== 'undefined' ) {
+		$menu_trigger.addEventListener('click', function() {
+			$body.className = ( $body.className == 'menu-active' )? '' : 'menu-active';
+		});
+	}
+
+}).call(this);
+		var iTempoSessao = <?php echo $sTempoSessaoTela ?>;
+		var umTimerSessao;
+		$( document ).ready(function() {
+			$('#tempoSessao').html('Expira em ' + iTempoSessao + 's');
+			umTimerSessao = setTimeout(function() {
+				subtraiTempoSessao();
+			},1000);
+        });
+
+
+		function subtraiTempoSessao() {
+			iTempoSessao = iTempoSessao - 1;
+			if (iTempoSessao<0) {
+				clearTimeout(umTimerSessao);
+				document.location = '<?php echo $this->basePath()?>/wbadmin/logout/expirou'
+			}
+			else {
+				$('#tempoSessao').html('Expira em ' + iTempoSessao + 's');
+				umTimerSessao = setTimeout(function() {
+					subtraiTempoSessao();
+				},1000);
+			}
+
+		}
+
+        </script>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#">Ambiente Administrativo</a>
+          <div class="nav-collapse collapse">
+            <p class="navbar-text pull-right">
+              <a href="#" class="navbar-link"><?php echo $sLoginUsuario ?></a>
+            </p>
+            <p class="navbar-text pull-right">
+							&nbsp;&nbsp;&nbsp;
+            </p>
+            <p class="navbar-text pull-right">
+              <small class="text-warning" id="tempoSessao"></small>
+            </p>
+            <ul class="nav">
+              <li class="active"><a href="<?php echo $this->basePath()?>/wbadmin/">Início</a></li>
+              <li><a href="<?php echo $this->basePath()?>/wbadmin/logout">Sair</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>

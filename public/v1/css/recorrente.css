@@ -1,0 +1,31 @@
+@CHARSET "UTF-8";
+
+input.error, select.error, textarea.error {
+      background: #FFC;
+}
+
+div.error {
+	color: #ff9999;
+	float: bottom;
+	font-weight: bold;
+}
+
+#divInputEstado, #divSeletorEstado, #divInputCidade, #divSeletorCidade {
+	display: none;
+}
+
+#divLoadingEmail, #divLoadingPais, #divLoadingEstado, #divLoadingCidade {
+	display: none;
+};
+
+#divConteudoForm {
+	display: none;
+};
+
+.white, .white a {
+  color: #fff;
+}
+
+#checkboxConfirmar2, #checkboxConfirmar3, #checkboxConfirmar4 {
+	display: none;
+}

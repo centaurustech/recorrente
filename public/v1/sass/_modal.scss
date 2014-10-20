@@ -1,0 +1,45 @@
+.modal{
+	    h1,h2,h3,h4,h5{
+	    	color:$blue;
+	    }
+		h3, button{
+			font-family: "Brandon Bold";
+		}
+		h3{
+			font-size:22px;
+			margin:0;
+		}
+		p{
+			font-family: "Raleway" ;
+			width: 100%;
+		}
+}
+
+#modalCancelar{
+	background-color:$gray;
+	*{
+		border:none;
+	}
+	h3, h4{
+		font-family: "Brandon Bold";
+		font-size: 20px;
+		color:$blue;
+	}
+	h4{
+		font-size:18px;
+	}
+	.modal-footer{
+		background-color: $gray;
+
+		button{
+			&:first-of-type{
+				margin:0;
+			}
+		}
+
+		.btn{
+			width: 220px;
+			height: 40px;
+		}
+	}
+}

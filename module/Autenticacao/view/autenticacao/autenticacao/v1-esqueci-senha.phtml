@@ -1,0 +1,33 @@
+      <div class="section generic">
+      <div class="wide-bg" >
+        <div class="container">
+          <div class="row">
+            <div class="span12">
+                <h2>Recuperação de senha</h2>
+                <hr/>
+            </div>
+            <div class="row">
+                <div class="span12">
+                    <p>Informe abaixo o email de seu cadastro que enviaremos os procedimentos para recuperar sua senha.</p>
+                    <br/><br/>
+    
+                    
+                    <form action="<?php echo $this->basePath()?>/seguro/formRecuperarSenha" method="post" class="form-horizontal" role="form" id="formRecuperarSenha">
+                  
+                    <div class="control-group">
+                      <label  class='control-label' for='email'> Email cadastrado </label>
+                      <div class="controls">
+                        <input type="email" id='email' placeholder='Informe' name="email" class="span6" required>
+                      </div>
+                    </div>
+                    <div class="options text-right">
+                      <a href="javascript:history.go(-1)"><button class="btn btn-primary">Voltar</button></a>
+                      <input class="btn btn-primary" type="submit" name="comando" value="Enviar" />
+                    </div>
+                    </form>
+                </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>

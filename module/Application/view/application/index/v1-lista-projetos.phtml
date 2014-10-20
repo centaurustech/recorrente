@@ -1,0 +1,134 @@
+<?php echo $this->headTitle("Campanhas | Recorrente: financiamento contínuo"); ?>
+
+      <div class="container verProjetos">
+        <p class="lead">CAMPANHAS</p>
+        <hr>
+        <div class="row">
+
+          <div class="span3">
+            <div class="sidebar categoria">
+              <span>Busca por <strong>PALAVRA</strong></span>
+              <input type='text' id='searchBox' name='busca' placeholder='Busca'>
+            </div>
+<?php
+    /* 
+?>
+            <div class="categoria sidebar">
+            <span>Procure por <strong>CATEGORIA</strong>: </span>
+            <ul>
+              <li><span>Todos as campanhas</span></li>
+              <li class="active"><span>Em destaque</span></li>
+              <li><span>Falta pouco</span></li>
+              <li><span>Mais recentes</span></li>
+              <li><span>Mais populares</span></li>
+              <!-- <li><hr></li> -->
+            </div><!-- /.categoria -->
+            <div class="tema categoria sidebar">
+              <span>Procure por <strong>TEMA</strong>: </span>
+              <ul>
+                <?php
+                    foreach ($oCategorieList as $aCategory) {
+                        $sAddClass = "";
+                        if ($aCategory["id"]==$iCategorySelected) {
+                            $sAddClass = " active";
+                        }
+                ?>
+                    <li onClick="document.location='<?php echo $this->basePath()?>/projetos/categoria-<?php echo $aCategory["id"]?>'"><span><?php echo $aCategory["title"]?></span></li>
+                <?php
+                    } 
+                ?>
+              </ul>
+            </div><!-- /.tema -->
+
+            <br>
+            <span>Procure por categorias: </span>
+            <ul>
+              <li><span>Todos as campanhas</span></li>
+              <li class="active"><span>Em destaque</span></li>
+              <li><span>Falta pouco</span></li>
+              <li><span>Mais recentes</span></li>
+              <li><span>Mais populares</span></li>
+              <!-- <li><hr></li> -->
+<?php
+    foreach ($oCategorieList as $aCategory) {
+        $sAddClass = "";
+        if ($aCategory["id"]==$iCategorySelected) {
+            $sAddClass = " active";
+        }
+?>
+    <li onClick="document.location='<?php echo $this->basePath()?>/projetos/categoria-<?php echo $aCategory["id"]?>'"><span><?php echo $aCategory["title"]?></span></li>
+<?php
+    } 
+?>
+              
+<!--               <li><span>Cidades</span></li> -->
+<!--               <li><span>Ciência e Tecnologia</span></li> -->
+<!--               <li><span>Cultura e Arte</span></li> -->
+<!--               <li><span>Economia Colaborativa</span></li> -->
+<!--               <li><span>Educação</span></li> -->
+<!--               <li><span>Empreendedorismo</span></li> -->
+<!--               <li><span>Esporte e Lazer</span></li> -->
+<!--               <li><span>Inovação</span></li> -->
+<!--               <li><span>Saúde e Bem-estar</span></li> -->
+<!--               <li><span>Sustentabilidade</span></li> -->
+            </ul>
+<?php
+    */
+?>            
+          </div>
+          <div class="projectsPlace span9">
+<?php 
+    foreach ($oProjects as $oProject) {
+        $aActualGoal = $oProject->getActualGoal();
+        $fTotalAmount = $oProject->getTotalAmountCollected();
+        if (!is_numeric($fTotalAmount)) {
+            $fTotalAmount = 0;
+        }
+        
+        if (($aActualGoal["reference"])>0) {
+        	$fProgress = round($fTotalAmount*100/$aActualGoal["reference"]);
+        }
+        else {
+        	$fProgress = 0;
+        }
+        $iCharLimit = 200;
+        $sProjectDescription = $oProject->getProperty("tag_line");
+        if (strlen($sProjectDescription)>$iCharLimit) {
+            $sProjectDescription = substr($sProjectDescription,0,strrpos(substr($sProjectDescription,0,$iCharLimit)," ")-1)."...";
+        }
+?>
+          
+            <div class="place">
+            <div class="span4 pull-right projectsLayer">
+            
+                <div class="thumbnail"><a href="<?php echo $this->basePath()?>/projeto/detalhes/<?php echo $oProject->getId()?>" title=""  class="thumb">
+                  <img src="<?php echo $this->basePath()?><?php echo $oProject->getProperty("url_cover_image")?>" alt="" />
+                </a>
+                <div class="caption">
+                  <h3 class='title'><a href="<?php echo $this->basePath()?>/projeto/detalhes/<?php echo $oProject->getId()?>"><?php echo $oProject->getProperty("title")?></a></h3>
+                  <p> <?php echo $sProjectDescription?></p>
+                    <strong class='valortxt'><span>R$<?php echo $fTotalAmount?></span><br> ARRECADADO POR MÊS</strong>
+                                  <strong class='financiadotxt'><span><?php echo $fProgress ?>% </span><br>DA META</strong><br />
+                                  <div class="progress">
+                                  <div class="bar" style="width: <?php echo $fProgress ?>%">
+                                    </div>
+                                  </div>
+                                </div>
+                               
+                </div>
+              </div>
+            </div>
+
+<?php 
+    }
+?>
+        </div>
+        </div>
+        
+        
+        
+
+
+    </div>
+    </div>
+    <div id="push"></div>

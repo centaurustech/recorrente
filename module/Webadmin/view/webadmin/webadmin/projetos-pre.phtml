@@ -1,0 +1,406 @@
+<?php
+	  $this->headTitle("Webadmin - Detalhes do projeto");
+
+	  Use Application\Model\Project; 
+
+    if (!empty($sMensagemErro)) {
+?>
+<div id="alerta" class="alert alert-error">
+  <button type="button" class="close" onClick="$('#alerta').hide();">&times;</button>
+  <strong>Atenção!</strong><br/><br/>
+  <?php echo $sMensagemErro ?>
+</div>
+<?php		
+	}
+?>	
+<div class="span9">
+
+    <h2>Etapa 1 - Pré-aprovação</h2>
+
+    <p>As informações abaixo foram cadastradas pelo autor <strong><?php echo $umAutor->getNome()?></strong> como um PRÉ-PROJETO.</p>
+    
+        
+      <h3>Projetista</h3>
+      <form class="form">
+            <fieldset>
+                <div class="control-group span12">
+                    <label class="control-label text-info"><strong>Nome Completo</strong></label>
+                    <div class="controls">
+                        <?php echo $umAutor->getNome()?>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="control-group span12">
+                    <label class="control-label text-info"><strong>E-mail</strong></label>
+                    <div class="controls">
+                        <?php echo $umAutor->getEmail()?>
+                    </div>
+                </div>
+            </fieldset>
+            
+        </form>
+    
+        <h3>Proposta Enviada</h3>
+        <form class="form" action="<?php echo $this->basePath()?>/wbadmin/projetos-atualizaDados" method="post" id="formProjeto">
+        
+
+        
+            <input type="hidden" name="operacao" id="operacao" value="">
+            <input type="hidden" name="project_id" value="<?php echo $umProjeto->getId()?>">
+            <input type="hidden" name="id_status" value="<?php echo $umProjeto->getProperty("id_status")?>">
+            
+            <fieldset>
+                <div class="control-group span12">
+                    <label class="control-label text-info"><strong>Nome do projeto</strong></label>
+                    <div class="controls">
+                        <input type="text" id="npNome" name="nome_projeto" placeholder="Entre com o título do projeto" value="<?php echo $umProjeto->getProperty("title")?>"  class="span12">
+                    </div>
+                </div>
+            </fieldset>
+            
+<?php
+    // Captura os telefones
+    $aPhones = $umProjeto->getAllPhones();
+?>            
+            <fieldset>
+                <div class="control-group span12">
+                    <label class="control-label text-info" for="npTelefonePrincipalContato"><strong>Telefone para contato</strong></label>
+                    <div class="controls">
+                        <input type="text" name="telefone_principal" class="span12 phone_number_mask" id="npTelefonePrincipalContato" placeholder="Telefone principal" value="<?php echo $aPhones["Principal"]?>">
+                    </div>
+                </div>
+            </fieldset>
+            
+            <fieldset>
+                <div class="control-group span12">
+                    <label class="control-label text-info" for="npTelefoneSecundarioContato"><strong>Outro telefone</strong></label>
+                    <div class="controls">
+                        <input type="text" name="telefone_secundario" class="span12 phone_number_mask" id="npTelefoneSecundarioContato" placeholder="Caso não encontremos você no outro telefone"  value="<?php echo $aPhones["Outro"]?>"  >
+                    </div>
+                </div>
+
+                            
+            </fieldset>
+            
+            <fieldset>
+                <div class="control-group span12">
+                    <label class="control-label text-info" for="npNome" style="margin-top: 10px"><strong>Qual o seu tipo jurídico</strong></label>
+                    <div class="controls">
+<?php
+    $aProjectCompanyTypes = $umProjeto->getAllCompanyTypes();
+    foreach ($aCompanyTypes as $aValue) { 
+        $sAdd = "";
+        if (in_array($aValue["id"],$aProjectCompanyTypes)) {
+        	$sAdd = " checked";
+        }
+?>
+                            <label class="checkbox">
+                                <input type="checkbox" name="tipo_juridico[]" value="<?php echo $aValue["id"]?>" id="npTipoJuridico"<?php echo $sAdd?>><?php echo $aValue["title"]?>
+                            </label>
+<?php
+    } 
+?>
+                    </div>
+                </div>
+
+            </fieldset>
+            
+            <fieldset>
+                <div class="control-group span12">
+                    <label class="control-label text-info" for="npComoChegouBenfeitoria"><strong>Como chegou até a Benfeitoria?</strong></label>
+                    <div class="controls">
+                        <textarea rows="4" class="span12" id="npComoChegouBenfeitoria" name="como_chegou_benfeitoria"><?php echo $umProjeto->getProperty("how_find_us")?></textarea>
+                    </div>
+                </div>
+            </fieldset>
+            
+            <fieldset>
+                <div class="control-group span12">
+                    <label class="control-label text-info" for="npSobreVoce"><strong>Conte-nos um pouco sobre você</strong></label>
+                    <div class="controls">
+                        <textarea rows="4" class="span12" id="npSobreVoce" name="sobre_voce"><?php echo $umProjeto->getProperty("about_you")?></textarea>
+                    </div>
+                </div>
+            </fieldset>
+            
+            <fieldset>
+                <div class="control-group span12">
+                    <label class="control-label text-info" for="npResumoProjeto"><strong>Resuma seu projeto</strong></label>
+                    <div class="controls">
+                        <textarea rows="4" class="span12" id="npResumoProjeto" name="resumo_projeto"><?php echo $umProjeto->getProperty("project_abstract")?></textarea>
+                    </div>
+                </div>
+            </fieldset>
+            
+            <fieldset>
+                <div class="control-group span12">
+                    <label class="control-label text-info" for="npRegiaoAtuacao"><strong>Região de atuação</strong></label>
+                    <div class="controls">
+                        <input type="text" class="span12" id="npRegiaoAtuacao" name="regiao_atuacao" placeholder="Descreva a região de atuação de seu projeto (nacional, estadual, nome da cidade, etc.)" value="<?php echo $umProjeto->getProperty("operating_region")?>">
+                    </div>
+                </div>
+            </fieldset>
+            
+            <fieldset>
+                <div class="control-group span12">
+                    <label class="control-label text-info" for="npTemas" style="margin-top: 10px"><strong>Em quais temas seu projeto se encaixa?</strong></label>
+                    <div class-"controls">
+<?php
+    $aProjectCategories = $umProjeto->getAllCategories();
+    foreach ($aCategories as $aValue) { 
+        $sAdd = "";
+        if (in_array($aValue["id"],$aProjectCategories)) {
+            $sAdd = " checked";
+        }
+?>
+                        <label class="checkbox">
+                            <input type="checkbox" name="temas[]" value="<?php echo $aValue["id"]?>" id="npTemas"<?php echo $sAdd?>><?php echo $aValue["title"]?>
+                        </label>
+<?php 
+    }
+?>
+                    </div>
+                </div>
+            </fieldset>
+            
+            <fieldset>
+                <div class="control-group span12">
+                    <label class="control-label text-info" for="npAnoFundacao"><strong>Informações gerais da instituição</strong></label>
+                    <div class="controls">
+                        <div class="for-group col-md-3">
+                            <label for="npAnoFundacao"><strong>Ano de fundação</strong></label>
+                            <input type="text" class="span12" id="npAnoFundacao" name="ano_fundacao" value="<?php echo $umProjeto->getProperty("fundation_year")?>">
+                        </div>
+                        <div class="for-group col-md-3">
+                            <label for="npNumFuncionarios"><strong>N<sup><u>o</u></sup> de funcionários</strong></label>
+                            <input type="text" class="span12" id="npNumFuncionarios" name="num_funcionarios" value="<?php echo $umProjeto->getProperty("employees_number")?>">
+                        </div>
+                        <div class="for-group col-md-3">
+                            <label for="npNumVoluntarios"><strong>N<sup><u>o</u></sup> de voluntários</strong></label>
+                            <input type="text" class="span12" id="npNumVoluntarios" name="num_voluntarios" value="<?php echo $umProjeto->getProperty("volunteers_number")?>">
+                        </div>
+                        <div class="for-group col-md-3">
+                            <label for="npNumPessoasImpactadas"><strong>N<sup><u>o</u></sup> de pessoas impactadas</strong></label>
+                            <input type="text" class="span12" id="npNumPessoasImpactadas" name="num_pessoas_impactadas" value="<?php echo $umProjeto->getProperty("people_impacted_number")?>">
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            
+            <fieldset>
+                <div class="control-group span12">
+                    <label class="control-label text-info" for="npMaisSobre"><strong>Fale um pouco mais sobre o projeto</strong></label>
+                    <div class="controls">
+                        <textarea rows="4" class="span12" id="npMaisSobre" name="mais_sobre" ><?php echo $umProjeto->getProperty("about_project")?></textarea>
+                    </div>
+                </div>
+            </fieldset>
+            
+            <fieldset>
+                <div class="control-group span12">
+                    <label class="control-label text-info" for="npHaQuantoTempo"><strong>Há quanto tempo o projeto acontece? O que já foi feito?</strong></label>
+                    <div class="controls">
+                        <textarea rows="4" class="span12" id="npHaQuantoTempo" name="ha_quanto_tempo" ><?php echo $umProjeto->getProperty("how_long")?></textarea>
+                    </div>
+                </div>
+            </fieldset>
+            
+            <fieldset>
+                <div class="control-group span12">
+                    <label class="control-label text-info" for="npGastoMensal"><strong>Qual a média de gastos mensal do projeto hoje? Com quanto ele se sustenta por mês?</strong></label>
+                    <div class="controls">
+                        <textarea rows="4" class="span12" id="npGastoMensal" name="gasto_mensal" ><?php echo $umProjeto->getProperty("average_monthly_spending")?></textarea>
+                    </div>
+                </div>
+            </fieldset>
+            
+            <fieldset>
+                <div class="control-group span12">
+                    <label class="control-label text-info" for="npRecursosExternos"><strong>O projeto já recebe recursos de alguma outra fonte?</strong></label>
+                    <div class="controls">
+                        <textarea rows="4" class="span12" id="npRecursosExternos" name="recursos_externos" ><?php echo $umProjeto->getProperty("resources_from")?></textarea>
+                    </div>
+                </div>
+            </fieldset>
+            
+            <fieldset>
+                <div class="control-group span12">
+                    <label class="control-label text-info" class="control-label" for="npMaisSobre">Metas informadas</label>
+                    
+<?php
+    // Metas
+    $aGoals = $umProjeto->getAllGoals();
+    $iContGoal = 1;
+    foreach ($aGoals as $aGoal) { 
+?>
+                            <label class="control-label" for="npMaisSobre"><strong>Meta <?php echo $iContGoal?></strong></label>
+                                <div class="controls">
+                                    <div class="control-group col-md-3">
+                                        <label for="npMeta1Valor">Valor</label>
+                                        <div class="input-append">
+                                            <span class="add-on">R$</span>
+                                            <input type="text" name="meta_valor[]" id="npMeta1Valor" class="span7 money" value="<?php echo $aGoal["reference"]?>">
+                                            <span class="add-on">,00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="controls">
+                                    <div class="control-group">
+                                        <label for="npMeta1ObjetivosValor">O que pretende fazer com este valor?</label>
+                                        <textarea rows="4" class="span12" id="npMeta1ObjetivosValor" name="meta_objetivos_valor[]"><?php echo $aGoal["goal"]?></textarea>
+                                    </div>
+                                </div>
+                                <div class="controls">
+                                    <div class="control-group">
+                                        <label for="npMeta1Recompensa">Recompensa coletiva ao atingir a meta</label>
+                                        <textarea rows="4" class="span12" id="npMeta1Recompensa" name="meta_recompensa[]"><?php echo $aGoal["collective_reward"]?></textarea>
+                                    </div>
+                                </div>
+<?php 
+        $iContGoal++;
+    }
+?>
+                            </div>
+            </fieldset>
+            
+            <fieldset>
+                <div class="control-group span12">
+                    <label class="control-label text-info" for="npComoSeraArrecadacao"><strong>Como será feita a arrecadação para o projeto?</strong></label>
+                    <textarea rows="4" class="span12" id="npComoSeraArrecadacao" name="como_sera_arrecadacao"><?php echo $umProjeto->getProperty("marketing")?></textarea>
+                </div>
+            </fieldset>
+        </form>
+    
+</div>
+<div class="span3">
+    <div data-spy="affix" data-offset-top="200" style="padding:5px">
+    <h4>Opções</h4>
+        <div class="btn-toolbar">
+            <div class="btn-group btn-group-vertical">
+                <button class="btn btn-primary span12" type="button" onClick="gravarAlteracoes()">Apenas gravar as alterações</button>
+                <button class="btn btn-warning span12" type="button" onClick="editarEmailProjetista('duvidas')">Estamos com dúvidas</button>
+                <button class="btn btn-warning span12" type="button" onClick="editarEmailProjetista('mudancas')">O projetista precisa fazer mudanças</button>
+                <button class="btn btn-danger span12" type="button" onClick="if (confirm('Deseja mesmo CANCELAR este projeto?')) { cancelarProjeto(); }">O projeto não se adequa. CANCELAR!</button>
+                <button class="btn btn-success span12" type="button" onClick="if (confirm('Deseja mesmo APROVAR este projeto?')) { publicarProjeto(); }">APROVADO! Passar para a segunda fase</button>
+            </div>
+        </div>
+    
+    </div>
+</div>
+
+<div id="modalEmail" class="modal hide fade" data-backdrop="static">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h3>Mensagem para <?php echo $umAutor->getNome()?></h3>
+  </div>
+  <form id="modalEmailForm">
+  <input type="hidden" name="type_message" value="" id="inputTypeMessage">
+  <div class="modal-body">
+    <div id="modalEmailBody"></div>
+    <p><textarea name="message" id="editor1" required></textarea></p>
+  </div>
+  </form>
+  <div class="modal-footer">
+    <span id="spanLoading" style="display:none"><img src="<?php echo $this->basePath()?>/images/ajax_loader_orange_32.gif"><span class="label label-warning">Enviando mensagem. Aguarde...</span></span>
+    <a href="javascript:$('#modalEmail').modal('hide')" class="btn">Cancelar</a>
+    <a href="javascript:enviaMensagem()" class="btn btn-primary">Enviar</a>
+  </div>
+</div>
+<style>
+    .modal {
+        width: 80%;
+        margin-left:-40%;
+    }
+</style>
+
+
+<script src="<?php echo $this->basepath()?>/mnt/js/ckeditor/ckeditor.js"></script>
+<script src="<?php echo $this->basepath()?>/mnt/js/ckeditor/config.js"></script>
+<script src="<?php echo $this->basepath()?>/mnt/js/ckeditor/adapters/jquery.js"></script>
+<script>
+
+    $( document ).ready( function() {
+    	$('#modalEmail').modal('hide').css({height:'600px'});  
+    	$('textarea#editor1' ).ckeditor();
+    	$('#modalEmailForm').validate();
+    	//var editor = CKEDITOR.inline( 'editor1' );
+    } );
+    
+    function gravarAlteracoes() {
+    	$('#operacao').val('gravar');
+    	$('#formProjeto').submit();
+    }
+
+
+    function publicarProjeto() {
+    	$('#operacao').val('gravar_publicar');
+    	$('#formProjeto').submit();
+    }
+
+
+    
+    function editarEmailProjetista(sTipo) {
+        // Carrega o texto padrão
+    	  download_to_textbox("<?php echo $this->basepath()?>/wbadmin/carregaMensagemPadrao/"+sTipo, $('#editor1'));
+    	  // Apresenta o texto de introdução conforme o tipo
+    	  if (sTipo=='duvidas') {
+        	  $('#modalEmailBody').html('<p><strong>Um email será enviado para <span class="label label-warning"><?php echo $umAutor->getEmail()?></span> com o assunto <span class="label label-inverse">Temos uma dúvida quanto a sua campanha</span></strong>. O projetista terá acesso ao texto abaixo:</p>');
+    	  }
+    	  if (sTipo=='mudancas') {
+        	  $('#modalEmailBody').html('<p><strong>Um email será enviado para <span class="label label-warning"><?php echo $umAutor->getEmail()?></span> com o assunto <span class="label label-inverse">Estamos sugerindo uma alteração em sua campanha</span></strong>. O projetista terá acesso ao texto abaixo:</p>');
+      	}
+    	  $('#inputTypeMessage').val(sTipo);
+      	$('#modalEmail').modal('show');
+    }
+
+
+    function enviaMensagem() {
+        if ($('#modalEmailForm').valid()) {
+            // Envia o email por ajax
+            $('#spanLoading').show();
+        			$.ajax({
+        				  type: 'POST',
+        				  url: '<?php echo $this->basePath()?>/wbadmin/formEnviaMensagem',
+        				  dataType: 'json',
+        			    data: {id_from: '<?php echo $umPerfil->getId()?>', id_to: '<?php echo $umAutor->getId()?>', type_message: $('#inputTypeMessage').val(), message: $('#editor1').val(), project_id: '<?php echo $umProjeto->getId()?>' },
+        			    cache: false,
+        				  timeout: 10000,
+        				  success: function(json) {
+        					  $('#spanLoading').hide();
+        					  if (json.retorno=='ok') {
+        						  // Direciona para a tela de confirmação de cadastro por email
+        						  alert('Mensagem enviada com sucesso!');
+        						  $('#modalEmail').modal('hide');
+        					  }
+        					  else {
+        						  alert('Ocorreu um problema ao enviar a mensagem. Pedimos que tente novamente.');
+        					  }
+        				  },
+        				  error: function (jqXHR, textStatus, errorThrown) {
+        					  $('#spanLoading').hide();
+        				  	switch (textStatus) {
+        					  	case 'timeout'	:	alert('Timeout: Tentar novamente');
+        					  										break;
+        					  	default         : alert('Erro: \n\n'+errorThrown);
+        					  										break;
+        				  	}
+        					return false;
+        			  	  }
+    				});
+		    }
+    }
+
+    
+    function cancelarProjeto() {
+    	$('#operacao').val('cancelar');
+    	$('#formProjeto').submit();
+    }
+    
+    function download_to_textbox(url, el) {
+        $.get(url, null, function (data) {
+            el.val(data);
+        }, "text");
+    }
+        
+</script>

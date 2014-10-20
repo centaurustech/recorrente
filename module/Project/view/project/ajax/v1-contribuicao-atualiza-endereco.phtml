@@ -1,0 +1,211 @@
+            <strong class="headlineContribuicao">Contribuição</strong>
+            
+              <p class="info">
+                Verifique seus dados abaixo e atualize caso necessário. Estas informações são matidas em sigilo no nosso sistema.
+              </p>
+
+                <form role="form" id="formAtualizaCadastroUsuario" class="form-horizontal logar" action="#" method="post" onSubmit="return false">
+                <input type="hidden" name="id_project" value="<?php echo $oProject->getId()?>">
+                <input type="hidden" name="id_contribution" value="<?php echo $oContribution->getId()?>">
+                <input type="hidden" name="id_contribution_old" value="<?php echo $iIdContributionOld?>">
+              
+<?php 
+    $sDataNascimento = date("d/m/Y",$oUser->getDataNascimento());
+    if ($sDataNascimento=="30/11/-0001") {
+        $sDataNascimento = "";
+    }
+?>
+                <label>
+                  Data de Nascimento <br>
+                  <input type="text" name="data_nascimento" id="inputDataNascimento" placeholder="__/__/____" value="<?php if (($sDataNascimento!="") && ($sDataNascimento!="31/12/1969")) { echo $sDataNascimento; }?>" required>
+                </label>
+                
+<?php 
+    // Conforme o tipo, apresenta os campos necessários
+    if (strtolower($oUser->getTipo())=="pf") {
+        // PESSOA FÍSICA
+?>
+                <label>
+                  CPF <br>
+                  <input type="text" placeholder='CPF' name="cpf" id="inputCPF" placeholder="" value="<?php echo $oUser->getCPF()?>" required>
+                </label>
+<?php
+    }
+    else {
+        // PESSOA JURIDICA
+?>
+                <label>
+                  CPF do responsável <br>
+                  <input type="text" placeholder='CPF' name="cpf" id="inputCPF" placeholder="" value="<?php echo $oUser->getCPF()?>" required>
+                </label>
+                
+                <label >CNPJ <br/>
+                    <input type="text" name="cnpj" id="inputCNPJ" placeholder="" value="<?php echo $oUser->getCNPJ()?>" required>
+                </label>
+            
+                <label>Nome da Empresa<br/>
+                    <input type="text" name="nome_empresa" id="inputCompanyName" placeholder="" value="<?php echo $oUser->getCompanyName()?>" required>
+                </label>
+  <?php
+    }
+?>
+                
+                
+    <label>País
+        <select name="pais" id="inputPais" onChange="selecionaPais($('#inputPais').val())" required>
+            <option value="">Escolha -----></option>
+<?php echo $sHTMLCountries?>
+        </select>
+    </label>
+    <div id="divLoadingPais">
+        <img src="<?php echo $this->basepath()?>/images/loader.gif">
+    </div>
+  
+  <div id="divInputEstado">
+    <label>Estado
+      <input type="text" name="novo_estado"  id="inputNovoEstado" placeholder="Informe o estado/território">
+    </label>
+  </div>
+
+  <div id="divSeletorEstado">
+    <label>Estado<br/>
+        <select name="estado" id="estado" onChange="selecionaCidade($('#estado').val())">
+            <option value="">Escolha -----></option>
+<?php echo $sHTMLStates?>
+        </select>
+    </label>
+    <div id="divLoadingEstado">
+        <img src="<?php echo $this->basepath()?>/images/loader.gif">
+    </div>
+  </div>
+  
+  <div id="divInputCidade">
+    <label>Cidade<br/>
+      <input type="text" name="nova_cidade" class="form-control" id="inputNovaCidade" placeholder="Informe a cidade">
+    </label>
+  </div>
+  
+  <div id="divSeletorCidade">
+    <label >Cidade<br/>
+        <select name="cidade" id="cidade">
+            <option value="">Escolha -----></option>
+<?php echo $sHTMLCities?>
+        </select>
+    </label>
+    <div class="col-sm-1" id="divLoadingCidade">
+        <img src="<?php echo $this->basepath()?>/images/loader.gif">
+    </div>
+  </div>
+
+  
+<?php 
+    $aEndereco = $oUser->getEndereco("residencial");
+?>
+  
+  
+                <label>
+                  Rua <br>
+                  <input type="text" placeholder='Rua, Avenida, etc' name="endereco_rua" id="inputEnderecoRua" value="<?php echo $aEndereco["address"]?>" maxlength="60" required>
+                </label>
+                <label>
+                  Número <br>
+                  <input type="text" placeholder='Número' name="endereco_numero" id="inputEnderecoNumero" value="<?php echo $aEndereco["number"]?>" maxlength="30">
+                </label>
+                <label>
+                  Complemento <br>
+                  <input type="text" placeholder='Complemento' name="endereco_complemento" id="inputEnderecoComplemento" value="<?php echo $aEndereco["complement"]?>" maxlength="50">
+                </label>
+                <label>
+                  Bairro <br>
+                  <input type="text" placeholder='Bairro' name="endereco_bairro" id="inputEnderecoBairro" value="<?php echo $aEndereco["neighborhood"]?>" maxlength="50" required>
+                </label>
+                
+                <label>
+                  CEP <br>
+                  <input type="text" placeholder='CEP' name="cep" id="inputCEP" value="<?php echo $aEndereco["zip"]?>" required>
+                </label>
+
+
+                <input type="button" class="btn btn-primary voltar" onClick="actionVoltar()" value="Voltar">
+
+                <input class="btn btn-primary no-hover update" type="button" value="Atualizar  "  onClick="goCheckout()" />
+              
+              </form>
+    <script>
+        // $(".loader").fadeOut('fast');
+        $('#inputDataNascimento').mask('99/99/9999');
+        $('#inputCEP').mask('99999-999');
+        $('#inputCPF').mask('999.999.999-99');
+        $('#inputCNPJ').mask('99.999.999/9999-99');
+        
+        if ($('#estado').val()!='') {
+            $('#divSeletorEstado').show();
+        }
+        if ($('#cidade').val()!='') {
+            $('#divSeletorCidade').show();
+        }
+
+        function actionVoltar() {
+        	$('#divConteudo').load(sBasePath+'/projeto/ajaxContribuicaoP1/<?php echo $oProject->getId()?>-<?php echo $oContribution->getId()?>');
+        }
+            
+        function goCheckout() {
+        		// Validação
+//         		if ($('#divSeletorEstado').is(':visible')) {
+//         			$('#inputNovoEstado').rules('remove','required');
+//         			$('#estado').rules('add','required');
+//         		}
+//         		else {
+//         			$('#inputNovoEstado').rules('add','required');
+//         			$('#estado').rules('remove','required');
+//         		}
+//         		if ($('#divSeletorCidade').is(':visible')) {
+//         			$('#inputNovaCidade').rules('remove','required');
+//         			$('#cidade').rules('add','required');
+//         		}
+//         		else {
+//         			$('#inputNovaCidade').rules('add','required');
+//         			$('#cidade').rules('remove','required');
+//         		}
+        		$('#formAtualizaCadastroUsuario').validate();
+
+        		if ($('#formAtualizaCadastroUsuario').valid()) {
+            		$.ajax({
+            			  type: 'POST',
+            			  url: sBasePath+'/projeto/ajaxAtualizaEndereco',
+            		    data: {contribution: '<?php echo $oContribution->getId()?>', projectId: '<?php echo $oProject->getId() ?>', user_id: '<?php echo $oUser->getId()?>', type: '<?php echo $oUser->getTipo()?>',birthday: $('#inputDataNascimento').val(), cpf: $('#inputCPF').val(), cnpj: $('#inputCNPJ').val(), company_name: $('#inputCompanyName').val(), country_id: $('#inputPais').val(), city_id: $('#cidade').val(), state: $('#estado').val(), new_city: $('#inputNovaCidade').val(), new_state: $('#inputNovoEstado').val(), zipcode: $('#inputCEP').val(), address: $('#inputEnderecoRua').val(), number: $('#inputEnderecoNumero').val(), complement: $('#inputEnderecoComplemento').val(), neighborhood: $('#inputEnderecoBairro').val() },
+            			  dataType: 'json',
+            		    cache: false,
+            			  timeout: 8000,
+            			  success: function(json) {
+     	        		 $('#divConteudo').fadeOut('slow', function(){
+   	                      // $(".loader").fadeIn('fast');
+   	                });
+            			  $('#divLoadingContent').hide();
+            				  if (json.retorno=='ok') {
+            				    // Envia para o seletor de cartão
+            					  $('#divConteudo').load(sBasePath+'/projeto/ajaxContribuicaoP3/<?php echo $oProject->getId() ?>-<?php echo $oContribution->getId()?>-<?php echo $iIdContributionOld?>', function(){
+                                    $(".loader").fadeOut('fast', function(){ $('#divConteudo').fadeIn(); });
+                                  });
+            				  }
+            				  else {
+            					  $('#divConteudo').load(sBasePath+'/projeto/ajaxMensagem/erro-atualiza-endereco', function(){
+                                    $(".loader").fadeOut('fast', function(){ $('#divConteudo').fadeIn(); });
+                                  });
+            				  }
+            			  },
+            			  error: function (jqXHR, textStatus, errorThrown) {
+            			  	switch (textStatus) {
+            				  	case 'timeout'	:	alert('Timeout...');
+            				  										break;
+            				  	default         : alert('Erro!\n\n'+errorThrown);
+            				  										break;
+            			  	}
+            			    return false;
+            		  	}
+            		});
+        		}
+        }
+        
+    </script>
+              

@@ -1,0 +1,130 @@
+﻿<?php
+	$this->headTitle("Webadmin - Relatórios");
+  Use Application\Model\Project; 
+  Use Application\Model\Perfil;
+?>
+
+<div class="navbar">
+  <div class="navbar-inner">
+    <a class="brand" href="#">Relatórios administrativos</a>
+    <ul class="nav">
+      <li class="active"><a href="#">Recorrências</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="well well-large">
+	
+<form method=post action="<?php echo $this->basePath()?>/wbadmin/relatorio/recorrenciasForm">
+
+<table class="table table-striped table-hover" style="width: 100%">
+
+			
+		<thead>
+		<tr>
+		    <td colspan=3>
+		    		<h3>Selecione os filtros</h3>
+		    </td>
+		</tr>
+		<tr>
+		    <td style="width: 60%">
+		    		<h5>Projetos:</h5>
+						<select name="projetos[]" multiple="multiple" size=10 style="width: 100%">
+<?php
+    foreach ($aIdsProjetos as $iIdProjeto) {
+        $umProjetoTemp = new Project($oSm,$iIdProjeto);
+        if (in_array($umProjetoTemp->getProperty("id"), $projetos)) $selected = "selected"; else $selected="";
+?>
+							  <option <?=$selected;?> value="<?=$umProjetoTemp->getProperty("id");?>"><?=$umProjetoTemp->getProperty("title");?></option>
+<?php 
+    }
+?>
+						</select>
+		    </td>
+		    <td style="width: 20%">
+		        <h5>Data inicial:</h5>
+		        <input name="data_inicial" style="height: 30px" type="date" value="<?=$data_inicial;?>"><br>
+		    </td>
+		    <td style="width: 20%">
+		        <h5>Data final:</h5>
+		        <input name="data_final" style="height: 30px" type="date" value="<?=$data_final;?>">
+		    </td>
+		</tr>
+		<tr>
+				<td colspan=4 style="text-align: center">
+		        <input type="submit" class="btn btn-large" type="button" value="Pesquisar">
+				</td>
+		</tr>
+		</thead>
+		
+</table>
+
+</form>
+
+</div>
+
+
+<br>
+
+<?php 
+    if (count($aIdsProjetos)>0) {
+?>    
+    
+    <table class="table table-striped table-hover">
+    <thead>
+    <tr>
+        <td>
+            Data Cadastro
+        </td>
+        <td>
+            Título do Projeto
+        </td>
+        <td>
+            Autor
+        </td>
+        <td>
+            &nbsp;
+        </td>
+    </tr>
+    </thead>
+    <tbody>
+<?php
+    foreach ($aIdsProjetos as $iIdProjeto) {
+        $umProjetoTemp = new Project($oSm,$iIdProjeto);
+?>
+    <tr>
+        <td>
+            <?php echo date("d/m/Y",strtotime($umProjetoTemp->getProperty("dt_registration")))?>
+        </td>
+        <td>
+            <?php echo $umProjetoTemp->getProperty("title")?>
+        </td>
+        <td>
+            <?php 
+                $oUSer = new Perfil($oSm,$umProjetoTemp->getProperty("id_user"));
+                echo $oUSer->getNome();
+            ?>
+        </td>
+        <td>
+            <a href="<?php echo $this->basePath()?>/wbadmin/projetos-detalhes/<?php echo $umProjetoTemp->getProjectId()?>"><i class="icon-search"></i></a>
+            <a href="<?php echo $this->basePath()?>/wbadmin/projetos-excluir/<?php echo $umProjetoTemp->getProjectId()?>"><i class="icon-remove"></i></a>
+        </td>
+    </tr>
+<?php 
+    }
+?>
+    </tbody>
+    </table>
+<?php 
+}
+else {
+?>
+    <div class="alert alert-info" role="alert">
+        No momento não existe nenhum projeto para ser avaliado como pré-projeto ;-)
+    </div>
+<?php
+} 
+?>   
+
+
+

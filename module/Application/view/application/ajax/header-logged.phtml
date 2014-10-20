@@ -1,0 +1,44 @@
+        <ul class="nav navbar-nav">
+            <li><a href="<?php echo $this->basepath()?>/comoFunciona">Como Funciona?</a></li>
+            <li><a href="<?php echo $this->basepath()?>/osProjetos">Os Projetos</a></li>
+            <li><a href="<?php echo $this->basepath()?>/cadastraProjeto">Envie o seu!</a></li>
+        </ul>
+        <div class="navbar-collapse collapse" id="divControleLogin">
+          <form class="navbar-form navbar-right" role="form" action="<?php echo $this->basePath()?>/logout" method="post" style="margin-top:-1px;margin-bottom:1px">
+            <div class="form-group">
+              <a class="navbar-brand" href="#">Olá <?php echo $umUsuario->getPrimeiroNome()?></a>
+            </div>
+            <div class="form-group">
+                <div class="dropdown">
+                  <a data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-cog" style="font-size:18pt;color:#ffffff"></span></a>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="<?php echo $this->basepath()?>/usuario/perfil">Meu perfil</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="<?php echo $this->basepath()?>/usuario/pagamentos">Minhas contribuições</a></li>
+<?php
+    $aProfiles = $umUsuario->getIdsPerfis();
+    // Projetista
+    if (in_array(2,$aProfiles)) { 
+?>
+                    <li role="presentation" class="divider"></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="<?php echo $this->basepath()?>/usuario/projetos">Meus projetos</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="<?php echo $this->basepath()?>/usuario/projetosValoresRecebidos">Meus valores recebidos</a></li>
+<?php
+    } 
+    // Administrador
+    if (in_array(3,$aProfiles)) { 
+?>
+                    <li role="presentation" class="divider"></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="<?php echo $this->basepath()?>/wbadmin">Webadmin <span class="badge alert-danger"><?php if ($umUsuario->showBadgeWebadmin()>0) { echo $umUsuario->showBadgeWebadmin(); }?></span></a></li>
+<?php
+    } 
+?>
+                    <li role="presentation" class="divider"></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Suporte</a></li>
+                  </ul>
+                </div>
+            </div>
+            <div class="form-group">
+              &nbsp;<a href="<?php echo $this->basePath()?>/seguro/logout"><span class="glyphicon glyphicon-log-out" style="font-size:18pt;color:#ffffff"></span></a>
+            </div>      
+            </form>
+        </div>

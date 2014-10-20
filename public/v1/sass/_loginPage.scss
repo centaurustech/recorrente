@@ -1,0 +1,126 @@
+.login{
+	min-height:500px;
+	
+	.getdown{
+		margin-top:0px;
+	}
+
+	.container{
+	}
+
+	h2{
+		margin-top:30px;
+		font-family: "Brandon Bold";
+		color: $blue;
+	}
+	
+	hr,p { 
+		margin-top:-30px;
+	}
+
+	p{
+		font-family: "Raleway";
+		color: darken($gray,30%);
+	}
+	
+	.semcadastro{
+		
+		padding-left: 100px;
+		height: 250px;
+
+		h3{
+			font-family: "Brandon Bold";
+			color:$blue;
+			 margin-top:-10px;
+			 margin-bottom:10px;
+		}
+
+		em{
+			color:$blue;
+			font-style: normal;
+			font-family: "Raleway";
+			font-size:15px;
+			font-weight: 600;
+		}
+
+		button{
+			width: 250px;
+			font-family: "Brandon Bold";
+			margin-top: 5px;
+		}
+	}
+	form{
+		border-right:2px solid $orange;
+		
+		.text-error{
+			margin-bottom:20px;
+			width: 145px;
+			background-color: #b94a48;
+			color:white;
+			border-radius:3px;
+			display: block;
+			padding: 2px 4px;
+			font-size: 11.844px;
+			font-weight: bold;
+			text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+			white-space: nowrap;
+			vertical-align: baseline;
+		}
+
+		h3{
+			font-family: "Brandon Bold";
+			color:$blue;
+			 margin-top:-10px;
+			 margin-bottom:10px;
+			 font-size:20px;
+		}
+		
+		label{
+			font-family: "Raleway";
+			font-weight: bold;
+			color:black;
+
+			input{
+				margin-top:5px;
+				height: 55px;
+				width: 320px;
+				padding-left:75px;
+
+				@include placeholder{
+					padding-left:10px;
+					color:#75627b;
+					font-family: "Brandon Regular";
+				}
+			}
+		}
+
+		#login_mail{
+		background: #fff url("../img/login-user.png") no-repeat;
+		background-position:left;
+		// background-size: 65px 65px;
+		}		
+
+		#login_senha{
+			background: #fff url("../img/login-pass.png") no-repeat;
+			background-position:left;
+			// background-size: 65px 65px;
+		}
+
+		input[type='text'], input[type='password']{
+			// width: 100%;
+		}
+	
+		button, a ,input[type='submit'], input[type='button']{
+			font-family: "Brandon Bold";
+		}
+		
+		input[type='submit'],button, input[type='button']{
+			margin-left:125px;
+		}
+
+		a{
+			text-decoration: underline;
+			font-size: 20px;
+		}
+	}
+}

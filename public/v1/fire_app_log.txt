@@ -1,0 +1,1139 @@
+2014-08-12 13:02:52    create stylesheets/ie.css 
+2014-08-12 13:02:52    create stylesheets/screen.css 
+2014-08-12 13:03:00    create stylesheets/main.css 
+2014-08-12 13:03:06 identical stylesheets/main.css 
+2014-08-12 13:04:10    create stylesheets/style.css 
+2014-08-12 13:06:33     error sass/style.scss (Line 8: File to import not found or unreadable: vendor/bootstrap/bootstrap-responsive.min.
+Load paths:
+  C:/xampp/htdocs/benfeitoria/front/proj/sass
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/blueprint/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/compass-960-plugin-f4bfe8555a7d2cae09bc/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/heygrady-compass-html5-boilerplate-4cc8815/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/compass-h5bp/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/thomas-mcdonald-bootstrap-sass-831f25b/vendor/assets/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/susy-1.0/sass
+  C:/Users/De/Dropbox/fire.app/lib/ruby/common/sassy-math-1.2/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/common/modular-scale-1.0.2/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/zurb-foundation-3.0.9/scss
+  Compass::SpriteImporter)
+2014-08-12 13:06:33 overwrite stylesheets/style.css 
+2014-08-12 13:06:54     error sass/style.scss (Line 8: File to import not found or unreadable: vendor/bootstrap/bootstrap-responsive.min.
+Load paths:
+  C:/xampp/htdocs/benfeitoria/front/proj/sass
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/blueprint/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/compass-960-plugin-f4bfe8555a7d2cae09bc/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/heygrady-compass-html5-boilerplate-4cc8815/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/compass-h5bp/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/thomas-mcdonald-bootstrap-sass-831f25b/vendor/assets/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/susy-1.0/sass
+  C:/Users/De/Dropbox/fire.app/lib/ruby/common/sassy-math-1.2/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/common/modular-scale-1.0.2/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/zurb-foundation-3.0.9/scss
+  Compass::SpriteImporter)
+2014-08-12 13:06:54 identical stylesheets/style.css 
+2014-08-12 13:07:09     error sass/style.scss (Line 7: File to import not found or unreadable: vendor/bootstrap/bootstrap-min.
+Load paths:
+  C:/xampp/htdocs/benfeitoria/front/proj/sass
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/blueprint/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/compass-960-plugin-f4bfe8555a7d2cae09bc/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/heygrady-compass-html5-boilerplate-4cc8815/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/compass-h5bp/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/thomas-mcdonald-bootstrap-sass-831f25b/vendor/assets/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/susy-1.0/sass
+  C:/Users/De/Dropbox/fire.app/lib/ruby/common/sassy-math-1.2/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/common/modular-scale-1.0.2/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/zurb-foundation-3.0.9/scss
+  Compass::SpriteImporter)
+2014-08-12 13:07:09 overwrite stylesheets/style.css 
+2014-08-12 13:07:18     error sass/style.scss (Line 7: File to import not found or unreadable: vendor/bootstrap/bootstrap-min.
+Load paths:
+  C:/xampp/htdocs/benfeitoria/front/proj/sass
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/blueprint/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/compass-960-plugin-f4bfe8555a7d2cae09bc/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/heygrady-compass-html5-boilerplate-4cc8815/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/compass-h5bp/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/thomas-mcdonald-bootstrap-sass-831f25b/vendor/assets/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/susy-1.0/sass
+  C:/Users/De/Dropbox/fire.app/lib/ruby/common/sassy-math-1.2/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/common/modular-scale-1.0.2/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/zurb-foundation-3.0.9/scss
+  Compass::SpriteImporter)
+2014-08-12 13:07:18 identical stylesheets/style.css 
+2014-08-12 13:09:28     error sass/style.scss (Line 7: File to import not found or unreadable: vendor/bootstrap/bootstrap-min.
+Load paths:
+  C:/xampp/htdocs/benfeitoria/front/proj/sass
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/blueprint/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/compass-960-plugin-f4bfe8555a7d2cae09bc/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/heygrady-compass-html5-boilerplate-4cc8815/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/compass-h5bp/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/thomas-mcdonald-bootstrap-sass-831f25b/vendor/assets/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/susy-1.0/sass
+  C:/Users/De/Dropbox/fire.app/lib/ruby/common/sassy-math-1.2/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/common/modular-scale-1.0.2/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/zurb-foundation-3.0.9/scss
+  Compass::SpriteImporter)
+2014-08-12 13:09:28 overwrite css/style.css 
+2014-08-12 13:09:38     error sass/style.scss (Line 7: File to import not found or unreadable: vendor/bootstrap/bootstrap-min.
+Load paths:
+  C:/xampp/htdocs/benfeitoria/front/proj/sass
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/blueprint/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/compass-960-plugin-f4bfe8555a7d2cae09bc/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/heygrady-compass-html5-boilerplate-4cc8815/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/compass-h5bp/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/thomas-mcdonald-bootstrap-sass-831f25b/vendor/assets/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/susy-1.0/sass
+  C:/Users/De/Dropbox/fire.app/lib/ruby/common/sassy-math-1.2/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/common/modular-scale-1.0.2/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/zurb-foundation-3.0.9/scss
+  Compass::SpriteImporter)
+2014-08-12 13:09:38 overwrite css/style.css 
+2014-08-12 13:09:59     error sass/style.scss (Line 7: File to import not found or unreadable: vendor/bootstrap/bootstrap-min.
+Load paths:
+  C:/xampp/htdocs/benfeitoria/front/proj/sass
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/blueprint/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/compass-960-plugin-f4bfe8555a7d2cae09bc/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/heygrady-compass-html5-boilerplate-4cc8815/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/compass-h5bp/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/thomas-mcdonald-bootstrap-sass-831f25b/vendor/assets/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/susy-1.0/sass
+  C:/Users/De/Dropbox/fire.app/lib/ruby/common/sassy-math-1.2/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/common/modular-scale-1.0.2/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/zurb-foundation-3.0.9/scss
+  Compass::SpriteImporter)
+2014-08-12 13:09:59 identical css/style.css 
+2014-08-12 13:10:39     error sass/style.scss (Line 7: File to import not found or unreadable: vendor/bootstrap/bootstrap-min.
+Load paths:
+  C:/xampp/htdocs/benfeitoria/front/proj/sass
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/blueprint/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/compass-960-plugin-f4bfe8555a7d2cae09bc/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/heygrady-compass-html5-boilerplate-4cc8815/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/compass-h5bp/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/thomas-mcdonald-bootstrap-sass-831f25b/vendor/assets/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/susy-1.0/sass
+  C:/Users/De/Dropbox/fire.app/lib/ruby/common/sassy-math-1.2/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/common/modular-scale-1.0.2/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/zurb-foundation-3.0.9/scss
+  Compass::SpriteImporter)
+2014-08-12 13:10:39 identical css/style.css 
+2014-08-12 13:10:57     error sass/style.scss (Line 7: File to import not found or unreadable: vendor/bootstrap/bootstrap-min.
+Load paths:
+  C:/xampp/htdocs/benfeitoria/front/proj/sass
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/blueprint/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/compass-960-plugin-f4bfe8555a7d2cae09bc/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/heygrady-compass-html5-boilerplate-4cc8815/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/compass-h5bp/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/thomas-mcdonald-bootstrap-sass-831f25b/vendor/assets/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/susy-1.0/sass
+  C:/Users/De/Dropbox/fire.app/lib/ruby/common/sassy-math-1.2/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/common/modular-scale-1.0.2/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/zurb-foundation-3.0.9/scss
+  Compass::SpriteImporter)
+2014-08-12 13:10:57 identical css/style.css 
+2014-08-12 13:11:15     error sass/style.scss (Line 7: File to import not found or unreadable: vendor/bootstrap/bootstrap-min.
+Load paths:
+  C:/xampp/htdocs/benfeitoria/front/proj/sass
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/blueprint/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/compass-960-plugin-f4bfe8555a7d2cae09bc/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/heygrady-compass-html5-boilerplate-4cc8815/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/compass-h5bp/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/thomas-mcdonald-bootstrap-sass-831f25b/vendor/assets/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/susy-1.0/sass
+  C:/Users/De/Dropbox/fire.app/lib/ruby/common/sassy-math-1.2/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/common/modular-scale-1.0.2/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/zurb-foundation-3.0.9/scss
+  Compass::SpriteImporter)
+2014-08-12 13:11:15 identical css/style.css 
+2014-08-12 13:11:34     error sass/style.scss (Line 8: File to import not found or unreadable: vendor/bootstrap/bootstrap-responsive-min.
+Load paths:
+  C:/xampp/htdocs/benfeitoria/front/proj/sass
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/blueprint/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/compass-960-plugin-f4bfe8555a7d2cae09bc/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/heygrady-compass-html5-boilerplate-4cc8815/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/compass-h5bp/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/thomas-mcdonald-bootstrap-sass-831f25b/vendor/assets/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/susy-1.0/sass
+  C:/Users/De/Dropbox/fire.app/lib/ruby/common/sassy-math-1.2/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/common/modular-scale-1.0.2/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/zurb-foundation-3.0.9/scss
+  Compass::SpriteImporter)
+2014-08-12 13:11:34 overwrite css/style.css 
+2014-08-12 13:11:36 overwrite css/vendor/bootstrap/bootstrap-min.css 
+2014-08-12 13:11:41     error sass/style.scss (Line 8: File to import not found or unreadable: vendor/bootstrap/bootstrap-responsive-min.
+Load paths:
+  C:/xampp/htdocs/benfeitoria/front/proj/sass
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/blueprint/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/compass-960-plugin-f4bfe8555a7d2cae09bc/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/heygrady-compass-html5-boilerplate-4cc8815/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/compass-h5bp/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/thomas-mcdonald-bootstrap-sass-831f25b/vendor/assets/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/susy-1.0/sass
+  C:/Users/De/Dropbox/fire.app/lib/ruby/common/sassy-math-1.2/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/common/modular-scale-1.0.2/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/zurb-foundation-3.0.9/scss
+  Compass::SpriteImporter)
+2014-08-12 13:11:41 overwrite css/style.css 
+2014-08-12 13:11:56     error sass/style.scss (Line 9: File to import not found or unreadable: vendor/theme/fancybox.
+Load paths:
+  C:/xampp/htdocs/benfeitoria/front/proj/sass
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/blueprint/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/compass-960-plugin-f4bfe8555a7d2cae09bc/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/heygrady-compass-html5-boilerplate-4cc8815/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/compass-h5bp/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/thomas-mcdonald-bootstrap-sass-831f25b/vendor/assets/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/susy-1.0/sass
+  C:/Users/De/Dropbox/fire.app/lib/ruby/common/sassy-math-1.2/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/common/modular-scale-1.0.2/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/zurb-foundation-3.0.9/scss
+  Compass::SpriteImporter)
+2014-08-12 13:11:56 overwrite css/style.css 
+2014-08-12 13:11:57    create css/vendor/bootstrap/bootstrap-min.css 
+2014-08-12 13:11:58    create css/vendor/bootstrap/bootstrap-responsive-min.css 
+2014-08-12 13:12:00     error sass/style.scss (Line 141 of sass/vendor/theme/fancybox.scss: Invalid CSS after "	co": expected "{", was "")
+2014-08-12 13:12:00 overwrite css/style.css 
+2014-08-12 13:12:01     error sass/vendor/theme/fancybox.scss (Line 141: Invalid CSS after "	co": expected "{", was "")
+2014-08-12 13:12:01    create css/vendor/theme/fancybox.css 
+2014-08-12 13:12:03     error sass/style.scss (Line 141 of sass/vendor/theme/fancybox.scss: Invalid CSS after "	co": expected "{", was "")
+2014-08-12 13:12:03 identical css/style.css 
+2014-08-12 13:12:04     error sass/vendor/theme/fancybox.scss (Line 141: Invalid CSS after "	co": expected "{", was "")
+2014-08-12 13:12:04 identical css/vendor/theme/fancybox.css 
+2014-08-12 13:12:04    create css/vendor/theme/masonry.css 
+2014-08-12 13:12:06     error sass/style.scss (Line 141 of sass/vendor/theme/fancybox.scss: Invalid CSS after "	co": expected "{", was "")
+2014-08-12 13:12:06 identical css/style.css 
+2014-08-12 13:12:06     error sass/vendor/theme/fancybox.scss (Line 141: Invalid CSS after "	co": expected "{", was "")
+2014-08-12 13:12:06 identical css/vendor/theme/fancybox.css 
+2014-08-12 13:12:07    create css/vendor/theme/slides.css 
+2014-08-12 13:12:09     error sass/style.scss (Line 141 of sass/vendor/theme/fancybox.scss: Invalid CSS after "	co": expected "{", was "")
+2014-08-12 13:12:09 identical css/style.css 
+2014-08-12 13:12:10     error sass/vendor/theme/fancybox.scss (Line 141: Invalid CSS after "	co": expected "{", was "")
+2014-08-12 13:12:10 identical css/vendor/theme/fancybox.css 
+2014-08-12 13:12:10    create css/vendor/theme/style.css 
+2014-08-12 13:12:26     error sass/style.scss (Line 141 of sass/vendor/theme/fancybox.scss: Invalid CSS after "	co": expected "{", was "")
+2014-08-12 13:12:26 overwrite css/style.css 
+2014-08-12 13:12:27    create css/vendor/bootstrap/bootstrap-min.css 
+2014-08-12 13:12:28    create css/vendor/bootstrap/bootstrap-responsive-min.css 
+2014-08-12 13:12:28     error sass/vendor/theme/fancybox.scss (Line 141: Invalid CSS after "	co": expected "{", was "")
+2014-08-12 13:12:28    create css/vendor/theme/fancybox.css 
+2014-08-12 13:12:28    create css/vendor/theme/masonry.css 
+2014-08-12 13:12:28    create css/vendor/theme/slides.css 
+2014-08-12 13:12:28    create css/vendor/theme/style.css 
+2014-08-12 13:13:15     error sass/style.scss (Line 141 of sass/vendor/theme/fancybox.scss: Invalid CSS after "	co": expected "{", was "")
+2014-08-12 13:13:15 identical css/style.css 
+2014-08-12 13:13:16    create css/vendor/bootstrap/bootstrap-min.css 
+2014-08-12 13:13:16    create css/vendor/bootstrap/bootstrap-responsive-min.css 
+2014-08-12 13:13:17     error sass/vendor/theme/fancybox.scss (Line 141: Invalid CSS after "	co": expected "{", was "")
+2014-08-12 13:13:17    create css/vendor/theme/fancybox.css 
+2014-08-12 13:13:17    create css/vendor/theme/masonry.css 
+2014-08-12 13:13:17    create css/vendor/theme/slides.css 
+2014-08-12 13:13:17    create css/vendor/theme/style.css 
+2014-08-12 13:15:51     error sass/style.scss (Line 7: File to import not found or unreadable: vendor/bootstrap/bootstrap-min.
+Load paths:
+  C:/xampp/htdocs/benfeitoria/front/proj/sass
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/blueprint/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/compass-960-plugin-f4bfe8555a7d2cae09bc/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/heygrady-compass-html5-boilerplate-4cc8815/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/compass-h5bp/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/thomas-mcdonald-bootstrap-sass-831f25b/vendor/assets/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/susy-1.0/sass
+  C:/Users/De/Dropbox/fire.app/lib/ruby/common/sassy-math-1.2/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/common/modular-scale-1.0.2/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/zurb-foundation-3.0.9/scss
+  Compass::SpriteImporter)
+2014-08-12 13:15:51 overwrite css/style.css 
+2014-08-12 13:21:55     error sass/style.scss (Line 1: Invalid CSS after ".": expected class name, was "/* Welcome to C...")
+2014-08-12 13:21:55 overwrite css/style.css 
+2014-08-12 13:31:48     error sass/style.scss (Line 7: File to import not found or unreadable: vendor/bootstrap/bootstrap.min.
+Load paths:
+  C:/xampp/htdocs/benfeitoria/front/proj/sass
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/blueprint/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/compass-960-plugin-f4bfe8555a7d2cae09bc/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/heygrady-compass-html5-boilerplate-4cc8815/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/compass-h5bp/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/thomas-mcdonald-bootstrap-sass-831f25b/vendor/assets/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/susy-1.0/sass
+  C:/Users/De/Dropbox/fire.app/lib/ruby/common/sassy-math-1.2/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/common/modular-scale-1.0.2/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/zurb-foundation-3.0.9/scss
+  Compass::SpriteImporter)
+2014-08-12 13:31:48 overwrite css/style.css 
+2014-08-12 13:31:56     error sass/style.scss (Line 7: File to import not found or unreadable: vendor/bootstrap/bootstrap.min.
+Load paths:
+  C:/xampp/htdocs/benfeitoria/front/proj/sass
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/blueprint/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/compass-960-plugin-f4bfe8555a7d2cae09bc/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/heygrady-compass-html5-boilerplate-4cc8815/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/compass-h5bp/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/thomas-mcdonald-bootstrap-sass-831f25b/vendor/assets/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/susy-1.0/sass
+  C:/Users/De/Dropbox/fire.app/lib/ruby/common/sassy-math-1.2/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/common/modular-scale-1.0.2/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/zurb-foundation-3.0.9/scss
+  Compass::SpriteImporter)
+2014-08-12 13:31:56 identical css/style.css 
+2014-08-12 13:32:14     error sass/style.scss (Line 8: File to import not found or unreadable: vendor/bootstrap/bootstrap.responsive.min.
+Load paths:
+  C:/xampp/htdocs/benfeitoria/front/proj/sass
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/blueprint/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/compass-960-plugin-f4bfe8555a7d2cae09bc/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/heygrady-compass-html5-boilerplate-4cc8815/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/compass-h5bp/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/thomas-mcdonald-bootstrap-sass-831f25b/vendor/assets/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/susy-1.0/sass
+  C:/Users/De/Dropbox/fire.app/lib/ruby/common/sassy-math-1.2/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/common/modular-scale-1.0.2/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/zurb-foundation-3.0.9/scss
+  Compass::SpriteImporter)
+2014-08-12 13:32:14 overwrite css/style.css 
+2014-08-12 13:32:15     error sass/style.scss (Line 8: File to import not found or unreadable: vendor/bootstrap/bootstrap.responsive.min.
+Load paths:
+  C:/xampp/htdocs/benfeitoria/front/proj/sass
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/blueprint/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/compass-960-plugin-f4bfe8555a7d2cae09bc/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/heygrady-compass-html5-boilerplate-4cc8815/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/compass-h5bp/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/thomas-mcdonald-bootstrap-sass-831f25b/vendor/assets/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/susy-1.0/sass
+  C:/Users/De/Dropbox/fire.app/lib/ruby/common/sassy-math-1.2/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/common/modular-scale-1.0.2/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/zurb-foundation-3.0.9/scss
+  Compass::SpriteImporter)
+2014-08-12 13:32:15 overwrite css/style.css 
+2014-08-12 13:34:18     error sass/style.scss (Line 8: File to import not found or unreadable: vendor/bootstrap/bootstrap.responsive.min.
+Load paths:
+  C:/xampp/htdocs/benfeitoria/front/proj/sass
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/blueprint/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/compass-960-plugin-f4bfe8555a7d2cae09bc/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/heygrady-compass-html5-boilerplate-4cc8815/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/compass-h5bp/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/thomas-mcdonald-bootstrap-sass-831f25b/vendor/assets/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/susy-1.0/sass
+  C:/Users/De/Dropbox/fire.app/lib/ruby/common/sassy-math-1.2/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/common/modular-scale-1.0.2/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/zurb-foundation-3.0.9/scss
+  Compass::SpriteImporter)
+2014-08-12 13:34:18 overwrite css/style.css 
+2014-08-12 13:34:21     error sass/style.scss (Line 8: File to import not found or unreadable: vendor/bootstrap/bootstrap.responsive.min.
+Load paths:
+  C:/xampp/htdocs/benfeitoria/front/proj/sass
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/blueprint/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/compass-960-plugin-f4bfe8555a7d2cae09bc/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/heygrady-compass-html5-boilerplate-4cc8815/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/compass-h5bp/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/thomas-mcdonald-bootstrap-sass-831f25b/vendor/assets/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/susy-1.0/sass
+  C:/Users/De/Dropbox/fire.app/lib/ruby/common/sassy-math-1.2/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/common/modular-scale-1.0.2/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/zurb-foundation-3.0.9/scss
+  Compass::SpriteImporter)
+2014-08-12 13:34:21 identical css/style.css 
+2014-08-12 13:34:24     error sass/style.scss (Line 8: File to import not found or unreadable: vendor/bootstrap/bootstrap.responsive.min.
+Load paths:
+  C:/xampp/htdocs/benfeitoria/front/proj/sass
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/blueprint/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/compass-960-plugin-f4bfe8555a7d2cae09bc/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/heygrady-compass-html5-boilerplate-4cc8815/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/compass-h5bp/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/thomas-mcdonald-bootstrap-sass-831f25b/vendor/assets/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/susy-1.0/sass
+  C:/Users/De/Dropbox/fire.app/lib/ruby/common/sassy-math-1.2/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/common/modular-scale-1.0.2/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/zurb-foundation-3.0.9/scss
+  Compass::SpriteImporter)
+2014-08-12 13:34:24 overwrite css/style.css 
+2014-08-12 13:34:33     error sass/style.scss (Line 8: File to import not found or unreadable: vendor/bootstrap/bootstrap.responsive.min.
+Load paths:
+  C:/xampp/htdocs/benfeitoria/front/proj/sass
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/blueprint/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/compass-960-plugin-f4bfe8555a7d2cae09bc/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/heygrady-compass-html5-boilerplate-4cc8815/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/compass-h5bp/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/thomas-mcdonald-bootstrap-sass-831f25b/vendor/assets/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/susy-1.0/sass
+  C:/Users/De/Dropbox/fire.app/lib/ruby/common/sassy-math-1.2/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/common/modular-scale-1.0.2/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/zurb-foundation-3.0.9/scss
+  Compass::SpriteImporter)
+2014-08-12 13:34:33 identical css/style.css 
+2014-08-12 13:34:38     error sass/style.scss (Line 8: File to import not found or unreadable: vendor/bootstrap/bootstrap.responsive.min.
+Load paths:
+  C:/xampp/htdocs/benfeitoria/front/proj/sass
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/blueprint/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/compass-960-plugin-f4bfe8555a7d2cae09bc/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/heygrady-compass-html5-boilerplate-4cc8815/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/compass-h5bp/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/thomas-mcdonald-bootstrap-sass-831f25b/vendor/assets/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/susy-1.0/sass
+  C:/Users/De/Dropbox/fire.app/lib/ruby/common/sassy-math-1.2/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/common/modular-scale-1.0.2/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/zurb-foundation-3.0.9/scss
+  Compass::SpriteImporter)
+2014-08-12 13:34:38 identical css/style.css 
+2014-08-12 13:34:42     error sass/style.scss (Line 8: File to import not found or unreadable: vendor/bootstrap/bootstrap.responsive.min.
+Load paths:
+  C:/xampp/htdocs/benfeitoria/front/proj/sass
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/blueprint/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/compass-960-plugin-f4bfe8555a7d2cae09bc/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/heygrady-compass-html5-boilerplate-4cc8815/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/compass-h5bp/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/thomas-mcdonald-bootstrap-sass-831f25b/vendor/assets/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/susy-1.0/sass
+  C:/Users/De/Dropbox/fire.app/lib/ruby/common/sassy-math-1.2/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/common/modular-scale-1.0.2/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/zurb-foundation-3.0.9/scss
+  Compass::SpriteImporter)
+2014-08-12 13:34:42 overwrite css/style.css 
+2014-08-12 13:35:01     error sass/style.scss (Line 141 of sass/vendor/theme/_fancybox.scss: Invalid CSS after "	co": expected "{", was "")
+2014-08-12 13:35:01 overwrite css/style.css 
+2014-08-12 13:35:41     error sass/style.scss (Line 141 of sass/vendor/theme/_fancybox.scss: Invalid CSS after "	co": expected "{", was "")
+2014-08-12 13:35:41 identical css/style.css 
+2014-08-12 13:35:50     error sass/style.scss (Line 141 of sass/vendor/theme/_fancybox.scss: Invalid CSS after "	co": expected "{", was "")
+2014-08-12 13:35:50 identical css/style.css 
+2014-08-12 13:36:02     error sass/style.scss (Line 141 of sass/vendor/theme/_fancybox.scss: Invalid CSS after "	co": expected "{", was "")
+2014-08-12 13:36:02 identical css/style.css 
+2014-08-12 13:36:06     error sass/style.scss (Line 141 of sass/vendor/theme/_fancybox.scss: Invalid CSS after "	co": expected "{", was "")
+2014-08-12 13:36:06 identical css/style.css 
+2014-08-12 13:37:44     error sass/style.scss (Line 141 of sass/vendor/theme/_fancybox.scss: Invalid CSS after "	co": expected "{", was "")
+2014-08-12 13:37:44 overwrite css/style.css 
+2014-08-12 13:37:44     error sass/style.scss (Line 141 of sass/vendor/theme/_fancybox.scss: Invalid CSS after "	co": expected "{", was "")
+2014-08-12 13:37:45 overwrite css/style.css 
+2014-08-12 13:37:50     error sass/style.scss (Line 141 of sass/vendor/theme/_fancybox.scss: Invalid CSS after "	co": expected "{", was "")
+2014-08-12 13:37:50 overwrite css/style.css 
+2014-08-12 13:38:18     error sass/style.scss (Line 140 of sass/vendor/theme/_fancybox.scss: Invalid CSS after "	co": expected "{", was "")
+2014-08-12 13:38:18 overwrite css/style.css 
+2014-08-12 13:38:32 overwrite css/style.css 
+2014-08-12 13:38:41 identical css/style.css 
+2014-08-12 13:57:58 overwrite css/style.css 
+2014-08-12 14:06:26 identical css/style.css 
+2014-08-12 14:07:16     error sass/style.scss (Line 55: Invalid CSS after "...nt-size:1.2em;}": expected selector or at-rule, was "}")
+2014-08-12 14:07:16 overwrite css/style.css 
+2014-08-12 14:07:37     error sass/style.scss (Line 160: Invalid CSS after "form-control {": expected "}", was "!width:140px;}")
+2014-08-12 14:07:37 overwrite css/style.css 
+2014-08-12 14:08:10 overwrite css/style.css 
+2014-08-12 18:57:45     error sass/style.scss (Line 15: Invalid CSS after ".../sticky-footer"": expected selector or at-rule, was "@include sticky...")
+2014-08-12 18:57:45 overwrite css/style.css 
+2014-08-12 18:57:52     error sass/style.scss (Line 15: Invalid CSS after ".../sticky-footer"": expected selector or at-rule, was "@include sticky...")
+2014-08-12 18:57:52 identical css/style.css 
+2014-08-12 18:58:11 overwrite css/style.css 
+2014-08-12 18:58:34 overwrite css/style.css 
+2014-08-12 18:58:46 overwrite css/style.css 
+2014-08-12 19:06:59 overwrite css/style.css 
+2014-08-12 19:07:03 overwrite css/style.css 
+2014-08-12 19:07:14 overwrite css/style.css 
+2014-08-12 19:11:59 overwrite css/style.css 
+2014-08-12 19:12:04 identical css/style.css 
+2014-08-12 19:15:20 overwrite css/style.css 
+2014-08-12 19:20:01 overwrite css/style.css 
+2014-08-12 19:20:18 overwrite css/style.css 
+2014-08-12 19:24:56 overwrite css/style.css 
+2014-08-12 19:25:20 overwrite css/style.css 
+2014-08-12 19:25:38 overwrite css/style.css 
+2014-08-12 19:25:43 overwrite css/style.css 
+2014-08-12 19:25:58 overwrite css/style.css 
+2014-08-12 19:28:30 overwrite css/style.css 
+2014-08-12 19:29:12 overwrite css/style.css 
+2014-08-12 19:29:26 overwrite css/style.css 
+2014-08-12 19:31:05 overwrite css/style.css 
+2014-08-12 19:31:18 identical css/style.css 
+2014-08-12 19:31:29 overwrite css/style.css 
+2014-08-12 19:31:59 overwrite css/style.css 
+2014-08-12 19:34:06 overwrite css/style.css 
+2014-08-12 19:34:39 overwrite css/style.css 
+2014-08-12 19:35:16 overwrite css/style.css 
+2014-08-12 19:35:41 overwrite css/style.css 
+2014-08-12 19:37:54 overwrite css/style.css 
+2014-08-12 19:40:26 overwrite css/style.css 
+2014-08-12 19:40:53 identical css/style.css 
+2014-08-12 19:41:34 overwrite css/style.css 
+2014-08-12 19:42:14 overwrite css/style.css 
+2014-08-12 19:44:59 overwrite css/style.css 
+2014-08-12 19:48:34     error sass/style.scss (Line 215: Invalid CSS after "$orange ": expected ":", was "= #f47f62;")
+2014-08-12 19:48:34 overwrite css/style.css 
+2014-08-12 19:48:49     error sass/style.scss (Line 215: Invalid CSS after "$orange ": expected ":", was "= "#f47f62";")
+2014-08-12 19:48:49 overwrite css/style.css 
+2014-08-12 19:49:00 overwrite css/style.css 
+2014-08-12 19:49:50 overwrite css/style.css 
+2014-08-12 19:51:38 overwrite css/style.css 
+2014-08-12 19:52:32 overwrite css/style.css 
+2014-08-12 19:54:01 overwrite css/style.css 
+2014-08-12 19:54:25 overwrite css/style.css 
+2014-08-12 19:55:38 overwrite css/style.css 
+2014-08-12 19:57:17 overwrite css/style.css 
+2014-08-12 20:00:37 overwrite css/style.css 
+2014-08-12 20:00:48 overwrite css/style.css 
+2014-08-12 20:02:56 overwrite css/style.css 
+2014-08-12 20:04:40 overwrite css/style.css 
+2014-08-12 20:05:36 overwrite css/style.css 
+2014-08-12 20:06:01 overwrite css/style.css 
+2014-08-12 20:06:53 overwrite css/style.css 
+2014-08-12 20:08:37 overwrite css/style.css 
+2014-08-12 20:10:47 overwrite css/style.css 
+2014-08-12 20:12:41 overwrite css/style.css 
+2014-08-12 20:12:48 overwrite css/style.css 
+2014-08-12 20:12:58 identical css/style.css 
+2014-08-12 20:13:03 overwrite css/style.css 
+2014-08-12 20:14:20 overwrite css/style.css 
+2014-08-12 20:14:58 overwrite css/style.css 
+2014-08-12 20:16:36 overwrite css/style.css 
+2014-08-12 20:16:44 overwrite css/style.css 
+2014-08-12 20:17:12 overwrite css/style.css 
+2014-08-12 20:17:56 overwrite css/style.css 
+2014-08-12 20:19:30 overwrite css/style.css 
+2014-08-12 20:19:48 overwrite css/style.css 
+2014-08-12 20:20:23 overwrite css/style.css 
+2014-08-12 20:22:26     error sass/style.scss (Line 272: Invalid CSS after "		margin-top:": expected expression (e.g. 1px, bold), was "}")
+2014-08-12 20:22:26 overwrite css/style.css 
+2014-08-12 20:22:37 overwrite css/style.css 
+2014-08-12 20:22:45 overwrite css/style.css 
+2014-08-12 20:22:51 overwrite css/style.css 
+2014-08-12 20:24:44 overwrite css/style.css 
+2014-08-12 20:24:52 overwrite css/style.css 
+2014-08-12 20:25:07 overwrite css/style.css 
+2014-08-12 20:27:50 overwrite css/style.css 
+2014-08-12 20:30:08 overwrite css/style.css 
+2014-08-12 20:30:13 identical css/style.css 
+2014-08-12 20:30:39 overwrite css/style.css 
+2014-08-12 20:33:24 overwrite css/style.css 
+2014-08-12 20:33:41 overwrite css/style.css 
+2014-08-12 20:33:57 overwrite css/style.css 
+2014-08-12 20:35:11 overwrite css/style.css 
+2014-08-12 20:35:55 overwrite css/style.css 
+2014-08-12 20:36:42     error sass/style.scss (Line 269: Invalid CSS after "			color": expected ";", was ":red;")
+2014-08-12 20:36:42 overwrite css/style.css 
+2014-08-12 20:36:52 overwrite css/style.css 
+2014-08-12 20:37:37 overwrite css/style.css 
+2014-08-12 20:41:13 overwrite css/style.css 
+2014-08-12 20:41:45 overwrite css/style.css 
+2014-08-12 20:42:01 overwrite css/style.css 
+2014-08-12 20:42:12 overwrite css/style.css 
+2014-08-12 20:42:27 overwrite css/style.css 
+2014-08-12 20:42:33 overwrite css/style.css 
+2014-08-12 20:42:46 overwrite css/style.css 
+2014-08-12 20:43:34 overwrite css/style.css 
+2014-08-12 20:43:44 overwrite css/style.css 
+2014-08-12 20:43:57 identical css/style.css 
+2014-08-12 20:44:34 overwrite css/style.css 
+2014-08-12 20:45:01 overwrite css/style.css 
+2014-08-12 20:45:11 overwrite css/style.css 
+2014-08-12 20:45:25 overwrite css/style.css 
+2014-08-12 20:45:34 overwrite css/style.css 
+2014-08-12 20:50:08 overwrite css/style.css 
+2014-08-12 20:51:03 overwrite css/style.css 
+2014-08-12 20:53:35 overwrite css/style.css 
+2014-08-12 20:54:31 overwrite css/style.css 
+2014-08-12 20:59:25 overwrite css/style.css 
+2014-08-12 21:23:47 overwrite css/style.css 
+2014-08-12 21:27:22 overwrite css/style.css 
+2014-08-12 21:28:16 overwrite css/style.css 
+2014-08-12 21:28:27 overwrite css/style.css 
+2014-08-12 21:28:39 overwrite css/style.css 
+2014-08-12 21:33:53 overwrite css/style.css 
+2014-08-12 21:35:51 identical css/style.css 
+2014-08-12 21:39:29     error sass/style.scss (Line 162: Invalid CSS after "...-height: 20px;.": expected class name, was "}")
+2014-08-12 21:39:29 overwrite css/style.css 
+2014-08-12 21:39:33 overwrite css/style.css 
+2014-08-12 21:39:39 identical css/style.css 
+2014-08-12 21:39:45 identical css/style.css 
+2014-08-12 21:39:49 identical css/style.css 
+2014-08-12 21:39:52 identical css/style.css 
+2014-08-12 21:42:59 overwrite css/style.css 
+2014-08-12 21:43:24 overwrite css/style.css 
+2014-08-12 21:46:54 overwrite css/style.css 
+2014-08-12 21:47:05 overwrite css/style.css 
+2014-08-12 21:47:17 overwrite css/style.css 
+2014-08-12 21:52:04 overwrite css/style.css 
+2014-08-12 21:52:09 overwrite css/style.css 
+2014-08-12 21:52:27 overwrite css/style.css 
+2014-08-12 21:52:32 overwrite css/style.css 
+2014-08-12 21:55:29 overwrite css/style.css 
+2014-08-12 21:55:52 overwrite css/style.css 
+2014-08-12 21:56:14 overwrite css/style.css 
+2014-08-12 21:56:18 identical css/style.css 
+2014-08-12 21:56:33 overwrite css/style.css 
+2014-08-12 21:56:42 overwrite css/style.css 
+2014-08-12 21:57:02 overwrite css/style.css 
+2014-08-12 21:57:12 overwrite css/style.css 
+2014-08-12 21:57:50 overwrite css/style.css 
+2014-08-12 22:00:45 overwrite css/style.css 
+2014-08-12 22:01:09     error sass/style.scss (Line 159: Undefined variable: "$orange".)
+2014-08-12 22:01:09 overwrite css/style.css 
+2014-08-12 22:01:27 overwrite css/style.css 
+2014-08-12 22:04:20 overwrite css/style.css 
+2014-08-12 22:04:26 overwrite css/style.css 
+2014-08-12 22:04:43 overwrite css/style.css 
+2014-08-12 22:05:04 overwrite css/style.css 
+2014-08-12 22:05:14 overwrite css/style.css 
+2014-08-12 22:28:24    create css/vendor/fontawe/font-awesome.css 
+2014-08-12 22:30:23     error sass/style.scss (Line 12: File to import not found or unreadable: fontawe/font-awesome.
+Load paths:
+  C:/xampp/htdocs/benfeitoria/front/proj/sass
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/blueprint/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/compass-960-plugin-f4bfe8555a7d2cae09bc/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/heygrady-compass-html5-boilerplate-4cc8815/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/compass-h5bp/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/thomas-mcdonald-bootstrap-sass-831f25b/vendor/assets/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/susy-1.0/sass
+  C:/Users/De/Dropbox/fire.app/lib/ruby/common/sassy-math-1.2/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/common/modular-scale-1.0.2/stylesheets
+  C:/Users/De/Dropbox/fire.app/lib/ruby/compass_extensions/zurb-foundation-3.0.9/scss
+  Compass::SpriteImporter)
+2014-08-12 22:30:23 overwrite css/style.css 
+2014-08-12 22:30:33 overwrite css/style.css 
+2014-08-12 22:31:08 identical css/style.css 
+2014-08-12 22:33:29 overwrite css/style.css 
+2014-08-12 22:34:04 overwrite css/style.css 
+2014-08-12 22:34:20 overwrite css/style.css 
+2014-08-12 22:34:57 overwrite css/style.css 
+2014-08-12 22:35:09 overwrite css/style.css 
+2014-08-12 22:35:31 overwrite css/style.css 
+2014-08-12 22:36:41 overwrite css/style.css 
+2014-08-12 22:37:01 overwrite css/style.css 
+2014-08-12 22:37:13 overwrite css/style.css 
+2014-08-12 22:37:23 overwrite css/style.css 
+2014-08-12 22:37:43 overwrite css/style.css 
+2014-08-12 22:40:06 overwrite css/style.css 
+2014-08-12 22:40:31 overwrite css/style.css 
+2014-08-12 22:40:58 overwrite css/style.css 
+2014-08-12 22:47:50 overwrite css/style.css 
+2014-08-12 22:48:14 identical css/style.css 
+2014-08-12 22:48:33 overwrite css/style.css 
+2014-08-12 22:49:01 identical css/style.css 
+2014-08-12 22:49:12 overwrite css/style.css 
+2014-08-12 22:49:35 overwrite css/style.css 
+2014-08-12 22:49:44 overwrite css/style.css 
+2014-08-12 22:49:55 identical css/style.css 
+2014-08-12 22:50:18 overwrite css/style.css 
+2014-08-12 22:50:38 overwrite css/style.css 
+2014-08-12 22:57:59 overwrite css/style.css 
+2014-08-12 22:58:49 overwrite css/style.css 
+2014-08-12 22:59:01 overwrite css/style.css 
+2014-08-12 22:59:11 overwrite css/style.css 
+2014-08-12 22:59:30 overwrite css/style.css 
+2014-08-12 22:59:37 overwrite css/style.css 
+2014-08-12 23:00:00 overwrite css/style.css 
+2014-08-12 23:00:22 overwrite css/style.css 
+2014-08-12 23:01:34 overwrite css/style.css 
+2014-08-12 23:03:42 identical css/style.css 
+2014-08-12 23:04:04 overwrite css/style.css 
+2014-08-12 23:04:27 overwrite css/style.css 
+2014-08-12 23:04:49 overwrite css/style.css 
+2014-08-12 23:05:16 overwrite css/style.css 
+2014-08-12 23:05:56 overwrite css/style.css 
+2014-08-12 23:10:31 overwrite css/style.css 
+2014-08-12 23:21:54 overwrite css/style.css 
+2014-08-12 23:23:31 overwrite css/style.css 
+2014-08-12 23:23:41 overwrite css/style.css 
+2014-08-12 23:27:22 overwrite css/style.css 
+2014-08-12 23:27:38 overwrite css/style.css 
+2014-08-12 23:28:50 overwrite css/style.css 
+2014-08-12 23:29:21 overwrite css/style.css 
+2014-08-12 23:32:23 overwrite css/style.css 
+2014-08-12 23:32:39 overwrite css/style.css 
+2014-08-12 23:35:26 overwrite css/style.css 
+2014-08-12 23:35:49 overwrite css/style.css 
+2014-08-12 23:35:57 identical css/style.css 
+2014-08-12 23:36:16 overwrite css/style.css 
+2014-08-12 23:37:56 overwrite css/style.css 
+2014-08-13 00:23:40 overwrite css/style.css 
+2014-08-13 00:23:56 overwrite css/style.css 
+2014-08-13 00:34:01 overwrite css/style.css 
+2014-08-13 00:35:37 overwrite css/style.css 
+2014-08-13 00:35:51 overwrite css/style.css 
+2014-08-13 00:36:04 overwrite css/style.css 
+2014-08-13 00:38:41 overwrite css/style.css 
+2014-08-13 00:38:53 overwrite css/style.css 
+2014-08-13 00:40:18 overwrite css/style.css 
+2014-08-13 00:40:22 overwrite css/style.css 
+2014-08-13 00:40:39 overwrite css/style.css 
+2014-08-13 00:42:47 overwrite css/style.css 
+2014-08-13 00:43:50 overwrite css/style.css 
+2014-08-13 00:46:39 overwrite css/style.css 
+2014-08-13 00:48:17 overwrite css/style.css 
+2014-08-13 00:50:14 overwrite css/style.css 
+2014-08-13 00:50:28 overwrite css/style.css 
+2014-08-13 01:01:43 overwrite css/style.css 
+2014-08-13 01:06:15 overwrite css/style.css 
+2014-08-13 01:06:30 overwrite css/style.css 
+2014-08-13 01:07:37 overwrite css/style.css 
+2014-08-13 01:08:39 overwrite css/style.css 
+2014-08-13 01:09:38 overwrite css/style.css 
+2014-08-13 01:09:57 overwrite css/style.css 
+2014-08-13 01:10:25 overwrite css/style.css 
+2014-08-13 01:15:42     error sass/style.scss (Line 374: Invalid CSS: a space is required between a property and its definition
+when it has other properties nested beneath it.
+)
+2014-08-13 01:15:42 overwrite css/style.css 
+2014-08-13 01:15:48     error sass/style.scss (Line 374: Invalid CSS: a space is required between a property and its definition
+when it has other properties nested beneath it.
+)
+2014-08-13 01:15:48 identical css/style.css 
+2014-08-13 01:15:58     error sass/style.scss (Line 374: Invalid CSS: a space is required between a property and its definition
+when it has other properties nested beneath it.
+)
+2014-08-13 01:15:58 identical css/style.css 
+2014-08-13 01:16:03     error sass/style.scss (Line 374: Invalid CSS: a space is required between a property and its definition
+when it has other properties nested beneath it.
+)
+2014-08-13 01:16:03 identical css/style.css 
+2014-08-13 01:16:19     error sass/style.scss (Line 374: Invalid CSS: a space is required between a property and its definition
+when it has other properties nested beneath it.
+)
+2014-08-13 01:16:19 identical css/style.css 
+2014-08-13 01:16:33     error sass/style.scss (Line 374: Invalid CSS: a space is required between a property and its definition
+when it has other properties nested beneath it.
+)
+2014-08-13 01:16:33 identical css/style.css 
+2014-08-13 01:16:39     error sass/style.scss (Line 374: Invalid CSS: a space is required between a property and its definition
+when it has other properties nested beneath it.
+)
+2014-08-13 01:16:39 identical css/style.css 
+2014-08-13 01:16:45     error sass/style.scss (Line 374: Invalid CSS: a space is required between a property and its definition
+when it has other properties nested beneath it.
+)
+2014-08-13 01:16:45 identical css/style.css 
+2014-08-13 01:16:53 overwrite css/style.css 
+2014-08-13 01:20:34 overwrite css/style.css 
+2014-08-13 01:21:02 overwrite css/style.css 
+2014-08-13 01:24:30 overwrite css/style.css 
+2014-08-13 01:41:01 overwrite css/style.css 
+2014-08-13 01:42:09 overwrite css/style.css 
+2014-08-13 01:42:43 overwrite css/style.css 
+2014-08-13 01:42:58 overwrite css/style.css 
+2014-08-13 01:43:47 overwrite css/style.css 
+2014-08-13 01:44:20 overwrite css/style.css 
+2014-08-13 01:45:21 overwrite css/style.css 
+2014-08-13 01:45:34 overwrite css/style.css 
+2014-08-13 01:50:01 overwrite css/style.css 
+2014-08-13 01:57:44 overwrite css/style.css 
+2014-08-13 01:58:35 overwrite css/style.css 
+2014-08-13 01:59:13 overwrite css/style.css 
+2014-08-13 01:59:38 overwrite css/style.css 
+2014-08-13 01:59:55 overwrite css/style.css 
+2014-08-13 02:00:01 overwrite css/style.css 
+2014-08-13 02:00:17 overwrite css/style.css 
+2014-08-13 02:00:28 overwrite css/style.css 
+2014-08-13 02:00:36 overwrite css/style.css 
+2014-08-13 02:00:58 overwrite css/style.css 
+2014-08-13 02:01:08 overwrite css/style.css 
+2014-08-13 02:01:32 overwrite css/style.css 
+2014-08-13 02:01:51 overwrite css/style.css 
+2014-08-13 02:01:59 overwrite css/style.css 
+2014-08-13 02:02:11 identical css/style.css 
+2014-08-13 02:02:27 overwrite css/style.css 
+2014-08-13 02:02:51 overwrite css/style.css 
+2014-08-13 02:03:01 overwrite css/style.css 
+2014-08-13 02:03:13 overwrite css/style.css 
+2014-08-13 02:03:24 identical css/style.css 
+2014-08-13 02:03:52 overwrite css/style.css 
+2014-08-13 02:03:52 identical css/vendor/fontawe/font-awesome.css 
+2014-08-13 02:10:47 overwrite css/style.css 
+2014-08-13 02:15:25 overwrite css/style.css 
+2014-08-13 02:18:57 identical css/style.css 
+2014-08-13 02:22:21 overwrite css/style.css 
+2014-08-13 02:24:25 overwrite css/style.css 
+2014-08-13 02:27:19 overwrite css/style.css 
+2014-08-13 02:30:27 overwrite css/style.css 
+2014-08-13 02:30:35 overwrite css/style.css 
+2014-08-13 02:30:46 identical css/style.css 
+2014-08-13 02:30:57 overwrite css/style.css 
+2014-08-13 02:31:06 overwrite css/style.css 
+2014-08-13 02:31:51 overwrite css/style.css 
+2014-08-13 02:32:01 overwrite css/style.css 
+2014-08-13 02:32:35 overwrite css/style.css 
+2014-08-13 02:32:40 overwrite css/style.css 
+2014-08-13 02:32:50 overwrite css/style.css 
+2014-08-13 02:58:53 overwrite css/style.css 
+2014-08-13 02:59:27 overwrite css/style.css 
+2014-08-13 02:59:30 identical css/style.css 
+2014-08-13 02:59:47 overwrite css/style.css 
+2014-08-13 03:00:10 overwrite css/style.css 
+2014-08-13 03:00:20 overwrite css/style.css 
+2014-08-13 03:00:31 overwrite css/style.css 
+2014-08-13 03:00:40 overwrite css/style.css 
+2014-08-13 03:08:20 overwrite css/style.css 
+2014-08-13 03:08:43 overwrite css/style.css 
+2014-08-13 03:09:01 overwrite css/style.css 
+2014-08-13 03:09:10 overwrite css/style.css 
+2014-08-13 03:09:13 identical css/style.css 
+2014-08-13 03:09:31 overwrite css/style.css 
+2014-08-13 03:09:48 overwrite css/style.css 
+2014-08-13 03:10:28 overwrite css/style.css 
+2014-08-13 03:11:09 overwrite css/style.css 
+2014-08-13 03:11:25 overwrite css/style.css 
+2014-08-13 03:11:34 overwrite css/style.css 
+2014-08-13 03:13:12 overwrite css/style.css 
+2014-08-13 03:13:44 overwrite css/style.css 
+2014-08-13 03:13:50 overwrite css/style.css 
+2014-08-13 03:13:59 overwrite css/style.css 
+2014-08-13 03:14:05 overwrite css/style.css 
+2014-08-13 03:14:12 overwrite css/style.css 
+2014-08-13 03:14:17 overwrite css/style.css 
+2014-08-13 03:14:22 overwrite css/style.css 
+2014-08-13 03:14:28 identical css/style.css 
+2014-08-13 03:23:05 overwrite css/style.css 
+2014-08-13 03:24:02 overwrite css/style.css 
+2014-08-13 03:24:17 overwrite css/style.css 
+2014-08-13 03:24:21 overwrite css/style.css 
+2014-08-13 03:25:05 overwrite css/style.css 
+2014-08-13 03:26:12 overwrite css/style.css 
+2014-08-13 03:26:51 identical css/style.css 
+2014-08-13 03:26:56 overwrite css/style.css 
+2014-08-13 03:27:11 overwrite css/style.css 
+2014-08-13 03:27:54 overwrite css/style.css 
+2014-08-13 03:28:17 overwrite css/style.css 
+2014-08-13 03:28:33 overwrite css/style.css 
+2014-08-13 03:28:51 overwrite css/style.css 
+2014-08-13 03:28:53 overwrite css/style.css 
+2014-08-13 03:29:09 overwrite css/style.css 
+2014-08-13 03:29:23 overwrite css/style.css 
+2014-08-13 03:29:29 overwrite css/style.css 
+2014-08-13 03:29:36 overwrite css/style.css 
+2014-08-13 03:29:56 identical css/style.css 
+2014-08-13 03:30:21 overwrite css/style.css 
+2014-08-13 03:30:30 overwrite css/style.css 
+2014-08-13 03:30:36 overwrite css/style.css 
+2014-08-13 03:31:14 overwrite css/style.css 
+2014-08-13 03:31:18 overwrite css/style.css 
+2014-08-13 03:31:53 overwrite css/style.css 
+2014-08-13 03:31:59 overwrite css/style.css 
+2014-08-13 03:32:11 overwrite css/style.css 
+2014-08-13 03:34:35     error sass/style.scss (Line 426: Invalid CSS after "		margin-top:": expected expression (e.g. 1px, bold), was ".span7{")
+2014-08-13 03:34:35 overwrite css/style.css 
+2014-08-13 03:34:44 overwrite css/style.css 
+2014-08-13 03:34:53 overwrite css/style.css 
+2014-08-13 03:36:32 overwrite css/style.css 
+2014-08-13 03:37:17 overwrite css/style.css 
+2014-08-13 03:37:32 overwrite css/style.css 
+2014-08-13 03:37:47 overwrite css/style.css 
+2014-08-13 03:38:00 overwrite css/style.css 
+2014-08-13 03:38:44 overwrite css/style.css 
+2014-08-13 03:38:50 overwrite css/style.css 
+2014-08-13 03:38:59 overwrite css/style.css 
+2014-08-13 03:39:32 overwrite css/style.css 
+2014-08-13 03:40:26 overwrite css/style.css 
+2014-08-13 03:43:47 identical css/style.css 
+2014-08-13 03:44:05 overwrite css/style.css 
+2014-08-13 03:44:20 overwrite css/style.css 
+2014-08-13 03:44:39 overwrite css/style.css 
+2014-08-13 03:45:03 overwrite css/style.css 
+2014-08-13 03:45:12 overwrite css/style.css 
+2014-08-13 03:45:23 overwrite css/style.css 
+2014-08-13 03:47:00 overwrite css/style.css 
+2014-08-13 03:49:26 overwrite css/style.css 
+2014-08-13 03:49:58 overwrite css/style.css 
+2014-08-13 03:52:40 overwrite css/style.css 
+2014-08-13 03:52:47 overwrite css/style.css 
+2014-08-13 03:54:41 overwrite css/style.css 
+2014-08-13 03:55:18 identical css/style.css 
+2014-08-13 03:58:11 overwrite css/style.css 
+2014-08-13 03:58:19 overwrite css/style.css 
+2014-08-13 03:58:24 identical css/style.css 
+2014-08-13 03:58:31 overwrite css/style.css 
+2014-08-13 03:58:48 overwrite css/style.css 
+2014-08-13 03:58:56 overwrite css/style.css 
+2014-08-13 04:03:12     error sass/style.scss (Line 435: Invalid CSS after "			padding-left": expected ";", was ":15px;")
+2014-08-13 04:03:12 overwrite css/style.css 
+2014-08-13 04:03:16 overwrite css/style.css 
+2014-08-13 16:50:52 overwrite css/style.css 
+2014-08-13 16:51:02 overwrite css/style.css 
+2014-08-13 16:53:28 overwrite css/style.css 
+2014-08-13 16:55:01 overwrite css/style.css 
+2014-08-13 16:57:31 overwrite css/style.css 
+2014-08-13 16:57:41 overwrite css/style.css 
+2014-08-13 17:02:47 overwrite css/style.css 
+2014-08-13 17:02:52 identical css/style.css 
+2014-08-13 17:03:05 overwrite css/style.css 
+2014-08-13 17:05:43 overwrite css/style.css 
+2014-08-13 17:05:55 overwrite css/style.css 
+2014-08-13 17:06:49 overwrite css/style.css 
+2014-08-13 17:15:52 overwrite css/style.css 
+2014-08-13 17:17:07 overwrite css/style.css 
+2014-08-13 17:17:12 overwrite css/style.css 
+2014-08-13 17:17:20 overwrite css/style.css 
+2014-08-13 17:17:25 overwrite css/style.css 
+2014-08-13 17:17:33 overwrite css/style.css 
+2014-08-13 17:20:58 overwrite css/style.css 
+2014-08-13 17:24:25 overwrite css/style.css 
+2014-08-13 17:24:28 overwrite css/style.css 
+2014-08-13 17:26:28 overwrite css/style.css 
+2014-08-13 17:47:30 overwrite css/style.css 
+2014-08-13 17:47:55 overwrite css/style.css 
+2014-08-13 17:48:04 identical css/style.css 
+2014-08-13 17:59:57 overwrite css/style.css 
+2014-08-13 18:00:03 overwrite css/style.css 
+2014-08-13 18:26:30 overwrite css/style.css 
+2014-08-13 18:26:36 overwrite css/style.css 
+2014-08-13 18:30:59 overwrite css/style.css 
+2014-08-13 18:35:11 overwrite css/style.css 
+2014-08-13 18:35:20 overwrite css/style.css 
+2014-08-13 18:38:06 overwrite css/style.css 
+2014-08-13 18:38:11 overwrite css/style.css 
+2014-08-13 18:39:13 overwrite css/style.css 
+2014-08-13 18:47:59 overwrite css/style.css 
+2014-08-13 18:48:10 overwrite css/style.css 
+2014-08-13 18:48:47 overwrite css/style.css 
+2014-08-13 18:48:50 identical css/style.css 
+2014-08-13 18:52:07 overwrite css/style.css 
+2014-08-13 18:53:05 overwrite css/style.css 
+2014-08-13 18:54:11 overwrite css/style.css 
+2014-08-13 18:54:16 overwrite css/style.css 
+2014-08-13 18:55:03 overwrite css/style.css 
+2014-08-13 18:55:09 overwrite css/style.css 
+2014-08-13 18:56:20 overwrite css/style.css 
+2014-08-13 18:58:15 overwrite css/style.css 
+2014-08-13 18:58:36 overwrite css/style.css 
+2014-08-13 18:58:44 overwrite css/style.css 
+2014-08-13 18:59:13 overwrite css/style.css 
+2014-08-13 18:59:18 overwrite css/style.css 
+2014-08-13 18:59:30 overwrite css/style.css 
+2014-08-13 19:02:26 identical css/style.css 
+2014-08-13 19:02:47 overwrite css/style.css 
+2014-08-13 19:07:48 overwrite css/style.css 
+2014-08-13 19:07:57 overwrite css/style.css 
+2014-08-13 19:10:22 overwrite css/style.css 
+2014-08-13 19:10:31 overwrite css/style.css 
+2014-08-13 19:10:37 overwrite css/style.css 
+2014-08-13 19:10:47 overwrite css/style.css 
+2014-08-13 19:11:06 overwrite css/style.css 
+2014-08-13 19:11:20 overwrite css/style.css 
+2014-08-13 19:12:18 overwrite css/style.css 
+2014-08-13 19:13:21 overwrite css/style.css 
+2014-08-13 19:14:44 overwrite css/style.css 
+2014-08-13 19:14:53 overwrite css/style.css 
+2014-08-13 19:15:31 overwrite css/style.css 
+2014-08-13 19:15:57 overwrite css/style.css 
+2014-08-13 19:17:03 overwrite css/style.css 
+2014-08-13 19:17:29 overwrite css/style.css 
+2014-08-13 19:17:41 overwrite css/style.css 
+2014-08-13 19:18:34 overwrite css/style.css 
+2014-08-13 19:18:48 overwrite css/style.css 
+2014-08-13 19:19:13 overwrite css/style.css 
+2014-08-13 19:19:34 overwrite css/style.css 
+2014-08-13 19:19:45 overwrite css/style.css 
+2014-08-13 19:19:54 overwrite css/style.css 
+2014-08-13 19:20:22 overwrite css/style.css 
+2014-08-13 19:20:36 overwrite css/style.css 
+2014-08-13 19:21:30 overwrite css/style.css 
+2014-08-13 19:21:41 overwrite css/style.css 
+2014-08-13 19:22:54 overwrite css/style.css 
+2014-08-13 19:23:17 overwrite css/style.css 
+2014-08-13 19:23:43 overwrite css/style.css 
+2014-08-13 19:23:49 overwrite css/style.css 
+2014-08-13 19:24:02 overwrite css/style.css 
+2014-08-13 19:24:05 overwrite css/style.css 
+2014-08-13 19:27:28 overwrite css/style.css 
+2014-08-13 22:12:23 overwrite css/style.css 
+2014-08-13 22:12:29 overwrite css/style.css 
+2014-08-13 22:17:01 overwrite css/style.css 
+2014-08-13 22:17:41 overwrite css/style.css 
+2014-08-13 22:21:11 overwrite css/style.css 
+2014-08-13 22:22:13 overwrite css/style.css 
+2014-08-13 22:28:00 overwrite css/style.css 
+2014-08-13 22:28:29 overwrite css/style.css 
+2014-08-13 22:31:13 overwrite css/style.css 
+2014-08-13 22:31:21 overwrite css/style.css 
+2014-08-13 22:31:28 overwrite css/style.css 
+2014-08-13 22:33:28 overwrite css/style.css 
+2014-08-13 22:33:34 overwrite css/style.css 
+2014-08-13 22:41:34 overwrite css/style.css 
+2014-08-13 22:44:21 overwrite css/style.css 
+2014-08-13 22:49:04 overwrite css/style.css 
+2014-08-13 22:57:52 overwrite css/style.css 
+2014-08-13 22:58:02 overwrite css/style.css 
+2014-08-13 22:59:44 overwrite css/style.css 
+2014-08-13 22:59:54 overwrite css/style.css 
+2014-08-13 23:00:03 overwrite css/style.css 
+2014-08-13 23:00:10 overwrite css/style.css 
+2014-08-13 23:01:09 overwrite css/style.css 
+2014-08-13 23:04:47 overwrite css/style.css 
+2014-08-13 23:21:40 identical css/style.css 
+2014-08-13 23:24:28 overwrite css/style.css 
+2014-08-14 00:08:02 overwrite css/style.css 
+2014-08-14 00:08:55 overwrite css/style.css 
+2014-08-14 00:11:16 overwrite css/style.css 
+2014-08-14 00:11:30 overwrite css/style.css 
+2014-08-14 00:11:37 overwrite css/style.css 
+2014-08-14 00:11:49 overwrite css/style.css 
+2014-08-14 00:13:30 overwrite css/style.css 
+2014-08-14 00:14:41 overwrite css/style.css 
+2014-08-14 00:17:24 overwrite css/style.css 
+2014-08-14 00:17:44 overwrite css/style.css 
+2014-08-14 00:17:53 overwrite css/style.css 
+2014-08-14 00:18:00 overwrite css/style.css 
+2014-08-14 00:18:03 overwrite css/style.css 
+2014-08-14 00:18:27 overwrite css/style.css 
+2014-08-14 00:21:23 overwrite css/style.css 
+2014-08-14 00:21:24 identical css/style.css 
+2014-08-14 00:32:42 overwrite css/style.css 
+2014-08-14 00:33:11 overwrite css/style.css 
+2014-08-14 00:34:17 identical css/style.css 
+2014-08-14 00:34:48 overwrite css/style.css 
+2014-08-14 00:37:03 overwrite css/style.css 
+2014-08-14 00:37:09 overwrite css/style.css 
+2014-08-14 00:37:14 overwrite css/style.css 
+2014-08-14 00:37:25     error sass/style.scss (Line 567: Invalid CSS after "				  display": expected ";", was ": block;")
+2014-08-14 00:37:25 overwrite css/style.css 
+2014-08-14 00:37:35 overwrite css/style.css 
+2014-08-14 00:37:47 overwrite css/style.css 
+2014-08-14 00:38:02 overwrite css/style.css 
+2014-08-14 00:41:26 overwrite css/style.css 
+2014-08-14 00:41:44 overwrite css/style.css 
+2014-08-14 00:41:45 overwrite css/style.css 
+2014-08-14 00:42:45 overwrite css/style.css 
+2014-08-14 00:42:59 overwrite css/style.css 
+2014-08-14 00:43:14 overwrite css/style.css 
+2014-08-14 00:43:28 overwrite css/style.css 
+2014-08-14 00:45:57 overwrite css/style.css 
+2014-08-14 00:46:03 overwrite css/style.css 
+2014-08-14 00:46:14 identical css/style.css 
+2014-08-14 00:46:24 overwrite css/style.css 
+2014-08-14 00:46:32 overwrite css/style.css 
+2014-08-14 00:47:24 overwrite css/style.css 
+2014-08-14 00:47:33 overwrite css/style.css 
+2014-08-14 01:24:31 overwrite css/style.css 
+2014-08-14 01:27:58 overwrite css/style.css 
+2014-08-14 01:28:04 overwrite css/style.css 
+2014-08-14 01:28:15 overwrite css/style.css 
+2014-08-14 01:28:54 overwrite css/style.css 
+2014-08-14 01:40:12 overwrite css/style.css 
+2014-08-14 01:44:24 overwrite css/style.css 
+2014-08-30 18:54:11 overwrite css/style.css 
+2014-08-30 18:55:04 identical css/style.css 
+2014-08-30 18:55:10 overwrite css/style.css 
+2014-08-30 18:56:43 overwrite css/style.css 
+2014-08-30 18:57:04 overwrite css/style.css 
+2014-08-30 18:57:47 overwrite css/style.css 
+2014-08-30 19:54:16 overwrite css/style.css 
+2014-08-30 19:57:11 overwrite css/style.css 
+2014-08-31 01:33:47 overwrite css/style.css 
+2014-08-31 01:37:26 overwrite css/style.css 
+2014-08-31 01:41:59 overwrite css/style.css 
+2014-08-31 01:42:10 overwrite css/style.css 
+2014-08-31 01:52:57 overwrite css/style.css 
+2014-08-31 01:53:04 overwrite css/style.css 
+2014-08-31 01:57:09 overwrite css/style.css 
+2014-08-31 01:57:21 overwrite css/style.css 
+2014-08-31 01:57:33 overwrite css/style.css 
+2014-08-31 01:57:44 overwrite css/style.css 
+2014-08-31 12:12:39 overwrite css/style.css 
+2014-08-31 12:17:44 overwrite css/style.css 
+2014-08-31 12:17:50 overwrite css/style.css 
+2014-08-31 12:26:22 overwrite css/style.css 
+2014-08-31 12:28:55 overwrite css/style.css 
+2014-08-31 12:38:32 overwrite css/style.css 
+2014-08-31 12:38:48 overwrite css/style.css 
+2014-08-31 12:42:17 overwrite css/style.css 
+2014-08-31 12:43:52 overwrite css/style.css 
+2014-08-31 12:44:04 overwrite css/style.css 
+2014-08-31 12:44:57 overwrite css/style.css 
+2014-08-31 12:45:50 overwrite css/style.css 
+2014-08-31 12:45:57 overwrite css/style.css 
+2014-08-31 12:47:08 overwrite css/style.css 
+2014-08-31 12:47:32 overwrite css/style.css 
+2014-08-31 12:48:26 overwrite css/style.css 
+2014-08-31 12:50:41 overwrite css/style.css 
+2014-08-31 12:56:24 overwrite css/style.css 
+2014-08-31 13:03:25 overwrite css/style.css 
+2014-08-31 13:09:57 overwrite css/style.css 
+2014-08-31 13:10:02 overwrite css/style.css 
+2014-08-31 13:16:03 overwrite css/style.css 
+2014-08-31 13:19:02 overwrite css/style.css 
+2014-08-31 13:24:59 identical css/style.css 
+2014-08-31 13:25:03 overwrite css/style.css 
+2014-08-31 13:46:16 overwrite css/style.css 
+2014-08-31 13:46:45 overwrite css/style.css 
+2014-08-31 13:47:16 overwrite css/style.css 
+2014-08-31 13:47:57 overwrite css/style.css 
+2014-08-31 13:48:03 overwrite css/style.css 
+2014-08-31 13:56:35 overwrite css/style.css 
+2014-08-31 13:57:16 overwrite css/style.css 
+2014-08-31 14:02:26 overwrite css/style.css 
+2014-08-31 14:44:18 overwrite css/style.css 
+2014-08-31 14:44:48 overwrite css/style.css 
+2014-08-31 14:45:48 overwrite css/style.css 
+2014-08-31 15:31:26 overwrite css/style.css 
+2014-08-31 15:32:34 overwrite css/style.css 
+2014-08-31 15:42:44 overwrite css/style.css 
+2014-08-31 15:48:36 overwrite css/style.css 
+2014-08-31 15:49:51 overwrite css/style.css 
+2014-08-31 15:50:39 overwrite css/style.css 
+2014-08-31 15:51:15 overwrite css/style.css 
+2014-09-01 23:35:20 overwrite css/style.css 
+2014-09-01 23:36:07 overwrite css/style.css 
+2014-09-01 23:37:42 overwrite css/style.css 
+2014-09-01 23:39:25 overwrite css/style.css 
+2014-09-01 23:40:01 overwrite css/style.css 
+2014-09-04 18:28:19 overwrite css/style.css 
+2014-09-04 18:29:11 overwrite css/style.css 
+2014-09-04 18:30:27 overwrite css/style.css 
+2014-09-04 18:30:41 overwrite css/style.css 
+2014-09-04 18:41:19 overwrite css/style.css 
+2014-09-04 18:43:48 overwrite css/style.css 
+2014-09-04 18:44:25 overwrite css/style.css 
+2014-09-04 18:45:09 overwrite css/style.css 
+2014-09-04 18:45:29 overwrite css/style.css 
+2014-09-04 18:48:16 overwrite css/style.css 
+2014-09-04 18:48:26 overwrite css/style.css 
+2014-09-04 18:48:41 overwrite css/style.css 
+2014-09-04 18:49:40 identical css/style.css 
+2014-09-04 18:49:49 identical css/style.css 
+2014-09-04 18:50:02 overwrite css/style.css 
+2014-09-04 18:50:33 overwrite css/style.css 
+2014-09-04 18:50:43 overwrite css/style.css 
+2014-09-04 18:51:17 overwrite css/style.css 
+2014-09-04 18:51:20 overwrite css/style.css 
+2014-09-04 18:55:24 overwrite css/style.css 
+2014-09-04 18:56:55 overwrite css/style.css 
+2014-09-04 18:57:20 overwrite css/style.css 
+2014-09-04 19:06:26 overwrite css/style.css 
+2014-09-04 19:11:30 overwrite css/style.css 
+2014-09-04 19:37:26 overwrite css/style.css 
+2014-09-04 19:38:01 overwrite css/style.css 
+2014-09-04 19:38:13 overwrite css/style.css 
+2014-09-04 19:38:32 overwrite css/style.css 
+2014-09-04 19:42:46 overwrite css/style.css 
+2014-09-04 19:42:51 overwrite css/style.css 
+2014-09-04 19:44:12 overwrite css/style.css 
+2014-09-04 19:46:08 overwrite css/style.css 
+2014-09-04 19:47:35 overwrite css/style.css 
+2014-09-04 19:50:16 overwrite css/style.css 
+2014-09-04 19:56:09 overwrite css/style.css 
+2014-09-04 20:01:01 overwrite css/style.css 
+2014-09-04 20:01:24 overwrite css/style.css 
+2014-09-04 20:03:06 overwrite css/style.css 
+2014-09-04 20:04:43 overwrite css/style.css 
+2014-09-04 20:04:51 overwrite css/style.css 
+2014-09-04 20:05:00 overwrite css/style.css 
+2014-09-04 20:05:17 overwrite css/style.css 
+2014-09-04 20:05:31 overwrite css/style.css 
+2014-09-04 20:05:45 overwrite css/style.css 
+2014-09-04 20:43:32 overwrite css/style.css 
+2014-09-04 21:01:20 overwrite css/style.css 
+2014-09-04 21:01:55 overwrite css/style.css 
+2014-09-04 21:05:13 overwrite css/style.css 
+2014-09-04 21:05:45 overwrite css/style.css 
+2014-09-04 21:09:44 overwrite css/style.css 
+2014-09-04 21:12:51 overwrite css/style.css 

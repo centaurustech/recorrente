@@ -1,0 +1,770 @@
+.tab-pane
+{
+    h3,
+    b,
+    strong
+    {
+        font-family: 'Raleway';
+        font-weight: bold;
+
+        width: 90%;
+        padding-left: 35px;
+
+        color: $blue;
+    }
+}
+
+.sobreArrecadacao
+{
+    font-family: 'Raleway';
+
+    min-height: 550px;
+    margin-bottom: 50px;
+    .jaContribuiu
+    {
+        .alert-contribuiu
+        {
+            font-size: 14px;
+            strong
+            {
+                margin-bottom: 10px;
+            }
+        }
+        button
+        {
+            font-size: 13px;
+
+            width: 80%;
+            height: 40px;
+            &:first-of-type
+            {
+                margin-top: 10px;
+                margin-bottom: 7px;
+            }
+        }
+    }
+    #metaAccordion
+    {
+        width: 85%;
+        .accordion-group
+        {
+            margin: none;
+
+            border: none;
+            *
+            {
+                padding: none;
+            }
+        }
+        .accordion-inner
+        {
+            width: 100%;
+            margin-left: -10px;
+        }
+        button
+        {
+            margin-left: 10px;
+        }
+    }
+    #verMetas
+    {
+        width: 100%;
+        margin-bottom: 10px;
+        padding-left: 20px;
+        i
+        {
+            margin-left: 5px;
+        }
+    }
+    .headlineContribuicao
+    {
+        font-size: 40px;
+        font-weight: bold;
+
+        display: block;
+
+        margin-top: 40px;
+        margin-left: 15px;
+
+        color: $blue;
+    }
+    .info
+    {
+        font-family: 'Raleway';
+        font-size: 15px;
+
+        margin-top: 15px;
+        margin-left: 15px;
+    }
+    em
+    {
+        display: inline-block;
+        &.info
+        {
+            font-size: 14px;
+        }
+    }
+    .contribuicaoLogin
+    {
+        font-family: 'Raleway';
+        font-size: 16px;
+        font-weight: bold;
+
+        margin-left: 15px;
+
+        color: $blue;
+        // float:right;
+    }
+    .assinatura
+    {
+        font-size: 14px;
+    }
+    .cadastroOverProject
+    {
+        margin-bottom: 30px;
+        button
+        {
+            width: 42%;
+
+            background-color: $blue;
+            &.juri
+            {
+                margin-left: 10px;
+            }
+            &:first-of-type
+            {
+                // margin-left:35px;
+            }
+            &:hover
+            {
+                background-color: $orange;
+            }
+            &.validate
+            {
+                background-color: #c09853;
+            }
+            &.voltar
+            {
+                background-color: $orange;
+            }
+        }
+    }
+    .logar
+    {
+        margin-left: 15px;
+        label
+        {
+            font-family: 'Raleway';
+            font-weight: bold;
+
+            margin-bottom: 5px;
+        }
+        input,
+        select
+        {
+            width: 90%;
+        }
+        select
+        {
+            width: 94%;
+        }
+        .validade,
+        .codsegu
+        {
+            float: left;
+
+            width: 43%;
+        }
+        .codsegu
+        {
+            margin-left: 28px;
+        }
+        input[type='submit'],
+        button,
+        input[type='button']
+        {
+            font-family: 'Brandon Bold';
+            width: 40%;
+            font-size: 16px;
+        }
+        button
+        {
+            margin: 0;
+            background-color: $blue;
+            &:hover
+            {
+                background-color: $orange;
+            }
+        }
+        .voltar
+        {
+
+            width: 45%;
+            height: 40px;
+            margin-left: 0;
+        }
+    }
+    button
+    {
+        font-family: 'Brandon Bold';
+        font-size: 20px;
+        font-weight: lighter;
+
+        width: 200px;
+        margin-left: 15px;
+
+        color: white;
+        background-color: #f47f62;
+    }
+    .headline
+    {
+        font-size: 50px;
+        font-weight: bold;
+
+        display: block;
+
+        margin-top: 40px;
+        margin-left: 30px;
+
+        color: $blue;
+        span
+        {
+            font-size: 40px;
+
+            color: #6b6161;
+        }
+    }
+    .tagline
+    {
+        font-size: 22px;
+        font-weight: 600;
+
+        display: block;
+
+        margin-top: -5px;
+        margin-left: 30px;
+
+        color: #757072;
+    }
+    img
+    {
+        margin-top: -15px;
+        margin-left: 30px;
+    }
+    .numberOfPeople
+    {
+        font-size: 40px;
+        font-weight: bold;
+
+        display: inline-block;
+        // width: 45px;
+        // hetight: 40px;
+
+        margin-top: -10px;
+        margin-right: 5px;
+        margin-left: 12px;
+
+        color: $blue;
+    }
+    .assinantes
+    {
+        font-size: 22px;
+        font-weight: 600;
+
+        color: #738597;
+        // margin-left:20px;
+    }
+    hr
+    {
+        margin-right: 30px;
+        margin-bottom: 10px;
+        margin-left: 30px;
+    }
+    .meta
+    {
+        font-size: 19px;
+        font-weight: 600;
+        font-weight: bold;
+
+        margin-left: 30px;
+
+        color: #5b595a;
+    }
+    .alcancada
+    {
+        margin-top: 20px;
+    }
+    .progress
+    {
+        width: 75%;
+        height: 30px;
+        margin-top: 15px;
+        margin-bottom: 20px;
+        margin-left: 30px;
+        padding: 8px;
+    }
+    ul
+    {
+        li
+        {
+            font-family: 'Raleway';
+            font-weight: 500;
+
+            margin-bottom: 10px;
+            span
+            {
+                font-size: 13px;
+
+                display: block;
+
+                width: 90%;
+
+                color: #989898;
+            }
+        }
+    }
+    .check
+    {
+        margin-top: -15px;
+        margin-left: 0;
+    }
+    .values
+    {
+        margin-top: 10px;
+        button
+        {
+            font-size: 20px;
+            // margin-right: 50px;
+            line-height: 20px;
+
+            width: 100px;
+            height: 100px;
+            margin-top: 5px;
+            margin-left: 0;
+
+            text-align: center;
+
+            background-color: $blue;
+            &:hover
+            {
+                background-color: $orange;
+            }
+            &.selected
+            {
+                background-color: $orange;
+            }
+            &:last-child
+            {
+                // width: 85px;
+            }
+            &:nth-child(3)
+            {
+                margin-left: 50px;
+            }
+            &:first-of-type
+            {
+                margin-left: 50px;
+                // margin-right: 50px;
+            }
+        }
+    }
+    .form-inline
+    {
+        margin-left: 30px;
+        .add-on
+        {
+            font-family: 'Brandon Bold';
+
+            color: white;
+            background-color: $blue;
+        }
+        input[type='submit'],
+        button,
+        input[type='button']
+        {
+            font-family: 'Brandon Bold';
+
+            width: 35px;
+
+            background-color: $blue;
+            &:hover
+            {
+                background-color: $blue;
+            }
+        }
+    }
+    .valorFinal
+    {
+        font-size: 33px;
+
+        display: inline-block;
+
+        margin-top: 10px;
+        margin-left: 45px;
+
+        color: $blue;
+        span
+        {
+            font-weight: bold;
+        }
+    }
+    .confirmaLeituraTermo
+    {
+        font-family: 'Raleway';
+        font-size: 14px;
+
+        margin-top: 15px;
+        margin-left: 8px;
+        input
+        {
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+    }
+    .confirmContri
+    {
+        margin-top: 10px;
+        margin-bottom: 15px;
+        margin-left: 50px;
+    }
+    .update
+    {
+        padding-left: 15px;
+    }
+    .alert-pagamento
+    {
+        font-family: 'Raleway';
+        font-size: 13px;
+
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}
+
+
+.informeCampanha
+{
+    margin-top: 16px;
+    .abasProjeto
+    {
+        margin-bottom: 50px;
+        .nav-tabs
+        {
+            margin-top: -11px;
+
+            background-color: $blue;
+            li
+            {
+                width: 125px;
+                height: 40px;
+                padding-right: 3px;
+
+                border: none;
+                a
+                {
+                    font-family: 'Raleway';
+                    font-size: 12px;
+                    font-weight: bold;
+
+                    height: 21px;
+
+                    text-align: center;
+
+                    color: #665e60;
+                    border: none;
+                    background-color: #d8d8d7;
+                    &:hover,
+                    &:focus,
+                    &:active
+                    {
+                        border: none;
+                    }
+                    &.last
+                    {
+                        // font-size: 12px;
+                    }
+                }
+                &.last
+                {
+                }
+            }
+            .campanha
+            {
+                width: 100px;
+            }
+            .galeria
+            {
+                width: 90px;
+            }
+            .assinantes
+            {
+                width: 90px;
+                a
+                {
+                    padding-left: 7px;
+                }
+            }
+            .coments
+            {
+                width: 100px;
+                a
+                {
+                    padding-left: 7px;
+                }
+            }
+            .novidades
+            {
+                width: 90px;
+                a
+                {
+                    padding-left: 9px;
+                }
+            }
+            .contas
+            {
+                width: 132px;
+                a
+                {
+                    line-height: 13px;
+                }
+            }
+            .active
+            {
+                border: none;
+                background-color: $blue;
+                a
+                {
+                    height: 40px;
+
+                    background-color: #eff2ee;
+                }
+                &:hover,
+                &:focus,
+                &:active
+                {
+                    border: none;
+                }
+            }
+        }
+    }
+    .row
+    {
+        margin-top: -55px;
+    }
+    .span8
+    {
+        // margin-right:25px;
+    }
+    .span8
+    {
+        background-color: #eff2ee;
+    }
+    #preConteudo
+    {
+        min-height: 550px;
+        margin-bottom: 30px;
+        padding-top: 1px;
+        padding-bottom: 5px;
+
+        background-color: #eff2ee;
+    }
+    .sobreArrecadao,
+    .anotherBox
+    {
+        background-color: #eff2ee;
+    }
+    .tab-content
+    {
+        font-family: 'Raleway';
+        .span8
+        {
+            min-height: 500px;
+            margin-bottom: 30px;
+        }
+        .campanhaWrapper
+        {
+            *
+            {
+                padding-left: 35px;
+            }
+            h3
+            {
+                font-family: 'Raleway';
+                font-size: 15px;
+                font-weight: bold;
+
+                width: 90%;
+
+                color: $blue;
+            }
+            p
+            {
+                font-size: 14px;
+                font-weight: 500;
+
+                width: 90%;
+                padding-top: 10px;
+                padding-bottom: 15px;
+
+                color: #989898;
+            }
+        }
+    }
+    #campanha
+    {
+        p
+        {
+            b,
+            strong,
+            h3
+            {
+                padding-left: 0;
+            }
+        }
+        img
+        {
+            width: 95%;
+            padding-left: 0;
+
+            border: 2px solid $orange;
+        }
+        .videocampanha
+        {
+            iframe
+            {
+                width: 550px;
+                height: 318px;
+                padding-left: 0;
+
+                border: 3px solid $orange;
+            }
+        }
+        button
+        {
+            font-family: 'Brandon Bold';
+
+            margin-bottom: 30px;
+            margin-left: 20px;
+        }
+        .socialButtons
+        {
+            width: 500px;
+            margin-top: 10px;
+            margin-left: -35px;
+            .fb-like
+            {
+                position: relative;
+                top: -5px;
+
+                margin-left: -85px;
+                padding: 0;
+            }
+        }
+    }
+}
+
+.two
+{
+    margin-left: 50%;
+}
+
+.anotherBox
+{
+    // margin-left:
+    margin-bottom: 40px;
+    img
+    {
+        margin: 0;
+    }
+    h4
+    {
+        font-family: 'Brandon Bold';
+        font-size: 20px;
+
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 18px;
+
+        color: $blue;
+    }
+    .img,
+    .about
+    {
+        float: left;
+    }
+    .img
+    {
+        margin-bottom: 20px;
+        margin-left: 20px;
+
+        border: 1px solid gray;
+    }
+    .about
+    {
+        width: 73%;
+        margin-top: -85px;
+        margin-left: 92px;
+        ul
+        {
+            margin: 0;
+            li
+            {
+                span
+                {
+                    font-family: 'Raleway';
+                    font-size: 14px;
+
+                    color: #989898;
+                }
+            }
+        }
+    }
+    .assinantesPrev
+    {
+        width: 90%;
+        margin-top: 10px;
+        margin-left: 18px;
+        .square
+        {
+            display: inline-block;
+
+            width: 45px;
+            height: 45px;
+            margin-left: 5px;
+
+            border: 1px solid gray;
+        }
+    }
+}
+
+.wrapProjetistaInfo
+{
+    margin-top: 20px;
+}
+
+.about-project
+{
+    h2
+    {
+        font-family: 'Raleway';
+        font-size: 23px;
+        font-weight: 800;
+
+        color: white;
+    }
+    p
+    {
+        font-family: 'Brandon Regular';
+        font-size: 19px;
+
+        padding: 0;
+        padding-top: 10px;
+        padding-bottom: 20px;
+
+        text-align: left;
+    }
+    .bottompush
+    {
+        height: 110px;
+    }
+}

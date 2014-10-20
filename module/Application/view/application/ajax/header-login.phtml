@@ -1,0 +1,21 @@
+        <ul class="nav navbar-nav">
+            <li><a href="<?php echo $this->basepath()?>/comoFunciona">Como Funciona?</a></li>
+            <li><a href="<?php echo $this->basepath()?>/osProjetos">Os Projetos</a></li>
+            <li><a href="<?php echo $this->basepath()?>/cadastraProjeto">Envie o seu!</a></li>
+        </ul>
+        <div class="navbar-collapse collapse" id="divControleLogin">
+          <form class="navbar-form navbar-right" role="form" action="<?php echo $this->basePath()?>/seguro/validaLogin" method="post">
+            <div class="form-group">
+              <input type="text" name="usuario" placeholder="Usuário" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="password" name="senha" placeholder="Senha" class="form-control">
+            </div>
+            <div class="form-group">
+        	    <button type="submit" class="btn btn-success">Entrar</button>
+    	      </div>
+            <div class="form-group">
+        	    <a href="<?php echo $this->basePath()?>/cadastro"  class="btn btn-warning">Não tenho cadastro</a>
+    	      </div>
+        	    </form>
+        </div>
